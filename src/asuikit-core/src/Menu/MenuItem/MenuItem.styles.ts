@@ -23,8 +23,8 @@ export default createStyles((theme, { color, radius }: MenuItemStylesParams) => 
     color: color
       ? theme.fn.variant({ variant: 'filled', primaryFallback: false, color }).background
       : theme.colorScheme === 'dark'
-      ? theme.colors.dark[0]
-      : theme.black,
+        ? theme.colors.dark[0]
+        : theme.black,
     display: 'flex',
     alignItems: 'center',
 
@@ -38,8 +38,8 @@ export default createStyles((theme, { color, radius }: MenuItemStylesParams) => 
       backgroundColor: color
         ? theme.fn.variant({ variant: 'light', color }).background
         : theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors.dark[3], 0.35)
-        : theme.colors.gray[1],
+          ? theme.fn.rgba(theme.colors.dark[3], 0.35)
+          : theme.colors.gray[1],
     },
   },
 

@@ -56,8 +56,8 @@ export default createStyles(
           error
             ? errorColor
             : theme.colorScheme === 'dark'
-            ? theme.colors.dark[4]
-            : theme.colors.gray[4]
+              ? theme.colors.dark[4]
+              : theme.colors.gray[4]
         }`,
         position: 'relative',
         appearance: 'none',

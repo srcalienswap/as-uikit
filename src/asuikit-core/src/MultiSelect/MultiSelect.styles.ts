@@ -67,8 +67,8 @@ export default createStyles((theme, { invalid }: MultiSelectStylesParams, { size
       color: invalid
         ? theme.colors.red[theme.fn.primaryShade()]
         : theme.colorScheme === 'dark'
-        ? theme.colors.dark[3]
-        : theme.colors.gray[5],
+          ? theme.colors.dark[3]
+          : theme.colors.gray[5],
     },
 
     '&:disabled': {

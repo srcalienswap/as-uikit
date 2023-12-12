@@ -23,7 +23,7 @@ export const MANTINE_CORE_ORDER = [
   'misc',
 ] as const;
 
-export const MANTINE_CORE_CATEGORIES: Record<typeof MANTINE_CORE_ORDER[number], Category> = {
+export const MANTINE_CORE_CATEGORIES: Record<(typeof MANTINE_CORE_ORDER)[number], Category> = {
   'data-display': {
     title: 'Data display',
     icon: IconNotebook,

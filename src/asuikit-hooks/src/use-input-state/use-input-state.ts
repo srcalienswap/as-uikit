@@ -26,6 +26,6 @@ export function useInputState<T>(initialState: T) {
   const [value, setValue] = useState(initialState);
   return [value, getInputOnChange<T>(setValue)] as [
     T,
-    (value: null | undefined | T | React.ChangeEvent<any>) => void
+    (value: null | undefined | T | React.ChangeEvent<any>) => void,
   ];
 }

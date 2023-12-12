@@ -38,11 +38,11 @@ export function mergeClassNames<T extends Record<string, string>>({
       Array.isArray(name)
         ? name
             .filter(Boolean)
-            .map((part) => `${cache?.key || 'mantine'}-${part}-${className}`)
+            .map((part) => `${cache?.key || 'asuikit'}-${part}-${className}`)
             .join(' ')
         : name
-        ? `${cache?.key || 'mantine'}-${name}-${className}`
-        : null
+          ? `${cache?.key || 'asuikit'}-${name}-${className}`
+          : null
     );
     return acc;
   }, {}) as T;

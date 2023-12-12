@@ -34,8 +34,8 @@ export default createStyles(
               ? theme.colors.dark[3]
               : theme.colors.gray[4]
             : theme.colorScheme === 'dark'
-            ? theme.colors.dark[4]
-            : theme.colors.gray[2],
+              ? theme.colors.dark[4]
+              : theme.colors.gray[2],
         },
 
         '& .asuikit-Slider-bar': {
@@ -44,8 +44,8 @@ export default createStyles(
               ? theme.colors.dark[4]
               : theme.colors.gray[2]
             : theme.colorScheme === 'dark'
-            ? theme.colors.dark[3]
-            : theme.colors.gray[4],
+              ? theme.colors.dark[3]
+              : theme.colors.gray[4],
         },
       },
     },
@@ -72,8 +72,8 @@ export default createStyles(
               : theme.colors.gray[4]
             : theme.fn.variant({ variant: 'filled', color }).background
           : theme.colorScheme === 'dark'
-          ? theme.colors.dark[4]
-          : theme.colors.gray[2],
+            ? theme.colors.dark[4]
+            : theme.colors.gray[2],
         zIndex: 0,
       },
     },
@@ -88,10 +88,10 @@ export default createStyles(
           ? theme.colors.dark[4]
           : theme.colors.gray[2]
         : disabled
-        ? theme.colorScheme === 'dark'
-          ? theme.colors.dark[3]
-          : theme.colors.gray[4]
-        : theme.fn.variant({ variant: 'filled', color }).background,
+          ? theme.colorScheme === 'dark'
+            ? theme.colors.dark[3]
+            : theme.colors.gray[4]
+          : theme.fn.variant({ variant: 'filled', color }).background,
       borderRadius: theme.fn.radius(radius),
     },
   })

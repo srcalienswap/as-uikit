@@ -94,8 +94,8 @@ export default createStyles((theme, { color, radius, withTitle }: NotificationSt
           ? theme.colors.dark[2]
           : theme.colors.gray[6]
         : theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.black,
+          ? theme.colors.dark[0]
+          : theme.black,
       lineHeight: 1.4,
       overflow: 'hidden',
       textOverflow: 'ellipsis',

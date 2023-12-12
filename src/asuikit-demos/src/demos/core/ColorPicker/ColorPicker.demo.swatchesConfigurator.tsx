@@ -20,8 +20,8 @@ import { ColorPicker } from '@asuikit/core';
 function Demo() {
   return (
     <ColorPicker${props} format="hex" swatches={[${Object.keys(DEFAULT_THEME.colors)
-  .map((color) => `'${DEFAULT_THEME.colors[color][6]}'`)
-  .join(', ')}]} />
+      .map((color) => `'${DEFAULT_THEME.colors[color][6]}'`)
+      .join(', ')}]} />
   );
 }
 `;

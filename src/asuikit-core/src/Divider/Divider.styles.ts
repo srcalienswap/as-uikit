@@ -18,10 +18,10 @@ function getColor(theme: MantineTheme, color: MantineColor) {
   return typeof color === 'string' && (color in theme.colors || color.split('.')[0] in theme.colors)
     ? themeColor
     : color === undefined
-    ? theme.colorScheme === 'dark'
-      ? theme.colors.dark[4]
-      : theme.colors.gray[4]
-    : color;
+      ? theme.colorScheme === 'dark'
+        ? theme.colors.dark[4]
+        : theme.colors.gray[4]
+      : color;
 }
 
 export default createStyles((theme, { color }: DividerStylesParams, { size, variant }) => ({

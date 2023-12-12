@@ -119,15 +119,15 @@ export const MonthLevel = forwardRef<HTMLDivElement, MonthLevelProps>((props, re
     typeof nextDisabled === 'boolean'
       ? nextDisabled
       : maxDate
-      ? !dayjs(month).endOf('month').isBefore(maxDate)
-      : false;
+        ? !dayjs(month).endOf('month').isBefore(maxDate)
+        : false;
 
   const _previousDisabled =
     typeof previousDisabled === 'boolean'
       ? previousDisabled
       : minDate
-      ? !dayjs(month).startOf('month').isAfter(minDate)
-      : false;
+        ? !dayjs(month).startOf('month').isAfter(minDate)
+        : false;
 
   return (
     <Box className={cx(classes.monthLevel, className)} data-month-level ref={ref} {...others}>

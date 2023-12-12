@@ -30,8 +30,8 @@ type FormRule<Value, Values> = NonNullable<Value> extends Array<infer ListValue>
         }>
       | Rule<Value, Values>
   : NonNullable<Value> extends Record<string, any>
-  ? FormRulesRecord<Value, Values> | Rule<Value, Values>
-  : Rule<Value, Values>;
+    ? FormRulesRecord<Value, Values> | Rule<Value, Values>
+    : Rule<Value, Values>;
 
 export type FormRulesRecord<Values, InitValues = Values> = Partial<{
   [Key in keyof Values]: FormRule<Values[Key], InitValues>;
@@ -113,7 +113,7 @@ export type _TransformValues<Values> = (values: Values) => unknown;
 
 export interface UseFormInput<
   Values,
-  TransformValues extends _TransformValues<Values> = (values: Values) => Values
+  TransformValues extends _TransformValues<Values> = (values: Values) => Values,
 > {
   initialValues?: Values;
   initialErrors?: FormErrors;
@@ -128,7 +128,7 @@ export interface UseFormInput<
 
 export interface UseFormReturnType<
   Values,
-  TransformValues extends _TransformValues<Values> = (values: Values) => Values
+  TransformValues extends _TransformValues<Values> = (values: Values) => Values,
 > {
   values: Values;
   errors: FormErrors;
@@ -159,7 +159,7 @@ export interface UseFormReturnType<
 
 export type UseForm<
   Values = Record<string, unknown>,
-  TransformValues extends _TransformValues<Values> = (values: Values) => Values
+  TransformValues extends _TransformValues<Values> = (values: Values) => Values,
 > = (input?: UseFormInput<Values, TransformValues>) => UseFormReturnType<Values, TransformValues>;
 
 export type TransformedValues<Form extends UseFormReturnType<any>> = Parameters<

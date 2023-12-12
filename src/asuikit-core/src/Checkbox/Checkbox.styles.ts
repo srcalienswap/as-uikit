@@ -76,8 +76,8 @@ export default createStyles(
           error
             ? theme.fn.variant({ variant: 'filled', color: 'red' }).background
             : theme.colorScheme === 'dark'
-            ? theme.colors.dark[4]
-            : theme.colors.gray[4]
+              ? theme.colors.dark[4]
+              : theme.colors.gray[4]
         }`,
         width: _size,
         height: _size,

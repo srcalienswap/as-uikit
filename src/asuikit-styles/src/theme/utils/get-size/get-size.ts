@@ -4,7 +4,7 @@ import { rem, em } from '../rem/rem';
 export function getSize<
   Sizes extends Record<string, any>,
   Key extends keyof Sizes,
-  Size extends MantineNumberSize
+  Size extends MantineNumberSize,
 >({
   size,
   sizes,

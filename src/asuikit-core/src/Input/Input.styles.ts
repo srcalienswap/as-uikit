@@ -105,10 +105,10 @@ export default createStyles(
             borderRadius: theme.fn.radius(radius),
           }
         : variant === 'unstyled' && withRightSection
-        ? {
-            paddingRight: rightSectionWidth || getSize({ size, sizes }),
-          }
-        : null;
+          ? {
+              paddingRight: rightSectionWidth || getSize({ size, sizes }),
+            }
+          : null;
 
     return {
       wrapper: {
@@ -200,8 +200,8 @@ export default createStyles(
         color: invalid
           ? theme.colors.red[theme.colorScheme === 'dark' ? 6 : 7]
           : theme.colorScheme === 'dark'
-          ? theme.colors.dark[2]
-          : theme.colors.gray[5],
+            ? theme.colors.dark[2]
+            : theme.colors.gray[5],
       },
 
       rightSection: {
