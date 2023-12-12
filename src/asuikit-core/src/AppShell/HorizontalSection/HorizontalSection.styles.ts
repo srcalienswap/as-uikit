@@ -74,8 +74,8 @@ export default createStyles(
         height: height
           ? rem(height)
           : layout === 'alt'
-          ? 'auto'
-          : 'calc(100vh - var(--asuikit-header-height, 0rem) - var(--asuikit-footer-height, 0rem))',
+            ? 'auto'
+            : 'calc(100vh - var(--asuikit-header-height, 0rem) - var(--asuikit-footer-height, 0rem))',
         width: width?.base ? rem(width?.base) : '100%',
         position: fixed ? 'fixed' : 'static',
         boxSizing: 'border-box',

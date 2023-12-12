@@ -44,19 +44,22 @@ export function groupPages({ query, categories, order, group }: GroupPages): {
 
   const uncategorized = [];
 
-  const categorized = pages.reduce((acc, page) => {
-    if (!(page.category in categories)) {
-      uncategorized.push({ ...page, order: page.order || 0 });
+  const categorized = pages.reduce(
+    (acc, page) => {
+      if (!(page.category in categories)) {
+        uncategorized.push({ ...page, order: page.order || 0 });
+        return acc;
+      }
+
+      if (!(page.category in acc)) {
+        acc[page.category] = [];
+      }
+
+      acc[page.category].push({ ...page, order: page.order || 0 });
       return acc;
-    }
-
-    if (!(page.category in acc)) {
-      acc[page.category] = [];
-    }
-
-    acc[page.category].push({ ...page, order: page.order || 0 });
-    return acc;
-  }, {} as { category: Category; pages: Frontmatter[] });
+    },
+    {} as { category: Category; pages: Frontmatter[] }
+  );
 
   const groups = order.map((category) => ({
     category: categories[category],

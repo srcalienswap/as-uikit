@@ -14,8 +14,8 @@ export default createStyles((theme, { width, height, flip, alt }: WavesStylesPar
       theme.colorScheme === 'dark'
         ? theme.colors.dark[alt ? 8 : 7]
         : alt
-        ? theme.white
-        : theme.colors.gray[0],
+          ? theme.white
+          : theme.colors.gray[0],
   },
 
   waves: {
@@ -23,8 +23,8 @@ export default createStyles((theme, { width, height, flip, alt }: WavesStylesPar
       theme.colorScheme === 'dark'
         ? theme.colors.dark[alt ? 7 : 8]
         : alt
-        ? theme.colors.gray[0]
-        : theme.white,
+          ? theme.colors.gray[0]
+          : theme.white,
     width: `${width}%`,
     height: rem(height),
     transform: flip ? 'scaleX(-1)' : undefined,

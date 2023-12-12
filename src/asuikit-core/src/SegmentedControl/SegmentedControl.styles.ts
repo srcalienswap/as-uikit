@@ -159,8 +159,8 @@ export default createStyles(
           ? color
             ? colors.background
             : theme.colorScheme === 'dark'
-            ? theme.colors.dark[5]
-            : theme.white
+              ? theme.colors.dark[5]
+              : theme.white
           : undefined,
       },
 
@@ -178,8 +178,8 @@ export default createStyles(
         backgroundColor: color
           ? colors.background
           : theme.colorScheme === 'dark'
-          ? theme.colors.dark[5]
-          : theme.white,
+            ? theme.colors.dark[5]
+            : theme.white,
       },
     };
   }

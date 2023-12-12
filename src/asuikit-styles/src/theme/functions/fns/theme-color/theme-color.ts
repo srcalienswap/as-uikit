@@ -26,7 +26,7 @@ export function themeColor(theme: MantineThemeBase) {
     return color in theme.colors
       ? theme.colors[color][_shade]
       : primaryFallback
-      ? theme.colors[theme.primaryColor][_shade]
-      : color;
+        ? theme.colors[theme.primaryColor][_shade]
+        : color;
   };
 }

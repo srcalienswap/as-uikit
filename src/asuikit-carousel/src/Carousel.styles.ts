@@ -40,9 +40,8 @@ export default createStyles(
       const slideGapValue = getSize({ size: gap, sizes: theme.spacing });
 
       return {
-        [orientation === 'horizontal'
-          ? 'marginRight'
-          : 'marginBottom']: `calc(${slideGapValue} * -1)`,
+        [orientation === 'horizontal' ? 'marginRight' : 'marginBottom']:
+          `calc(${slideGapValue} * -1)`,
       };
     };
 

@@ -3,7 +3,7 @@ import { Category } from './types';
 
 export const MANTINE_HOOKS_ORDER = ['state', 'dom', 'utils', 'lifecycle'] as const;
 
-export const MANTINE_HOOKS_CATEGORIES: Record<typeof MANTINE_HOOKS_ORDER[number], Category> = {
+export const MANTINE_HOOKS_CATEGORIES: Record<(typeof MANTINE_HOOKS_ORDER)[number], Category> = {
   state: {
     title: 'State management',
     icon: IconBox,

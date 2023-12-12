@@ -34,8 +34,8 @@ export function Portal(props: PortalProps): ReactPortal {
     ref.current = !target
       ? document.createElement('div')
       : typeof target === 'string'
-      ? document.querySelector(target)
-      : target;
+        ? document.querySelector(target)
+        : target;
 
     if (!target) {
       document.body.appendChild(ref.current);

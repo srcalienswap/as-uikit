@@ -89,7 +89,7 @@ interface Variations {
 export function createStyles<
   Key extends string = string,
   Params = void,
-  Input extends Record<Key, CSSObject> = Record<Key, CSSObject>
+  Input extends Record<Key, CSSObject> = Record<Key, CSSObject>,
 >(input: ((theme: MantineTheme, params: Params, variations: Variations) => Input) | Input) {
   const getCssObject = typeof input === 'function' ? input : () => input;
 

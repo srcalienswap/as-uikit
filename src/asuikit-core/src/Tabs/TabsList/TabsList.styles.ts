@@ -21,8 +21,8 @@ function getVariantStyles(
           ? 'borderRight'
           : 'borderLeft'
         : inverted
-        ? 'borderTop'
-        : 'borderBottom']: `${rem(2)} solid ${
+          ? 'borderTop'
+          : 'borderBottom']: `${rem(2)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
       }`,
     };
@@ -35,8 +35,8 @@ function getVariantStyles(
           ? 'borderRight'
           : 'borderLeft'
         : inverted
-        ? 'borderTop'
-        : 'borderBottom']: `${rem(1)} solid ${
+          ? 'borderTop'
+          : 'borderBottom']: `${rem(1)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
       }`,
     };

@@ -115,10 +115,10 @@ export default createStyles((theme, { radius, color }: AlertStylesParams, { vari
       variant === 'filled'
         ? theme.white
         : theme.colorScheme === 'dark'
-        ? variant === 'light'
-          ? theme.white
-          : theme.colors.dark[0]
-        : theme.black,
+          ? variant === 'light'
+            ? theme.white
+            : theme.colors.dark[0]
+          : theme.black,
   },
 
   closeButton: {
@@ -128,9 +128,9 @@ export default createStyles((theme, { radius, color }: AlertStylesParams, { vari
       variant === 'filled'
         ? theme.white
         : theme.colorScheme === 'dark'
-        ? variant === 'light'
-          ? theme.white
-          : theme.colors.dark[0]
-        : theme.black,
+          ? variant === 'light'
+            ? theme.white
+            : theme.colors.dark[0]
+          : theme.black,
   },
 }));

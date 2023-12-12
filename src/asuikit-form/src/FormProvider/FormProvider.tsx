@@ -9,7 +9,7 @@ export interface FormProviderProps<Form> {
 
 export function createFormContext<
   Values,
-  TransformValues extends _TransformValues<Values> = (values: Values) => Values
+  TransformValues extends _TransformValues<Values> = (values: Values) => Values,
 >() {
   type Form = UseFormReturnType<Values, TransformValues>;
 
@@ -31,6 +31,6 @@ export function createFormContext<
   return [FormProvider, useFormContext, useForm] as [
     React.FC<FormProviderProps<Form>>,
     () => Form,
-    UseForm<Values, TransformValues>
+    UseForm<Values, TransformValues>,
   ];
 }

@@ -103,8 +103,8 @@ export function AccordionProvider<Multiple extends boolean = false>({
         ? _value.filter((selectedValue) => selectedValue !== itemValue)
         : [..._value, itemValue]
       : itemValue === _value
-      ? null
-      : (itemValue as any);
+        ? null
+        : (itemValue as any);
 
     handleChange(nextValue);
   };

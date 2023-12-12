@@ -55,7 +55,7 @@ function getSizeStyles({ compact, size, withLeftIcon, withRightIcon }: GetSizeSt
     return sizes[`compact-${size}`];
   }
 
-  const _sizes: typeof sizes[keyof typeof sizes] = sizes[size];
+  const _sizes: (typeof sizes)[keyof typeof sizes] = sizes[size];
 
   if (!_sizes) {
     return {};

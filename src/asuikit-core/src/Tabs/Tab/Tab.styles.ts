@@ -21,8 +21,8 @@ function getVariantStyles(
         ? `${radiusValue} 0 0 ${radiusValue}`
         : ` 0 ${radiusValue} ${radiusValue} 0`
       : inverted
-      ? `0 0 ${radiusValue} ${radiusValue}`
-      : `${radiusValue} ${radiusValue} 0 0`;
+        ? `0 0 ${radiusValue} ${radiusValue}`
+        : `${radiusValue} ${radiusValue} 0 0`;
 
   if (variant === 'default') {
     return {
@@ -31,15 +31,15 @@ function getVariantStyles(
           ? 'borderRight'
           : 'borderLeft'
         : inverted
-        ? 'borderTop'
-        : 'borderBottom']: `${rem(2)} solid transparent`,
+          ? 'borderTop'
+          : 'borderBottom']: `${rem(2)} solid transparent`,
       [vertical
         ? placement === 'left'
           ? 'marginRight'
           : 'marginLeft'
         : inverted
-        ? 'marginTop'
-        : 'marginBottom']: rem(-2),
+          ? 'marginTop'
+          : 'marginBottom']: rem(-2),
       borderRadius,
 
       ...theme.fn.hover({
@@ -64,8 +64,8 @@ function getVariantStyles(
           ? 'borderRight'
           : 'borderLeft'
         : inverted
-        ? 'borderTop'
-        : 'borderBottom']: 'none',
+          ? 'borderTop'
+          : 'borderBottom']: 'none',
 
       '&[data-active]': {
         borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
