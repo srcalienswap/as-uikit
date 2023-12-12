@@ -8,7 +8,7 @@ import {
   NativeSelect,
   MultiSelect,
   Autocomplete,
-} from '@mantine/core';
+} from '@asuikit/core';
 
 export function Inputs() {
   return (

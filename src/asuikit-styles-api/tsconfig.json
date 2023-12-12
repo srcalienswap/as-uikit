@@ -1,0 +1,40 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["./src", "./types", "../../configuration/types"],
+  "exclude": ["./lib", "./esm", "./cjs"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "composite": true,
+    "paths": {
+      "@asuikit/core": ["../asuikit-core/src"],
+      "@asuikit/dates": ["../asuikit-dates/src"],
+      "@asuikit/hooks": ["../asuikit-hooks/src"],
+      "@asuikit/prism": ["../asuikit-prism/src"],
+      "@asuikit/dropzone": ["../asuikit-dropzone/src"],
+      "@asuikit/spotlight": ["../asuikit-spotlight/src"],
+      "@asuikit/notifications": ["../asuikit-notifications/src"],
+      "@asuikit/modals": ["../asuikit-modals/src"],
+      "@asuikit/carousel": ["../asuikit-carousel/src"],
+      "@asuikit/tiptap": ["../asuikit-tiptap/src"],
+      "@asuikit/storybook": ["../asuikit-storybook/src"]
+    }
+  },
+  "references": [
+    { "path": "../asuikit-core" },
+    { "path": "../asuikit-dates" },
+    { "path": "../asuikit-hooks" },
+    { "path": "../asuikit-prism" },
+    { "path": "../asuikit-dropzone" },
+    { "path": "../asuikit-notifications" },
+    { "path": "../asuikit-modals" },
+    { "path": "../asuikit-carousel" },
+    { "path": "../asuikit-spotlight" },
+    { "path": "../asuikit-tiptap" },
+    { "path": "../asuikit-storybook" }
+  ]
+}

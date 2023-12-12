@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@asuikit/core';
 
 interface WavesStylesParams {
   height: number;

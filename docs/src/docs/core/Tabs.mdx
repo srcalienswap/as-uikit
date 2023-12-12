@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Tabs
 order: 1
 slug: /core/tabs/
@@ -8,13 +8,13 @@ category: 'navigation'
 description: 'Switch between different views'
 componentPrefix: 'Tabs'
 props: ['Tabs', 'Tab', 'TabsList', 'TabsPanel']
-import: "import { Tabs } from '@mantine/core';"
-source: 'mantine-core/src/Tabs/Tabs.tsx'
+import: "import { Tabs } from '@asuikit/core';"
+source: 'asuikit-core/src/Tabs/Tabs.tsx'
 docs: 'core/Tabs.mdx'
 styles: ['Tabs']
 ---
 
-import { TabsDemos } from '@mantine/demos';
+import { TabsDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -26,7 +26,7 @@ To control Tabs state provide `value` and `onTabChange` props:
 
 ```tsx
 import { useState } from 'react';
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 function Demo() {
   const [activeTab, setActiveTab] = useState<string | null>('first');
@@ -50,7 +50,7 @@ function Demo() {
 If you do not need to subscribe to Tabs state changes use `defaultValue`:
 
 ```tsx
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -130,7 +130,7 @@ This is useful when you want to render components that impact performance inside
 components that are rendered inside `Tabs.Panel` will reset their state on each mount (tab change).
 
 ```tsx
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 // Second tab panel will be mounted only when user activates second tab
 function Demo() {
@@ -162,7 +162,7 @@ By doing so, you will be able to keep component behavior while providing your ow
 
 ```tsx
 import { useRef } from 'react';
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 function Demo() {
   const secondTabRef = useRef<HTMLButtonElement>(null);
@@ -189,7 +189,7 @@ function Demo() {
 
 ```tsx
 import { useNavigate, useParams } from 'react-router-dom';
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 function Demo() {
   const navigate = useNavigate();
@@ -211,7 +211,7 @@ function Demo() {
 ```tsx
 // For file /tabs/[activeTab].tsx
 import { useRouter } from 'next/router';
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 function Demo() {
   const router = useRouter();
@@ -239,7 +239,7 @@ Tabs component follows [WAI-ARIA recommendations](https://www.w3.org/TR/wai-aria
 If you use `Tabs.Tab` without text content, for example, only with icon, then set `aria-label`:
 
 ```tsx
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 import { IconCoin } from '@tabler/icon';
 
 function Demo() {
@@ -260,7 +260,7 @@ function Demo() {
 To set tabs list label, set `aria-label` on `Tabs.List` component, it will be announced by screen reader:
 
 ```tsx
-import { Tabs } from '@mantine/core';
+import { Tabs } from '@asuikit/core';
 
 function Demo() {
   return (

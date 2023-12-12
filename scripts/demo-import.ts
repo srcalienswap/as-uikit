@@ -22,18 +22,18 @@ function updateDemo(demoPath: string) {
   const splittedContent = contents.split(lastImport);
   const contentsWithImport = `${
     splittedContent[0]
-  }import { MantineDemo } from '@mantine/ds';\n${lastImport}${splittedContent
+  }import { MantineDemo } from '@asuikit/ds';\n${lastImport}${splittedContent
     .slice(1)
     .join(lastImport)}`;
 
   fs.writeFileSync(demoPath, contentsWithImport);
 }
 
-glob(path.join(__dirname, '../src/mantine-demos/src/demos/**/*'), (error, matches) => {
+glob(path.join(__dirname, '../src/asuikit-demos/src/demos/**/*'), (error, matches) => {
   const demos = matches.filter((file) => file.includes('.demo.'));
   demos.forEach(updateDemo);
 });
 
 // updateDemo(
-//   path.join(__dirname, '../src/mantine-demos/src/demos/carousel/Carousel.demo.animationOffset.tsx')
+//   path.join(__dirname, '../src/asuikit-demos/src/demos/carousel/Carousel.demo.animationOffset.tsx')
 // );

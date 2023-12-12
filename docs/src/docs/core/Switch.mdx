@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Switch
 order: 1
 slug: /core/switch/
@@ -8,13 +8,13 @@ category: 'inputs'
 description: 'Capture boolean input from user'
 componentPrefix: 'Switch'
 props: ['Switch', 'SwitchGroup']
-import: "import { Switch } from '@mantine/core';"
-source: 'mantine-core/src/Switch/Switch.tsx'
+import: "import { Switch } from '@asuikit/core';"
+source: 'asuikit-core/src/Switch/Switch.tsx'
 docs: 'core/Switch.mdx'
 styles: ['Switch']
 ---
 
-import { SwitchDemos } from '@mantine/demos';
+import { SwitchDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -24,7 +24,7 @@ import { SwitchDemos } from '@mantine/demos';
 
 ```tsx
 import { useState } from 'react';
-import { Switch } from '@mantine/core';
+import { Switch } from '@asuikit/core';
 
 function Demo() {
   const [checked, setChecked] = useState(false);
@@ -56,7 +56,7 @@ function Demo() {
 
 ```tsx
 import { useState } from 'react';
-import { Switch } from '@mantine/core';
+import { Switch } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState<string[]>([]);
@@ -74,7 +74,7 @@ function Demo() {
 
 ```tsx
 import { useRef } from 'react';
-import { Switch } from '@mantine/core';
+import { Switch } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLInputElement>(null);

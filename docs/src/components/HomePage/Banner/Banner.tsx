@@ -1,6 +1,6 @@
 import React from 'react';
-import { Title, Overlay, Text, Button, Container } from '@mantine/core';
-import { GithubIcon } from '@mantine/ds';
+import { Title, Overlay, Text, Button, Container } from '@asuikit/core';
+import { GithubIcon } from '@asuikit/ds';
 import useStyles from './Banner.styles';
 
 export function Banner() {

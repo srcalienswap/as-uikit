@@ -14,7 +14,7 @@ export const NEXT_STEPS_DATA = [
     title: 'Learn about theming',
     description:
       'Learn how to change colors, fonts, shadows, spacing and other theme values with MantineProvider',
-    link: '/theming/mantine-provider/',
+    link: '/theming/asuikit-provider/',
     type: 'gatsby',
     icon: IconPalette,
     color: 'pink',

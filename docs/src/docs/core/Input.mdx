@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Input
 order: 1
 polymorphic: true
@@ -9,13 +9,13 @@ category: 'inputs'
 description: 'Base component to create custom inputs'
 componentPrefix: 'Input'
 props: ['Input', 'InputWrapper', 'InputLabel', 'InputDescription', 'InputError']
-import: "import { Input } from '@mantine/core';"
-source: 'mantine-core/src/Input/Input.tsx'
+import: "import { Input } from '@asuikit/core';"
+source: 'asuikit-core/src/Input/Input.tsx'
 docs: 'core/Input.mdx'
 styles: ['Input', 'Input.Wrapper']
 ---
 
-import { InputDemos } from '@mantine/demos';
+import { InputDemos } from '@asuikit/demos';
 
 ## Disclaimer
 
@@ -85,7 +85,7 @@ The only difference is whether input element will have `required` attribute, exa
 [TextInput](/core/text-input/) component:
 
 ```tsx
-import { TextInput } from '@mantine/core';
+import { TextInput } from '@asuikit/core';
 
 // Will display required asterisk and add `required` attribute to the input element
 function RequiredDemo() {
@@ -122,7 +122,7 @@ or do not support placeholder property natively:
 
 ## Default props on MantineProvider
 
-You can add [default props](/theming/default-props/) on [MantineProvider](/theming/mantine-provider/)
+You can add [default props](/theming/default-props/) on [MantineProvider](/theming/asuikit-provider/)
 to `Input` and `Input.Wrapper` components. These default props will be inherited by all inputs
 that use `Input` and `Input.Wrapper` under the hood ([TextInput](/core/text-input/), [Autocomplete](/core/autocomplete/), [MultiSelect](/core/multi-select/), etc.):
 
@@ -131,7 +131,7 @@ that use `Input` and `Input.Wrapper` under the hood ([TextInput](/core/text-inpu
 ## Styles on MantineProvider
 
 Same as with default props you can use `Input` and `Input.Wrapper` [Styles API](/styles/styles-api/)
-on [MantineProvider](/theming/mantine-provider/) to add styles to all Inputs:
+on [MantineProvider](/theming/asuikit-provider/) to add styles to all Inputs:
 
 <Demo data={InputDemos.providerStyles} />
 
@@ -146,7 +146,7 @@ To customize focus styles of any inputs that are built on top of the `Input` com
 
 ```tsx
 import { useRef } from 'react';
-import { Input } from '@mantine/core';
+import { Input } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLInputElement>(null);

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Text, Box, Anchor, rem, em } from '@mantine/core';
-import { Prism } from '@mantine/prism';
+import { Text, Box, Anchor, rem, em } from '@asuikit/core';
+import { Prism } from '@asuikit/prism';
 
 const code = `
-import { Text } from '@mantine/core';
+import { Text } from '@asuikit/core';
 
 function Demo() {
   return (

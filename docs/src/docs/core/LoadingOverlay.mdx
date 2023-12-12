@@ -1,18 +1,18 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: LoadingOverlay
 order: 1
 slug: /core/loading-overlay/
 category: 'overlay'
 description: 'Overlay over given container with centered Loader'
 props: ['LoadingOverlay']
-import: "import { LoadingOverlay } from '@mantine/core';"
-source: 'mantine-core/src/LoadingOverlay/LoadingOverlay.tsx'
+import: "import { LoadingOverlay } from '@asuikit/core';"
+source: 'asuikit-core/src/LoadingOverlay/LoadingOverlay.tsx'
 docs: 'core/LoadingOverlay.mdx'
 ---
 
-import { LoadingOverlayDemos } from '@mantine/demos';
+import { LoadingOverlayDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -44,7 +44,7 @@ LoadingOverlay is built using [Overlay](/core/overlay/) and [Loader](/core/loade
 You can change all props of Loader component, opacity and color of Overlay:
 
 ```tsx
-import { LoadingOverlay } from '@mantine/core';
+import { LoadingOverlay } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -60,11 +60,11 @@ function Demo() {
 
 ## Configure default loader
 
-You can configure default loader in [MantineProvider](/theming/mantine-provider/),
+You can configure default loader in [MantineProvider](/theming/asuikit-provider/),
 it will be used in [Loader](/core/loader/) and LoadingOverlay components by default:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (

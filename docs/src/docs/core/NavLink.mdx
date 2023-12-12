@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: NavLink
 order: 1
 polymorphic: true
@@ -8,13 +8,13 @@ slug: /core/nav-link/
 category: 'navigation'
 description: 'Navigation link'
 props: ['NavLink']
-import: "import { NavLink } from '@mantine/core';"
-source: 'mantine-core/src/NavLink/NavLink.tsx'
+import: "import { NavLink } from '@asuikit/core';"
+source: 'asuikit-core/src/NavLink/NavLink.tsx'
 docs: 'core/NavLink.mdx'
 styles: ['NavLink']
 ---
 
-import { NavLinkDemos } from '@mantine/demos';
+import { NavLinkDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -38,7 +38,7 @@ To create nested links put `NavLink` as children of another `NavLink`:
 you can change that by setting `component` prop:
 
 ```tsx
-import { NavLink } from '@mantine/core';
+import { NavLink } from '@asuikit/core';
 
 function Demo() {
   return <NavLink component="a" href="/home" target="_blank" />;

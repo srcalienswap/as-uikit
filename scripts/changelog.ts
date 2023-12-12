@@ -11,7 +11,7 @@ async function getChangelog() {
   );
   const notes = messages
     .slice(0, lastRelease)
-    .filter((message) => /\[@mantine/.test(message) && !message.includes('[@mantine/demos]'))
+    .filter((message) => /\[@asuikit/.test(message) && !message.includes('[@asuikit/demos]'))
     .map((message) => message.replace('[', '- `[').replace(']', ']`'))
     .join('\n');
 

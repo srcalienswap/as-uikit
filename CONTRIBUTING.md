@@ -39,8 +39,8 @@ Examples:
 
 - `[core] Fix documentation deployment script` – Change made in repository script, it is not related to documentation or any package
 - `[docs] Update report issues link` – Change related to documentation website
-- `[@mantine/core] Button: Add theme focus styles` – Change in `@mantine/core` package at Button component
-- `[@mantine/hooks] use-list-state: Add remove handler` – Change in `@mantine/hooks` package at use-list-state hook
+- `[@asuikit/core] Button: Add theme focus styles` – Change in `@asuikit/core` package at Button component
+- `[@asuikit/hooks] use-list-state: Add remove handler` – Change in `@asuikit/hooks` package at use-list-state hook
 
 ## Git branches
 
@@ -53,7 +53,7 @@ Examples:
 - Fork [repository](https://github.com/mantinedev/mantine), clone or download your fork
 - Install dependencies with yarn – `yarn`
 - Build local version of all packages – `npm run build:all`
-- Build local version of specific packages – `npm run build @mantine/core @mantine/demos @mantine/hooks`
+- Build local version of specific packages – `npm run build @asuikit/core @asuikit/demos @asuikit/hooks`
 - To start storybook – `npm run storybook`
 - To start docs – `npm run docs`
 - To rebuild props descriptions – `npm run docs:docgen`

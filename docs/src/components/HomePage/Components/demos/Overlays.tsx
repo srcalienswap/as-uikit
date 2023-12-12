@@ -14,8 +14,8 @@ import {
   Stepper,
   Pagination,
   Box,
-} from '@mantine/core';
-import { AuthenticationForm, HoverCardHomePageDemo } from '@mantine/demos';
+} from '@asuikit/core';
+import { AuthenticationForm, HoverCardHomePageDemo } from '@asuikit/demos';
 
 function StepperDemo() {
   const [active, setActive] = useState(1);

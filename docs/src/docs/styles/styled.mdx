@@ -6,7 +6,7 @@ order: 5
 search: 'Add styles to components with styled components syntax'
 ---
 
-import { StyledDemos } from '@mantine/demos';
+import { StyledDemos } from '@asuikit/demos';
 
 ## Installation
 
@@ -20,11 +20,11 @@ yarn add @emotion/styled
 npm install @emotion/styled
 ```
 
-**!important** You will need to wrap your application with [MantineProvider](/theming/mantine-provider/)
+**!important** You will need to wrap your application with [MantineProvider](/theming/asuikit-provider/)
 to access [theme](/theming/theme-object/) in styles.
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function App() {
   return (
@@ -64,7 +64,7 @@ Add `emotion.d.ts` declaration file to your `src` folder or to any place include
 
 ```tsx
 import '@emotion/react';
-import type { MantineTheme } from '@mantine/core';
+import type { MantineTheme } from '@asuikit/core';
 
 declare module '@emotion/react' {
   export interface Theme extends MantineTheme {}

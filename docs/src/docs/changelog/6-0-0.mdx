@@ -22,7 +22,7 @@ import {
   PinInputDemos,
   SpotlightDemos,
   CalendarDemos,
-} from '@mantine/demos';
+} from '@asuikit/demos';
 
 ## Breaking changes
 
@@ -39,7 +39,7 @@ with medium text size selected by user, all components will scale based on setti
 are now expected to be defined in rem. `theme.breakpoints` are expected to be defined in `em` units:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -62,7 +62,7 @@ with theme values in [createStyles](https://mantine.dev/styles/create-styles/) a
 use `calc` instead:
 
 ```tsx
-import { createStyles, rem } from '@mantine/core':
+import { createStyles, rem } from '@asuikit/core':
 
 // 5.x expressions that will no longer work in 6.x
 createStyles((theme) => ({
@@ -108,7 +108,7 @@ If you use numbers in Mantine components props, they will be treated as `px` and
 for example:
 
 ```tsx
-import { ColorSwatch } from '@mantine/core';
+import { ColorSwatch } from '@asuikit/core';
 
 function DemoPx() {
   // Specify ColorSwatch size in px, it will be automatically converted to rem
@@ -126,7 +126,7 @@ The same logic is applied to [style props](/styles/style-props/) available
 in every component:
 
 ```tsx
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 function Demo() {
   // width: 2rem, height: 1rem
@@ -139,11 +139,11 @@ function Demo() {
 ### createStyles breaking changes
 
 [createStyles](https://mantine.dev/styles/create-styles/) function no longer receives `getRef`
-as a third argument. Use `getStylesRef` exported from `@mantine/core` package instead:
+as a third argument. Use `getStylesRef` exported from `@asuikit/core` package instead:
 
 ```tsx
 // in 5.x, will not work in 6.x
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@asuikit/core';
 
 createStyles((theme, params, getRef) => {
   child: { ref: getRef('child') },
@@ -151,7 +151,7 @@ createStyles((theme, params, getRef) => {
 });
 
 // in 6.x use getStylesRef function
-import { createStyles, getStylesRef } from '@mantine/core';
+import { createStyles, getStylesRef } from '@asuikit/core';
 
 createStyles((theme, params) => {
   child: { ref: getStylesRef('child') },
@@ -159,16 +159,16 @@ createStyles((theme, params) => {
 });
 ```
 
-### @mantine/notifications breaking changes
+### @asuikit/notifications breaking changes
 
-[@mantine/notifications](https://mantine.dev/others/notifications/) package no longer exports
+[@asuikit/notifications](https://mantine.dev/others/notifications/) package no longer exports
 `NotificationsProvider` component. Instead you should add `Notifications` component to any
 part of your application. This change allows to avoid unnecessary rerenders of child components
 when notifications state change. Also `useNotifications` hook is no longer exported from the package.
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
-import { Notifications } from '@mantine/notifications';
+import { MantineProvider } from '@asuikit/core';
+import { Notifications } from '@asuikit/notifications';
 
 function Demo() {
   return (
@@ -180,15 +180,15 @@ function Demo() {
 }
 ```
 
-### @mantine/rte package deprecation
+### @asuikit/rte package deprecation
 
-`@mantine/rte` package is deprecated – it will no longer receive updates (last version will remain 5.x)
-and it may no longer be compatible with `@mantine/core` and `@mantine/hooks` packages (6.x and later versions).
-Migrate to [@mantine/tiptap](https://mantine.dev/others/tiptap/) as soon as possible.
+`@asuikit/rte` package is deprecated – it will no longer receive updates (last version will remain 5.x)
+and it may no longer be compatible with `@asuikit/core` and `@asuikit/hooks` packages (6.x and later versions).
+Migrate to [@asuikit/tiptap](https://mantine.dev/others/tiptap/) as soon as possible.
 
-### @mantine/dates breaking changes
+### @asuikit/dates breaking changes
 
-All components from `@mantine/dates` package were rebuilt from scratch.
+All components from `@asuikit/dates` package were rebuilt from scratch.
 Note that the following list is not full as it is difficult to include all breaking changes
 after a full package revamp – follow documentation of component that you use to find out about
 all breaking changes.
@@ -210,7 +210,7 @@ use components prop to specify format instead:
 
 ```tsx
 // 5.x, will not work in 6.x
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -221,7 +221,7 @@ function Demo() {
 }
 
 // 6.x – use components props
-import { DatePickerInput } from '@mantine/dates';
+import { DatePickerInput } from '@asuikit/dates';
 
 function Demo() {
   return <DatePickerInput valueFormat="MMMM D, YYYY" locale="es" />;
@@ -260,7 +260,7 @@ not possible to differentiate controlled and uncontrolled `NumberInput`.
 
 ```tsx
 import { useState } from 'react';
-import { NumberInput } from '@mantine/core';
+import { NumberInput } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState<number | ''>(0);
@@ -277,7 +277,7 @@ function Demo() {
   - `initialPage` → `defaultValue`
   - `page` → `value`
 
-### @mantine/spotlight breaking changes
+### @asuikit/spotlight breaking changes
 
 [Spotlight](https://mantine.dev/others/spotlight/) component was migrated to use [Modal](https://mantine.dev/core/modal/)
 under the hood. Its Styles API selectors and some props names were changed – it now supports all [Modal](https://mantine.dev/core/modal/) component props.
@@ -304,14 +304,14 @@ Renamed props:
 - [PasswordInput](https://mantine.dev/core/password-input/) Styles API was changed – `invalid` and `withIcon` selectors are no longer available, use `data-invalid` and `data-with-icon` attributes with `innerInput` selector
 - `invalid` prop was renamed to `error` in [Input](https://mantine.dev/core/input/) component
 - [FileInput](https://mantine.dev/core/file-input/), [Select](https://mantine.dev/core/select/) and [MultiSelect](https://mantine.dev/core/multi-select/) components no longer support `clearButtonLabel` and `clearButtonTabIndex` props, use `clearButtonProps` instead to add any extra props to the clear button
-- `@mantine/next` package no longer exports `NextLink` component
+- `@asuikit/next` package no longer exports `NextLink` component
 - [Checkbox.Group](https://mantine.dev/core/checkbox/), [Switch.Group](https://mantine.dev/core/switch/) and [Radio.Group](https://mantine.dev/core/radio/) components no longer include [Group](https://mantine.dev/core/group/) – `orientation`, `offset` and `spacing` props are no longer supported. This change gives you more freedom on how to organize inputs layout.
 - [Chip.Group](https://mantine.dev/core/chip/) no longer includes `Group` – you need to manage layout on your side
 - [List](https://mantine.dev/core/list/) component Styles API was changed, it no longer has `withIcon` selector, use `data-with-icon` attribute instead
 - `withFocusReturn` prop was renamed to `returnFocus` in [Modal](https://mantine.dev/core/modal/) and [Drawer](https://mantine.dev/core/drawer/) components
 - [Card](https://mantine.dev/core/card/) component now uses `padding` prop instead of `p` to offset `Card.Section` components
 - [RichTextEditor](https://mantine.dev/others/tiptap/) now depends on `@tabler/icons-react` (`>=2.1.0`) package instead of `@tabler/icons`
-- `@mantine/core` package no longer exports `GroupedTransition` component, use multiple [Transition](https://mantine.dev/core/transition/) components instead
+- `@asuikit/core` package no longer exports `GroupedTransition` component, use multiple [Transition](https://mantine.dev/core/transition/) components instead
 - `use-scroll-lock` hook is deprecated, all Mantine components now use [react-remove-scroll](https://github.com/theKashey/react-remove-scroll)
 - [ScrollArea.Autosize](https://mantine.dev/core/scroll-area/) component prop `maxHeight` is removed, it is replaced with `mah` [style prop](https://mantine.dev/styles/style-props/)
 - [SegmentedControl](https://mantine.dev/core/segmented-control/) component Styles API was changed – `labelActive` and `disabled` selectors were removed (replaced with `data-active` and `data-disabled` attributes on `label` selector), `active` selector was renamed to `indicator`
@@ -322,7 +322,7 @@ Renamed props:
 
 ## Variants and sizes on MantineProvider
 
-You can now use [MantineProvider](https://mantine.dev/theming/mantine-provider/) to add variants to all Mantine components that support [Styles API](https://mantine.dev/styles/styles-api/)
+You can now use [MantineProvider](https://mantine.dev/theming/asuikit-provider/) to add variants to all Mantine components that support [Styles API](https://mantine.dev/styles/styles-api/)
 and sizes to components that support `size` prop.
 
 Variants:
@@ -333,9 +333,9 @@ Sizes:
 
 <Demo data={ThemeDemos.sizes} />
 
-## Updated @mantine/dates package
+## Updated @asuikit/dates package
 
-`@mantine/dates` package was rebuilt from scratch, it now includes new components to
+`@asuikit/dates` package was rebuilt from scratch, it now includes new components to
 pick [year](https://mantine.dev/dates/year-picker/), [month](https://mantine.dev/dates/month-picker/)
 and [dates](https://mantine.dev/dates/date-picker/). All new pickers support `type` prop that can be:
 
@@ -389,7 +389,7 @@ For example, you can build week picker component with it:
 ### [DatesProvider](https://mantine.dev/dates/dates-provider/)
 
 `DatesProvider` component lets you set various settings that are shared across all
-components exported from `@mantine/dates` package:
+components exported from `@asuikit/dates` package:
 
 <Demo data={DatesProviderDemos.usage} />
 
@@ -454,7 +454,7 @@ be hidden with `display: none` styles.
 
 <Demo data={PaginationDemos.composition} />
 
-## @mantine/spotlight improvements
+## @asuikit/spotlight improvements
 
 ### Controlled actions
 
@@ -473,8 +473,8 @@ You can now fully control search query:
 - `rightSection` of all inputs is now based on `size` prop by default (previously it was a static value)
 - [Chip](https://mantine.dev/core/chip/) component now supports `filled`, `outline` and `light` variants
 - `theme.headings.fontFamily` now fallbacks to `theme.fontFamily` if value is not defined on `MantineProvider`
-- [@mantine/notifications](https://mantine.dev/others/notifications/) package now exports `notifications` object that includes functions to show, update, hide, clean and clean queue
-- [@mantine/nprogress](https://mantine.dev/others/nprogress/), [@mantine/modals](https://mantine.dev/others/modals/) and [@mantine/spotlight](https://mantine.dev/others/spotlight/) packages now exports `nprogress`, `modals` and `spotlight` objects with all package methods
+- [@asuikit/notifications](https://mantine.dev/others/notifications/) package now exports `notifications` object that includes functions to show, update, hide, clean and clean queue
+- [@asuikit/nprogress](https://mantine.dev/others/nprogress/), [@asuikit/modals](https://mantine.dev/others/modals/) and [@asuikit/spotlight](https://mantine.dev/others/spotlight/) packages now exports `nprogress`, `modals` and `spotlight` objects with all package methods
 - [use-os](https://mantine.dev/hooks/use-os/) hook now sets initial value in `useLayoutEffect` by default (configurable with option) to avoid hydration mismatches
 - [use-id](https://mantine.dev/hooks/use-id/) hook now always generate random id when component is mounted to replace id generated by `React.useId` hook. This change prevents browser from showing incorrect autocomplete suggestions for inputs.
 - [Timeline](https://mantine.dev/core/timeline/) component now supports `root` Styles API selector
@@ -485,7 +485,7 @@ You can now fully control search query:
 - [Highlight](https://mantine.dev/core/highlight/) component now supports changing styles per highlighted substring
 - [JsonInput](https://mantine.dev/core/json-input/) component now supports `serialize` and `deserialize` props to allow custom JSON formats
 - [Modals manager](https://mantine.dev/others/modals/) now supports type safe context modals
-- [@mantine/form](https://mantine.dev/form/validators/) now exports new `matchesField` validator
+- [@asuikit/form](https://mantine.dev/form/validators/) now exports new `matchesField` validator
 - [form.getInputProps](https://mantine.dev/form/validators/) `withError` parameter is now true by default for all inputs
 - New [use-headroom](https://mantine.dev/hooks/use-headroom/) hook
 

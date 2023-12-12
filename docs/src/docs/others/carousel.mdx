@@ -1,41 +1,41 @@
 ---
 group: 'Other packages'
-package: '@mantine/carousel'
+package: '@asuikit/carousel'
 title: 'Carousel'
 order: 1
 slug: /others/carousel/
 description: 'Embla based carousel component'
 componentPrefix: 'Carousel'
 props: ['Carousel', 'CarouselSlide']
-import: "import { Carousel } from '@mantine/carousel';"
-source: 'mantine-carousel/src'
+import: "import { Carousel } from '@asuikit/carousel';"
+source: 'asuikit-carousel/src'
 docs: 'others/carousel.mdx'
-installation: '@mantine/carousel'
+installation: '@asuikit/carousel'
 styles: ['Carousel']
 license: MIT
 ---
 
-import { CarouselDemos } from '@mantine/demos';
+import { CarouselDemos } from '@asuikit/demos';
 
 ## Installation
 
-Package depends on `@mantine/core` and `@mantine/hooks`.
+Package depends on `@asuikit/core` and `@asuikit/hooks`.
 
 Install with yarn:
 
 ```bash
-yarn add embla-carousel-react @mantine/carousel
+yarn add embla-carousel-react @asuikit/carousel
 ```
 
 Install with npm:
 
 ```bash
-npm install embla-carousel-react @mantine/carousel
+npm install embla-carousel-react @asuikit/carousel
 ```
 
 ## Usage
 
-`@mantine/carousel` package is based on [embla carousel](https://www.embla-carousel.com/),
+`@asuikit/carousel` package is based on [embla carousel](https://www.embla-carousel.com/),
 it supports most of its features:
 
 <Demo data={CarouselDemos.usage} />
@@ -54,7 +54,7 @@ You can also control size and gap of each slide individually by setting `size` a
 on `Carousel.Slide` component:
 
 ```tsx
-import { Carousel } from '@mantine/carousel';
+import { Carousel } from '@asuikit/carousel';
 
 function Demo() {
   return (
@@ -105,7 +105,7 @@ Set `height="100%"` to make Carousel take 100% height of the container. Note tha
 - container element must have fixed height
 
 ```tsx
-import { Carousel } from '@mantine/carousel';
+import { Carousel } from '@asuikit/carousel';
 
 export function PercentageHeight() {
   return (
@@ -130,7 +130,7 @@ You will be able enhance carousel with additional logic after that using embla a
 ## Embla plugins
 
 Set `plugins` prop to enhance carousel with [embla plugins](https://www.embla-carousel.com/plugins/).
-Note that plugins are not installed with `@mantine/carousel` package and you will need to
+Note that plugins are not installed with `@asuikit/carousel` package and you will need to
 install them on your side.
 
 Example with [autoplay plugin](https://www.embla-carousel.com/plugins/autoplay/):
@@ -173,7 +173,7 @@ Example of incorrect slides offset calculation (scroll though slides):
 
 <Demo data={CarouselDemos.brokenAnimation} demoProps={{ toggle: true }} />
 
-To solve this issue use `useAnimationOffsetEffect` hook exported from `@mantine/carousel` package.
+To solve this issue use `useAnimationOffsetEffect` hook exported from `@asuikit/carousel` package.
 It accepts embla instance as first argument and transition duration as second:
 
 <Demo data={CarouselDemos.animationOffset} />

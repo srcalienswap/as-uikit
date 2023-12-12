@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 import {
   IconArrowsMaximize,
   IconClock,
@@ -8,8 +8,8 @@ import {
   IconMaximize,
   IconResize,
 } from '@tabler/icons-react';
-import { Demo } from '@mantine/ds';
-import { FormDemos, HooksDemos } from '@mantine/demos';
+import { Demo } from '@asuikit/ds';
+import { FormDemos, HooksDemos } from '@asuikit/demos';
 import { DemoTabs } from '../DemoTabs/DemoTabs';
 
 const data = [
@@ -55,13 +55,13 @@ export function Hooks() {
   return (
     <Box
       sx={(theme) => ({
-        '& .mantine-Prism-code': {
+        '& .asuikit-Prism-code': {
           backgroundColor: `${
             theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white
           } !important`,
         },
 
-        '& .mantine-CodeDemo-root': {
+        '& .asuikit-CodeDemo-root': {
           marginTop: 0,
           boxShadow: theme.shadows.md,
         },

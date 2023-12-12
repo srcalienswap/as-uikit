@@ -1,7 +1,7 @@
 import React from 'react';
-import { em, Tooltip } from '@mantine/core';
-import { useClipboard, useMediaQuery } from '@mantine/hooks';
-import { Prism } from '@mantine/prism';
+import { em, Tooltip } from '@asuikit/core';
+import { useClipboard, useMediaQuery } from '@asuikit/hooks';
+import { Prism } from '@asuikit/prism';
 import { Language } from 'prism-react-renderer';
 import useStyles from './HeaderCode.styles';
 

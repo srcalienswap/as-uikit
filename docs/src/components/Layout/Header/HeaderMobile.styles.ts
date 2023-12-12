@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@asuikit/core';
 import { NAVBAR_BREAKPOINT } from '../Navbar/Navbar.styles';
 import { HEADER_HEIGHT } from './HeaderDesktop.styles';
 

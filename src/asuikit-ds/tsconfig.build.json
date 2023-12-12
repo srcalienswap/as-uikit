@@ -1,0 +1,38 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["./src", "./types", "../../configuration/types"],
+  "exclude": [
+    "./lib",
+    "./esm",
+    "./cjs",
+    "**/*.story.tsx",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/styles.api.ts",
+    "src/components/*/demos/*",
+    "src/demos.ts"
+  ],
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "composite": true,
+    "declarationDir": "lib",
+    "paths": {
+      "@asuikit/core": ["../asuikit-core/src"],
+      "@asuikit/hooks": ["../asuikit-hooks/src"],
+      "@asuikit/tests": ["../asuikit-tests/src"],
+      "@asuikit/utils": ["../asuikit-utils/src"],
+      "@asuikit/prism": ["../asuikit-prism/src"]
+    }
+  },
+  "references": [
+    { "path": "../asuikit-core" },
+    { "path": "../asuikit-hooks" },
+    { "path": "../asuikit-prism" },
+    { "path": "../asuikit-utils" },
+    { "path": "../asuikit-tests" }
+  ]
+}

@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: MediaQuery
 order: 1
 slug: /core/media-query/
 category: 'layout'
 description: 'Apply styles to children if media query matches'
 props: ['MediaQuery']
-import: "import { MediaQuery } from '@mantine/core';"
-source: 'mantine-core/src/MediaQuery/MediaQuery.tsx'
+import: "import { MediaQuery } from '@asuikit/core';"
+source: 'asuikit-core/src/MediaQuery/MediaQuery.tsx'
 docs: 'core/MediaQuery.mdx'
 ---
 
-import { DEFAULT_THEME } from '@mantine/core';
-import { MediaQueryDemos } from '@mantine/demos';
+import { DEFAULT_THEME } from '@asuikit/core';
+import { MediaQueryDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -46,7 +46,7 @@ Default breakpoints:
 To change these values wrap your application with MantineProvider and set `breakpoints` prop on theme:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -90,7 +90,7 @@ not have correct styles:
 
 ```tsx
 // Invalid MediaQuery usage, do not do this
-import { MediaQuery } from '@mantine/core';
+import { MediaQuery } from '@asuikit/core';
 
 function InvalidDemo() {
   return <MediaQuery>No styles applied</MediaQuery>;

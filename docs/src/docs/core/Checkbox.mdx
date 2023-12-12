@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Checkbox
 order: 1
 slug: /core/checkbox/
@@ -8,13 +8,13 @@ category: 'inputs'
 description: 'Capture boolean input from user'
 componentPrefix: 'Checkbox'
 props: ['Checkbox', 'CheckboxGroup']
-import: "import { Checkbox } from '@mantine/core';"
-source: 'mantine-core/src/Checkbox/Checkbox.tsx'
+import: "import { Checkbox } from '@asuikit/core';"
+source: 'asuikit-core/src/Checkbox/Checkbox.tsx'
 docs: 'core/Checkbox.mdx'
 styles: ['Checkbox']
 ---
 
-import { CheckboxDemos } from '@mantine/demos';
+import { CheckboxDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -49,7 +49,7 @@ Checkbox supports indeterminate state. When `indeterminate` prop is true,
 
 ```tsx
 import { useState } from 'react';
-import { Checkbox } from '@mantine/core';
+import { Checkbox } from '@asuikit/core';
 
 function Demo() {
   const [checked, setChecked] = useState(false);
@@ -71,7 +71,7 @@ function Demo() {
 
 ```tsx
 import { useState } from 'react';
-import { Checkbox } from '@mantine/core';
+import { Checkbox } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState<string[]>([]);
@@ -91,7 +91,7 @@ You can get input ref by setting `ref` prop:
 
 ```tsx
 import { useRef } from 'react';
-import { Checkbox } from '@mantine/core';
+import { Checkbox } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLInputElement>(null);

@@ -6,17 +6,17 @@ import {
   Global,
   createEmotionCache,
   rem,
-} from '@mantine/core';
-import { useHotkeys, useLocalStorage } from '@mantine/hooks';
+} from '@asuikit/core';
+import { useHotkeys, useLocalStorage } from '@asuikit/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { LayoutInner, LayoutProps } from './LayoutInner';
 import { DirectionContext } from './DirectionContext';
 import { GreycliffCF } from '../../fonts/GreycliffCF/GreycliffCF';
 
-const THEME_KEY = 'mantine-color-scheme';
+const THEME_KEY = 'asuikit-color-scheme';
 
 const rtlCache = createEmotionCache({
-  key: 'mantine-rtl',
+  key: 'asuikit-rtl',
   prepend: true,
   stylisPlugins: [rtlPlugin],
 });

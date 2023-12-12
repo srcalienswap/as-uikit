@@ -1,22 +1,22 @@
 ---
-group: 'mantine-form'
-package: '@mantine/form'
+group: 'asuikit-form'
+package: '@asuikit/form'
 title: 'Form errors'
 order: 2
 slug: /form/errors/
 description: 'Manipulate form errors with use-form'
 docs: 'form/errors.mdx'
-source: 'mantine-form/src'
+source: 'asuikit-form/src'
 ---
 
-import { FormDemos } from '@mantine/demos';
+import { FormDemos } from '@asuikit/demos';
 
 ## Errors object
 
 `form.errors` is an object of React nodes that contains validation errors:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { firstName: '', lastName: '' },
@@ -45,7 +45,7 @@ form.errors; // ->
 Same as with [initial values](/form/values/) you can set initial form errors:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { firstName: '', lastName: '' },
@@ -59,7 +59,7 @@ const form = useForm({
 ## setErrors handler
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm();
 form.setErrors({ firstName: 'Too short', email: 'Invalid email' });
@@ -73,7 +73,7 @@ form.errors;
 `form.setFieldError` handler sets error of the given field:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({ initialValues: { name: '', email: '' } });
 form.setFieldError('email', 'Invalid email');
@@ -86,7 +86,7 @@ form.errors; // -> { email: 'Invalid email' }
 `form.clearErrors` handler clear all form errors:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({ initialErrors: { name: 'Too short', email: 'Invalid email' } });
 form.clearErrors();
@@ -100,7 +100,7 @@ console.log(form.errors);
 `form.clearFieldError` handler clears error of the given field:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({ initialErrors: { name: 'Too short', email: 'Invalid email' } });
 form.clearFieldError('name');
@@ -114,7 +114,7 @@ console.log(form.errors);
 You can use any React node as an error message:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { name: '', email: '' },
@@ -128,7 +128,7 @@ const form = useForm({
 Note that errors that are `false`, `null` or `undefined` will be automatically removed:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({ initialErrors: { name: 'name-error', email: null } });
 form.errors; // -> { name: 'name-error' }, email error is not included in errors object
@@ -136,16 +136,16 @@ form.errors; // -> { name: 'name-error' }, email error is not included in errors
 
 ## FormErrors type
 
-`form.errors` type is `Record<string, React.ReactNode>`, you can import a shorthand `FormErrors` type from `@mantine/form`:
+`form.errors` type is `Record<string, React.ReactNode>`, you can import a shorthand `FormErrors` type from `@asuikit/form`:
 
 ```tsx
-import type { FormErrors } from '@mantine/form';
+import type { FormErrors } from '@asuikit/form';
 ```
 
 You can also get type directly from the `form` instance:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm();
 

@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@asuikit/core';
 
 export default createStyles((theme) => ({
   code: {

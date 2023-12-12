@@ -5,7 +5,7 @@ slug: /guides/polymorphic/
 search: 'Create custom polymorphic components with Box'
 ---
 
-import { ButtonDemos } from '@mantine/demos';
+import { ButtonDemos } from '@asuikit/demos';
 
 # Polymorphic components
 
@@ -25,7 +25,7 @@ with `react-router-dom` Link:
 
 ```tsx
 import { Link } from 'react-router-dom';
-import { Button } from '@mantine/core';
+import { Button } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -43,7 +43,7 @@ Next.js link does not work in the same way as other similar components in all Ne
 ```tsx
 // For Next.js 12 and below
 import Link from 'next/link';
-import { Button } from '@mantine/core';
+import { Button } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -57,7 +57,7 @@ function Demo() {
 ```tsx
 // For Next.js 13 and above
 import Link from 'next/link';
-import { Button } from '@mantine/core';
+import { Button } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -73,7 +73,7 @@ function Demo() {
 Polymorphic components cannot infer ref and events correctly in some cases. When this happens – provide generic component type:
 
 ```tsx
-import { Button } from '@mantine/core';
+import { Button } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -98,7 +98,7 @@ and [Box](/core/box/) component:
 
 ```tsx
 import { forwardRef } from 'react';
-import { Box, createPolymorphicComponent } from '@mantine/core';
+import { Box, createPolymorphicComponent } from '@asuikit/core';
 
 interface ButtonProps {
   children: React.ReactNode;

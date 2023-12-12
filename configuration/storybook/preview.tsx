@@ -7,14 +7,14 @@ import {
   ActionIcon,
   createEmotionCache,
   rem,
-} from '@mantine/core';
-import { useHotkeys } from '@mantine/hooks';
+} from '@asuikit/core';
+import { useHotkeys } from '@asuikit/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
 
 export const parameters = { layout: 'fullscreen' };
 
 const rtlCache = createEmotionCache({
-  key: 'mantine-rtl',
+  key: 'asuikit-rtl',
   prepend: true,
   stylisPlugins: [rtlPlugin],
 });

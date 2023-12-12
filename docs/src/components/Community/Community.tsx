@@ -1,6 +1,6 @@
 import React from 'react';
-import { SimpleGrid, Group, Text, Card } from '@mantine/core';
-import { GithubIcon, TwitterIcon, meta, DiscordIcon } from '@mantine/ds';
+import { SimpleGrid, Group, Text, Card } from '@asuikit/core';
+import { GithubIcon, TwitterIcon, meta, DiscordIcon } from '@asuikit/ds';
 import useStyles from './Community.styles';
 
 export function Community() {

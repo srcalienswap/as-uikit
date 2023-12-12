@@ -1,25 +1,25 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: AppShell
 order: 1
 slug: /core/app-shell/
 category: 'layout'
 description: 'Responsive shell for your application with header and navbar'
 props: ['AppShell', 'Navbar', 'Header', 'Aside', 'Footer']
-import: "import { AppShell, Navbar, Header, Aside, Footer } from '@mantine/core';"
-source: 'mantine-core/src/AppShell/AppShell.tsx'
+import: "import { AppShell, Navbar, Header, Aside, Footer } from '@asuikit/core';"
+source: 'asuikit-core/src/AppShell/AppShell.tsx'
 docs: 'core/AppShell.mdx'
 styles: ['AppShell']
 ---
 
-import { Anchor } from '@mantine/core';
-import { AppShellDemos } from '@mantine/demos';
+import { Anchor } from '@asuikit/core';
+import { AppShellDemos } from '@asuikit/demos';
 
 ## Usage
 
 AppShell is a layout component that can be used to create a common Header - Navbar - Footer - Aside - Content layout pattern.
-AppShell, Header, Footer, Aside and Navbar components include bare minimum default styles to simplify customization. [View full source code](https://github.com/mantinedev/mantine/tree/master/src/mantine-demos/src/demos/core/AppShell)
+AppShell, Header, Footer, Aside and Navbar components include bare minimum default styles to simplify customization. [View full source code](https://github.com/mantinedev/mantine/tree/master/src/asuikit-demos/src/demos/core/AppShell)
 
 <Demo data={AppShellDemos.usage} />
 
@@ -41,7 +41,7 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
-} from '@mantine/core';
+} from '@asuikit/core';
 
 export default function AppShellDemo() {
   const theme = useMantineTheme();
@@ -109,7 +109,7 @@ To place `Navbar` and `Aside` components above `Header` and `Footer`, set `layou
 To hide all AppShell components and render only children set `hidden` prop:
 
 ```tsx
-import { AppShell, Navbar, Header } from '@mantine/core';
+import { AppShell, Navbar, Header } from '@asuikit/core';
 
 function Demo() {
   // Navbar and Header will not be rendered when hidden prop is set
@@ -123,14 +123,14 @@ function Demo() {
 
 ## Navbar and Aside components
 
-Navbar and Aside components can be used outside of AppShell context ([View full source code](https://github.com/mantinedev/mantine/tree/master/src/mantine-demos/src/demos/core/AppShell)):
+Navbar and Aside components can be used outside of AppShell context ([View full source code](https://github.com/mantinedev/mantine/tree/master/src/asuikit-demos/src/demos/core/AppShell)):
 
 <Demo data={AppShellDemos.navbar} />
 
 ### Navbar.Section and Aside.Section
 
 ```tsx
-import { Navbar } from '@mantine/core';
+import { Navbar } from '@asuikit/core';
 
 function Demo() {
   // Same can be applied to Aside component with Aside.Section component
@@ -152,7 +152,7 @@ function Demo() {
 ### Responsive width
 
 ```tsx
-import { Navbar } from '@mantine/core';
+import { Navbar } from '@asuikit/core';
 
 function Demo() {
   // Same can be applied to Aside component
@@ -180,7 +180,7 @@ function Demo() {
 To make Navbar or Aside static, set `fixed={false}`:
 
 ```tsx
-import { Navbar } from '@mantine/core';
+import { Navbar } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -193,7 +193,7 @@ function Demo() {
 
 ### Custom scrollbars
 
-`Navbar.Section` and `Aside.Section` components can be used with [ScrollArea](/core/scroll-area/) component ([View full source code](https://github.com/mantinedev/mantine/tree/master/src/mantine-demos/src/demos/core/AppShell)):
+`Navbar.Section` and `Aside.Section` components can be used with [ScrollArea](/core/scroll-area/) component ([View full source code](https://github.com/mantinedev/mantine/tree/master/src/asuikit-demos/src/demos/core/AppShell)):
 
 <Demo data={AppShellDemos.scrollbars} />
 

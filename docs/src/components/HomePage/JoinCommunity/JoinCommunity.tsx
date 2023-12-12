@@ -1,4 +1,4 @@
-import { Space } from '@mantine/core';
+import { Space } from '@asuikit/core';
 import React from 'react';
 import { Community } from '../../Community/Community';
 import { PageSection } from '../PageSection/PageSection';

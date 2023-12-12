@@ -28,12 +28,12 @@ Init new application:
 yarn create next-app --typescript
 ```
 
-<PackagesInstallation extraPackages={['@mantine/next', '@emotion/server']} />
+<PackagesInstallation extraPackages={['@asuikit/next', '@emotion/server']} />
 
 Create `pages/_document.tsx` file:
 
 ```tsx
-import { createGetInitialProps } from '@mantine/next';
+import { createGetInitialProps } from '@asuikit/next';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 const getInitialProps = createGetInitialProps();
@@ -55,12 +55,12 @@ export default class _Document extends Document {
 }
 ```
 
-Add [MantineProvider](/theming/mantine-provider/) to `pages/_app.tsx`:
+Add [MantineProvider](/theming/asuikit-provider/) to `pages/_app.tsx`:
 
 ```tsx
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -100,7 +100,7 @@ for that you will need to setup Mantine ssr styles extraction on your side:
 
 ```tsx
 import Document, { DocumentContext } from 'next/document';
-import { ServerStyles, createStylesServer } from '@mantine/next';
+import { ServerStyles, createStylesServer } from '@asuikit/next';
 
 // optional: you can provide your cache as a first argument in createStylesServer function
 const stylesServer = createStylesServer();

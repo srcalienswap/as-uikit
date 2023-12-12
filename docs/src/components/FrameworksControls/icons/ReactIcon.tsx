@@ -1,5 +1,5 @@
 import React from 'react';
-import { rem } from '@mantine/core';
+import { rem } from '@asuikit/core';
 
 export function ReactIcon() {
   return (

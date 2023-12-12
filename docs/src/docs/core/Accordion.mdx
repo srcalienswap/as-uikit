@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Accordion
 order: 1
 slug: /core/accordion/
 category: 'data-display'
 description: 'Divide content into collapsible sections'
 props: ['Accordion', 'AccordionControl', 'AccordionItem', 'AccordionPanel']
-import: "import { Accordion } from '@mantine/core';"
-source: 'mantine-core/src/Accordion/Accordion.tsx'
+import: "import { Accordion } from '@asuikit/core';"
+source: 'asuikit-core/src/Accordion/Accordion.tsx'
 docs: 'core/Accordion.mdx'
 styles: ['Accordion']
 ---
 
-import { AccordionDemos } from '@mantine/demos';
+import { AccordionDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -46,7 +46,7 @@ To disable transitions, set `transitionDuration` to 0:
 When `multiple={false}`, set `defaultValue` as string:
 
 ```tsx
-import { Accordion } from '@mantine/core';
+import { Accordion } from '@asuikit/core';
 
 function Demo() {
   // Second item will be opened by default
@@ -69,7 +69,7 @@ function Demo() {
 When `multiple={true}`, set `defaultValue` as an array of strings:
 
 ```tsx
-import { Accordion } from '@mantine/core';
+import { Accordion } from '@asuikit/core';
 
 function Demo() {
   // Both items will be opened by default
@@ -95,7 +95,7 @@ When `multiple={false}`, set `value` as string:
 
 ```tsx
 import { useState } from 'react';
-import { Accordion } from '@mantine/core';
+import { Accordion } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState<string | null>(null);
@@ -120,7 +120,7 @@ When `multiple={true}`, set `value` as an array of strings:
 
 ```tsx
 import { useState } from 'react';
-import { Accordion } from '@mantine/core';
+import { Accordion } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState<string[]>([]);
@@ -176,7 +176,7 @@ Accordion elements have `data-` attributes that can be used with [Styles API](/s
 - `data-rotate` attribute is added to chevron icon when icon should rotate (controlled by `disableChevronRotation` and expanded state of associated panel)
 
 ```tsx
-import { Accordion, rem } from '@mantine/core';
+import { Accordion, rem } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -209,11 +209,11 @@ function Demo() {
 
 ## TypeScript
 
-`AccordionProps` type exported from `@mantine/core` is a generic, it accepts boolean type that
+`AccordionProps` type exported from `@asuikit/core` is a generic, it accepts boolean type that
 describes `multiple` state:
 
 ```tsx
-import type { AccordionProps } from '@mantine/core';
+import type { AccordionProps } from '@asuikit/core';
 
 type MultipleAccordionProps = AccordionProps<true>;
 type DefaultAccordionProps = AccordionProps<false>;
@@ -229,7 +229,7 @@ Set `order` on `Accordion` component to wrap accordion controls with h2-h6 headi
 The following example will wrap controls with h3 tag:
 
 ```tsx
-import { Accordion } from '@mantine/core';
+import { Accordion } from '@asuikit/core';
 
 function Demo() {
   return <Accordion order={3}>{/* ...items */}</Accordion>;

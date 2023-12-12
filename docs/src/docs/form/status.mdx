@@ -1,15 +1,15 @@
 ---
-group: 'mantine-form'
-package: '@mantine/form'
+group: 'asuikit-form'
+package: '@asuikit/form'
 title: 'Touched & dirty'
 order: 3
 slug: /form/status/
 description: 'Get fields and form touched and dirty status'
 docs: 'form/status.mdx'
-source: 'mantine-form/src'
+source: 'asuikit-form/src'
 ---
 
-import { FormDemos } from '@mantine/demos';
+import { FormDemos } from '@asuikit/demos';
 
 ## Touched and dirty state
 
@@ -23,7 +23,7 @@ import { FormDemos } from '@mantine/demos';
 ## isTouched and isDirty functions
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({ initialValues: { a: 1, nested: { field: '' } } });
 
@@ -44,7 +44,7 @@ You can provide initial touched and dirty values with `initialTouched` and `init
 Both properties support [the same fields path format as errors](/form/errors/):
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { a: 1, nested: { field: '' } },
@@ -59,7 +59,7 @@ const form = useForm({
 Note that `form.reset` will also reset `touched` and `dirty` state:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { a: 1 },
@@ -80,7 +80,7 @@ form.isDirty('a'); // -> false
 To reset values that are used for dirty check call `form.resetDirty` with new values:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { a: 1 },

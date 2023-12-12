@@ -13,8 +13,8 @@ import {
   AccordionDemos,
   ThemeDemos,
   InputDemos,
-} from '@mantine/demos';
-import { Slider as SliderStylesApi, Button as ButtonStylesApi } from '@mantine/styles-api';
+} from '@asuikit/demos';
+import { Slider as SliderStylesApi, Button as ButtonStylesApi } from '@asuikit/styles-api';
 
 # Styles API
 
@@ -38,7 +38,7 @@ styles names table. The name column will tell you how to target a specific eleme
   head={['Name', 'Static selector', 'Description']}
   data={Object.keys(SliderStylesApi).map((name) => [
     name,
-    `.mantine-Slider-${name}`,
+    `.asuikit-Slider-${name}`,
     SliderStylesApi[name],
   ])}
 />
@@ -57,7 +57,7 @@ Now you can write styles for your component with createStyles function
 or any other styling tools and languages:
 
 ```tsx
-import { Slider, createStyles, rem } from '@mantine/core';
+import { Slider, createStyles, rem } from '@asuikit/core';
 
 const useStyles = createStyles((theme) => ({
   track: {
@@ -112,7 +112,7 @@ Styles names for button component:
   head={['Name', 'Static selector', 'Description']}
   data={Object.keys(ButtonStylesApi).map((name) => [
     name,
-    `.mantine-Button-${name}`,
+    `.asuikit-Button-${name}`,
     ButtonStylesApi[name],
   ])}
 />
@@ -133,7 +133,7 @@ All styles defined there will be added to each component rendered inside provide
 If component does not specify Styles API selectors, then in most cases you can add styles using `root` selector:
 
 ```tsx
-import { MantineProvider, Text } from '@mantine/core';
+import { MantineProvider, Text } from '@asuikit/core';
 
 function App() {
   return (

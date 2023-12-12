@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import { createStyles, MantineTheme, rem, em } from '@mantine/core';
+import { createStyles, MantineTheme, rem, em } from '@asuikit/core';
 import { HEADER_HEIGHT } from '../Header/HeaderDesktop.styles';
 
 export const NAVBAR_WIDTH = 260;

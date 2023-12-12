@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery, navigate } from 'gatsby';
-import { randomId, useMediaQuery } from '@mantine/hooks';
-import { Notifications } from '@mantine/notifications';
-import { ModalsProvider, ContextModalProps } from '@mantine/modals';
-import { SpotlightProvider, SpotlightAction, useSpotlight } from '@mantine/spotlight';
-import { Text, Button, rem, em } from '@mantine/core';
+import { randomId, useMediaQuery } from '@asuikit/hooks';
+import { Notifications } from '@asuikit/notifications';
+import { ModalsProvider, ContextModalProps } from '@asuikit/modals';
+import { SpotlightProvider, SpotlightAction, useSpotlight } from '@asuikit/spotlight';
+import { Text, Button, rem, em } from '@asuikit/core';
 import { IconSearch } from '@tabler/icons-react';
 import MdxProvider from '../MdxPage/MdxProvider/MdxProvider';
 import Navbar from './Navbar/Navbar';

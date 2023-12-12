@@ -1,15 +1,15 @@
 ---
-group: 'mantine-form'
-package: '@mantine/form'
+group: 'asuikit-form'
+package: '@asuikit/form'
 title: 'Form validation'
 order: 2
 slug: /form/validation/
 description: 'Validate fields with use-form hook'
 docs: 'form/validation.mdx'
-source: 'mantine-form/src'
+source: 'asuikit-form/src'
 ---
 
-import { FormDemos } from '@mantine/demos';
+import { FormDemos } from '@asuikit/demos';
 
 ## Validation with rules object
 
@@ -30,7 +30,7 @@ Each form rule receives the following arguments:
 for example you can get index of array element:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { a: [{ b: 1 }, { b: 2 }] },
@@ -60,13 +60,13 @@ from the validation results.
 
 ## Schema based validation
 
-Out of the box `@mantine/form` supports schema validation with:
+Out of the box `@asuikit/form` supports schema validation with:
 - [zod](https://www.npmjs.com/package/zod)
 - [joi](https://www.npmjs.com/package/joi)
 - [yup](https://www.npmjs.com/package/yup)
 - [superstruct](https://www.npmjs.com/package/superstruct)
 
-You will need to install one of the libraries yourself, as `@mantine/form` package does not depend on any of them.
+You will need to install one of the libraries yourself, as `@asuikit/form` package does not depend on any of them.
 If you do not know what validation library to choose, we recommend choosing [zod](https://www.npmjs.com/package/zod)
 as the most modern and developer-friendly library.
 
@@ -99,7 +99,7 @@ const form = useForm({ validateInputOnChange: true });
 You can also provide an array of fields paths to validate only those values:
 
 ```tsx
-import { FORM_INDEX, useForm } from '@mantine/form';
+import { FORM_INDEX, useForm } from '@asuikit/form';
 
 const form = useForm({ validateInputOnChange: ['name', 'email', `jobs.${FORM_INDEX}.title`] });
 ```
@@ -119,7 +119,7 @@ const form = useForm({ validateInputOnBlur: true });
 You can also provide an array of fields paths to validate only those values:
 
 ```tsx
-import { FORM_INDEX, useForm } from '@mantine/form';
+import { FORM_INDEX, useForm } from '@asuikit/form';
 
 const form = useForm({ validateInputOnBlur: ['name', 'email', `jobs.${FORM_INDEX}.title`] });
 ```
@@ -152,7 +152,7 @@ for example, you can show a notification:
 `form.validate` it does not set `form.errors` and just returns boolean value that indicates whether form is valid.
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: { name: '', age: 0 },

@@ -1,4 +1,4 @@
-import { createStyles, MantineTheme, rem, em } from '@mantine/core';
+import { createStyles, MantineTheme, rem, em } from '@asuikit/core';
 
 const BREAKPOINT = 765;
 

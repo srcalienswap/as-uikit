@@ -55,14 +55,14 @@ Init new application:
 npm init gatsby
 ```
 
-<PackagesInstallation extraPackages={['@mantine/ssr']} />
+<PackagesInstallation extraPackages={['@asuikit/ssr']} />
 
 Create `gatsby-ssr.js` file with following code:
 
 ```tsx
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { createStylesServer, ServerStyles } from '@mantine/ssr';
+import { createStylesServer, ServerStyles } from '@asuikit/ssr';
 
 // optional: you can provide your cache as a first argument in createStylesServer function
 const stylesServer = createStylesServer();

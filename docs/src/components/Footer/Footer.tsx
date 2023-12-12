@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Text, Group } from '@mantine/core';
-import { TwitterButton, DiscordButton } from '@mantine/ds';
+import { Container, Text, Group } from '@asuikit/core';
+import { TwitterButton, DiscordButton } from '@asuikit/ds';
 import { Logo } from '../Logo/Logo';
 import { LinksGroup } from './LinksGroup/LinksGroup';
 import { FOOTER_LINKS_DATA } from './data';

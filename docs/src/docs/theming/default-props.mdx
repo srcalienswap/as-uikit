@@ -6,22 +6,22 @@ slug: /theming/default-props/
 search: 'Default props for components on MantineProvider'
 ---
 
-import { ThemeDemos } from '@mantine/demos';
+import { ThemeDemos } from '@asuikit/demos';
 
 # Default props
 
 You can define default props for every Mantine component by setting `theme.components` on
-[MantineProvider](/theming/mantine-provider):
+[MantineProvider](/theming/asuikit-provider):
 
 <Demo data={ThemeDemos.defaultProps} />
 
 ## Overriding default props
 
-Default props defined on [MantineProvider](/theming/mantine-provider) will be overridden with
+Default props defined on [MantineProvider](/theming/asuikit-provider) will be overridden with
 props that you set on component itself:
 
 ```tsx
-import { MantineProvider, Button } from '@mantine/core';
+import { MantineProvider, Button } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -52,7 +52,7 @@ have associated static components: `Menu.Item`, `Tabs.List`, `RichTextEditor.Too
 default props to these components by omitting the dot from component name:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -90,7 +90,7 @@ MantineProvider uses `Record<string, any>` type for default props types to impro
 If you need more strict type checks or want to have IDE autocomplete, you should define default props separately:
 
 ```tsx
-import { MantineProvider, ButtonProps, SwitchProps } from '@mantine/core';
+import { MantineProvider, ButtonProps, SwitchProps } from '@asuikit/core';
 
 const ButtonDefaultProps: Partial<ButtonProps> = {
   size: 'xs',

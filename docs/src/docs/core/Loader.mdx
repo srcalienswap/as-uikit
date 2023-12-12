@@ -1,18 +1,18 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Loader
 order: 1
 slug: /core/loader/
 category: 'feedback'
 description: 'Indicate loading state'
 props: ['Loader']
-import: "import { Loader } from '@mantine/core';"
-source: 'mantine-core/src/Loader/Loader.tsx'
+import: "import { Loader } from '@asuikit/core';"
+source: 'asuikit-core/src/Loader/Loader.tsx'
 docs: 'core/Loader.mdx'
 ---
 
-import { LoaderDemos } from '@mantine/demos';
+import { LoaderDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -22,11 +22,11 @@ By default, loader will be rendered with `theme.primaryColor`. You can choose an
 
 ## Configure default loader
 
-You can configure default loader in [MantineProvider](/theming/mantine-provider/),
+You can configure default loader in [MantineProvider](/theming/asuikit-provider/),
 it will be used in Loader and [LoadingOverlay](/core/loading-overlay/) components by default:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (

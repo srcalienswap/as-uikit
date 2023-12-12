@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Popover
 order: 1
 slug: /core/popover/
@@ -8,13 +8,13 @@ category: 'overlay'
 description: 'Display popover section relative to given target element'
 componentPrefix: 'Popover'
 props: ['Popover', 'PopoverTarget', 'PopoverDropdown']
-import: "import { Popover } from '@mantine/core';"
-source: 'mantine-core/src/Popover/Popover.tsx'
+import: "import { Popover } from '@asuikit/core';"
+source: 'asuikit-core/src/Popover/Popover.tsx'
 docs: 'core/Popover.mdx'
 styles: ['Popover']
 ---
 
-import { PopoverDemos, PasswordInputDemos } from '@mantine/demos';
+import { PopoverDemos, PasswordInputDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -26,7 +26,7 @@ You can control Popover state with `opened` and `onChange` props:
 
 ```tsx
 import { useState } from 'react';
-import { Popover, Button } from '@mantine/core';
+import { Popover, Button } from '@asuikit/core';
 
 function Demo() {
   const [opened, setOpened] = useState(false);
@@ -88,7 +88,7 @@ strings, fragments, numbers and multiple elements/components are not supported a
 Custom components must provide a prop to get root element ref, all Mantine components support ref out of the box.
 
 ```tsx
-import { Popover, Button } from '@mantine/core';
+import { Popover, Button } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -129,7 +129,7 @@ Custom components that are rendered inside `Popover.Target` are required to supp
 
 ```tsx
 // Example of code that WILL NOT WORK
-import { Popover } from '@mantine/core';
+import { Popover } from '@asuikit/core';
 
 function MyComponent() {
   return <div>My component</div>;
@@ -152,7 +152,7 @@ Use `forwardRef` function to forward ref to root element:
 ```tsx
 // Example of code that will work
 import { forwardRef } from 'react';
-import { Popover } from '@mantine/core';
+import { Popover } from '@asuikit/core';
 
 const MyComponent = forwardRef((props, ref) => (
   <div ref={ref} {...props}>

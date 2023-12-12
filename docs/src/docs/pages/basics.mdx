@@ -2,12 +2,12 @@
 title: Learn the basics
 ---
 
-import { SliderDemos, CreateStylesDemos } from '@mantine/demos';
+import { SliderDemos, CreateStylesDemos } from '@asuikit/demos';
 
 # Learn the basics
 
 This guide will help you get familiar with core Mantine concepts.
-Please read this guide, [theming](/theming/mantine-provider/) and [styles](/styles/sx/) sections before starting development
+Please read this guide, [theming](/theming/asuikit-provider/) and [styles](/styles/sx/) sections before starting development
 to learn about all available theming and styling features.
 
 ## Getting help
@@ -28,10 +28,10 @@ Mantine documentation includes more than 150 pages, to use it efficiently rememb
 ## Theming
 
 [Theme object](/theming/theme-object/) supports changing colors, spacing, box-shadows, font families, font sizes and many other properties.
-To configure theme, wrap your app with a [MantineProvider](/theming/mantine-provider/) component:
+To configure theme, wrap your app with a [MantineProvider](/theming/asuikit-provider/) component:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -54,7 +54,7 @@ All Mantine components support light and dark color scheme out of the box.
 To learn how to implement color scheme changes via context follow [dark theme guide](/guides/dark-theme/).
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -98,7 +98,7 @@ Mantine components work with colors defined in [theme.colors](/theming/colors/).
 You can [extend theme](/theming/colors/) with any amount of your colors:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -155,7 +155,7 @@ Components that have padding get values from `theme.spacing`, default values are
 To change these values set `spacing` property on [theme](/theming/theme-object/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -192,7 +192,7 @@ Components that use the box-shadow property get values from `theme.shadows`, def
 To change these values set the `shadows` property on [theme](/theming/theme-object/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -226,7 +226,7 @@ You can get ref of most components with their `ref` prop:
 
 ```tsx
 import { useRef } from 'react';
-import { Button, Paper, TextInput } from '@mantine/core';
+import { Button, Paper, TextInput } from '@asuikit/core';
 
 function Demo() {
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -256,7 +256,7 @@ To setup server side rendering follow one of these guides
 
 ### Exported types
 
-`@mantine/core` package export types to help you build components and styles with TypeScript:
+`@asuikit/core` package export types to help you build components and styles with TypeScript:
 
 - `MantineTheme` – theme interface defined in MantineProvider.
 - `ColorScheme` – union of `'light' | 'dark'`.
@@ -271,5 +271,5 @@ To setup server side rendering follow one of these guides
 You can import props type of any component by adding `Props` to the component name:
 
 ```tsx
-import type { ButtonProps } from '@mantine/core';
+import type { ButtonProps } from '@asuikit/core';
 ```

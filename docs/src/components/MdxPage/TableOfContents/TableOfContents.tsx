@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Slugger from 'github-slugger';
 import { navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
-import { Text, ScrollArea, useMantineTheme, rem } from '@mantine/core';
+import { Text, ScrollArea, useMantineTheme, rem } from '@asuikit/core';
 import { IconList } from '@tabler/icons-react';
 import useStyles from './TableOfContents.styles';
 

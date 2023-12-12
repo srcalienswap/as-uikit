@@ -20,7 +20,7 @@ You can use numbers in Mantine components props, it will be treated as `px` and 
 for example:
 
 ```tsx
-import { ColorSwatch } from '@mantine/core';
+import { ColorSwatch } from '@asuikit/core';
 
 function DemoPx() {
   // Specify ColorSwatch size in px, it will be automatically converted to rem
@@ -38,7 +38,7 @@ The same logic is applied to [style props](/styles/style-props/) available
 in every component:
 
 ```tsx
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 function Demo() {
   // width: 2rem, height: 1rem
@@ -50,10 +50,10 @@ function Demo() {
 
 ## rem and em function
 
-`@mantine/core` package exports `rem` and `em` function that can be used to convert `px` into `rem`/`em`:
+`@asuikit/core` package exports `rem` and `em` function that can be used to convert `px` into `rem`/`em`:
 
 ```tsx
-import { rem, em } from '@mantine/core';
+import { rem, em } from '@asuikit/core';
 
 // numbers and values in px are converted to rem
 rem(32); // -> 2rem
@@ -74,10 +74,10 @@ em('5vh'); // -> 5vh
 
 ## Convert rem to px
 
-To convert `rem` to `px` use `px` function exported from `@mantine/core`:
+To convert `rem` to `px` use `px` function exported from `@asuikit/core`:
 
 ```tsx
-import { px } from '@mantine/core';
+import { px } from '@asuikit/core';
 
 px('2rem'); // -> 32
 px('10rem'); // -> 160
@@ -90,7 +90,7 @@ do not perform automatic `rem` units conversion. When you write styles it is rec
 either specify all size values in rem or use `rem` function to convert `px` to `rem`:
 
 ```tsx
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@asuikit/core';
 
 createStyles({
   button: {

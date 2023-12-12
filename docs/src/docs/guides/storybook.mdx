@@ -15,7 +15,7 @@ Create a separate file that will store your theme object – you will need to us
 
 ```tsx
 // theme.ts file
-import type { MantineThemeOverride } from '@mantine/core';
+import type { MantineThemeOverride } from '@asuikit/core';
 
 // export your theme object
 export const theme: MantineThemeOverride = {
@@ -26,13 +26,13 @@ export const theme: MantineThemeOverride = {
 
 ## MantineProvider with Storybook
 
-To add [MantineProvider](/theming/mantine-provider/) (and other providers) to your Storybook setup create `preview.tsx`
+To add [MantineProvider](/theming/asuikit-provider/) (and other providers) to your Storybook setup create `preview.tsx`
 file in your Storybook configuration folder (usually it is called `.storybook`):
 
 ```tsx
 // .storybook/preview.tsx
 
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 // import theme object you've exported in previous step
 import { theme } from './theme';
 
@@ -67,7 +67,7 @@ Then integrate it in decorator that was created in previous step:
 
 ```tsx
 import { useDarkMode } from 'storybook-dark-mode';
-import { MantineProvider, ColorSchemeProvider } from '@mantine/core';
+import { MantineProvider, ColorSchemeProvider } from '@asuikit/core';
 import { theme } from './theme';
 
 function ThemeWrapper(props: { children: React.ReactNode }) {
@@ -90,7 +90,7 @@ If you do not use this hook in your application then it is safe to omit `ColorSc
 
 ```tsx
 import { useDarkMode } from 'storybook-dark-mode';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 import { theme } from './theme';
 
 function ThemeWrapper(props: { children: React.ReactNode }) {

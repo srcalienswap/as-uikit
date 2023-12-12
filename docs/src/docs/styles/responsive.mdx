@@ -6,22 +6,22 @@ order: 3
 search: 'Media queries, breakpoints, inline responsive styles'
 ---
 
-import { DEFAULT_THEME } from '@mantine/core';
-import { MediaQueryDemos, CreateStylesDemos } from '@mantine/demos';
+import { DEFAULT_THEME } from '@asuikit/core';
+import { MediaQueryDemos, CreateStylesDemos } from '@asuikit/demos';
 
 # Responsive styles
 
-`@mantine/core` package exports several components that can help you organize responsive styles without writing CSS.
+`@asuikit/core` package exports several components that can help you organize responsive styles without writing CSS.
 Note that in most cases that are not covered in this guide, the best way to make your app responsive is to
 add styles with [createStyles](/styles/create-styles/) function.
 
 ## Configure breakpoints
 
 `theme.breakpoints` are used in all responsive Mantine components. Breakpoints are expected to be set in `em` units (`1em == 16px` by default).
-You can configure these values with [MantineProvider](/theming/mantine-provider/):
+You can configure these values with [MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -89,8 +89,8 @@ The approach with [MediaQuery](/core/media-query/) component will work with SSR.
 the more cleaner way to change size is to use [use-media-query](/hooks/use-media-query/) hook:
 
 ```tsx
-import { TextInput } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { TextInput } from '@asuikit/core';
+import { useMediaQuery } from '@asuikit/hooks';
 
 function Demo() {
   // Will always return false during ssr, use only when you do not have ssr
@@ -104,7 +104,7 @@ function Demo() {
 All Mantine components support `sx` prop with which you can add styles (including responsive styles) to root component element:
 
 ```tsx
-import { TextInput } from '@mantine/core';
+import { TextInput } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -127,7 +127,7 @@ If you want to add styles with `sx` prop to non-Mantine component, you can wrap 
 ```tsx
 // Example with react-router-dom Link
 import { Link } from 'react-router-dom';
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 function Demo() {
   return (

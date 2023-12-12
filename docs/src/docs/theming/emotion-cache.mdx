@@ -24,7 +24,7 @@ a configuration object with the following properties:
 - `stylisPlugins` – an array of Stylis plugins that will be run by Stylis during preprocessing, for example [stylis-plugin-rtl](https://www.npmjs.com/package/stylis-plugin-rtl) can be used to add [RTL](/guides/rtl) support
 
 ```tsx
-import { MantineProvider, createEmotionCache } from '@mantine/core';
+import { MantineProvider, createEmotionCache } from '@asuikit/core';
 
 const myCache = createEmotionCache({ key: 'mantine', prepend: true });
 
@@ -44,7 +44,7 @@ To make Mantine styles override other styles, create emotion cache with `prepend
 With this option styles will be added at the end of `head` element:
 
 ```tsx
-import { MantineProvider, createEmotionCache } from '@mantine/core';
+import { MantineProvider, createEmotionCache } from '@asuikit/core';
 
 const appendCache = createEmotionCache({ key: 'mantine', prepend: false });
 
@@ -62,7 +62,7 @@ function Demo() {
 To change classes prefix create cache with key:
 
 ```tsx
-import { MantineProvider, createEmotionCache } from '@mantine/core';
+import { MantineProvider, createEmotionCache } from '@asuikit/core';
 
 const myCache = createEmotionCache({ key: 'my-prefix' });
 
@@ -80,7 +80,7 @@ Now classes will follow this pattern: `my-prefix-{random part}`.
 ## Server side rendering with custom cache
 
 To setup server side rendering with custom cache, you will need to provide
-the same emotion cache both to [MantineProvider](/theming/mantine-provider/)
+the same emotion cache both to [MantineProvider](/theming/asuikit-provider/)
 and to the server side code.
 
 Example with Next.js ([view full code on GitHub](https://github.com/mantinedev/next-pages-template/tree/v5-rtl)):
@@ -88,10 +88,10 @@ Example with Next.js ([view full code on GitHub](https://github.com/mantinedev/n
 ```tsx
 // rtl-cache.ts
 import rtlPlugin from 'stylis-plugin-rtl';
-import { createEmotionCache } from '@mantine/core';
+import { createEmotionCache } from '@asuikit/core';
 
 export const rtlCache = createEmotionCache({
-  key: 'mantine-rtl',
+  key: 'asuikit-rtl',
   stylisPlugins: [rtlPlugin],
 });
 ```
@@ -99,7 +99,7 @@ export const rtlCache = createEmotionCache({
 ```tsx
 // _app.tsx
 import { AppProps } from 'next/app';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 import { rtlCache } from '../rtl-cache';
 
 export default function App(props: AppProps) {
@@ -122,7 +122,7 @@ export default function App(props: AppProps) {
 ```tsx
 // _document.tsx
 import Document, { DocumentContext } from 'next/document';
-import { ServerStyles, createStylesServer } from '@mantine/next';
+import { ServerStyles, createStylesServer } from '@asuikit/next';
 import { rtlCache } from '../rtl-cache';
 
 const stylesServer = createStylesServer(rtlCache);

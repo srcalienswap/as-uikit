@@ -1,18 +1,18 @@
 ---
-group: 'mantine-dates'
-package: '@mantine/dates'
+group: 'asuikit-dates'
+package: '@asuikit/dates'
 title: DatePicker
 order: 1
 slug: /dates/date-picker/
 description: 'Inline date, multiple dates and dates range picker'
 props: ['DatePicker']
-import: "import { DatePicker } from '@mantine/dates';"
-source: 'mantine-dates/src/components/DatePicker/DatePicker.tsx'
+import: "import { DatePicker } from '@asuikit/dates';"
+source: 'asuikit-dates/src/components/DatePicker/DatePicker.tsx'
 docs: 'dates/DatePicker.mdx'
 styles: ['DatePicker']
 ---
 
-import { DatePickerDemos } from '@mantine/demos';
+import { DatePickerDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -149,7 +149,7 @@ Use `decadeLabelFormat`, `yearLabelFormat` and `monthLabelFormat` props to chang
 
 ## Localization
 
-Usually it is better to specify `@mantine/dates` package locale in [DatesProvider](/dates/dates-provider/),
+Usually it is better to specify `@asuikit/dates` package locale in [DatesProvider](/dates/dates-provider/),
 but you can also override locale per component:
 
 <Demo data={DatePickerDemos.locale} />
@@ -161,7 +161,7 @@ but you can also override locale per component:
 Set `ariaLabels` prop to specify `aria-label` attributes for next/previous controls:
 
 ```tsx
-import { DatePicker } from '@mantine/dates';
+import { DatePicker } from '@asuikit/dates';
 
 function Demo() {
   return (
@@ -186,7 +186,7 @@ function Demo() {
 Use `getYearControlProps`/`getMonthControlProps`/`getDayProps` to customize `aria-label` attribute:
 
 ```tsx
-import { DatePicker } from '@mantine/dates';
+import { DatePicker } from '@asuikit/dates';
 
 function Demo() {
   return (

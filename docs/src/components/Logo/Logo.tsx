@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { rem } from '@mantine/core';
-import { MantineLogo, MantineLogoProps } from '@mantine/ds';
+import { rem } from '@asuikit/core';
+import { MantineLogo, MantineLogoProps } from '@asuikit/ds';
 import useStyles from './Logo.styles';
 
 export function Logo(props: MantineLogoProps) {

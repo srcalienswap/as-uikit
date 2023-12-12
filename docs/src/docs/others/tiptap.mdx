@@ -1,38 +1,38 @@
 ---
 group: 'Other packages'
-package: '@mantine/tiptap'
+package: '@asuikit/tiptap'
 title: 'Rich text editor'
 order: 1
 slug: /others/tiptap/
 description: 'Tiptap based rich text editor'
 props: ['RichTextEditor']
-import: "import { RichTextEditor } from '@mantine/tiptap';"
-source: 'mantine-tiptap/src'
+import: "import { RichTextEditor } from '@asuikit/tiptap';"
+source: 'asuikit-tiptap/src'
 docs: 'others/tiptap.mdx'
-installation: '@mantine/tiptap'
+installation: '@asuikit/tiptap'
 license: MIT
 styles: ['RichTextEditor']
 ---
 
-import { TipTapDemos } from '@mantine/demos';
+import { TipTapDemos } from '@asuikit/demos';
 
 ## Installation
 
 Install with yarn:
 
 ```bash
-yarn add @mantine/tiptap @mantine/core @mantine/hooks @tabler/icons-react @tiptap/react @tiptap/pm @tiptap/extension-link @tiptap/starter-kit
+yarn add @asuikit/tiptap @asuikit/core @asuikit/hooks @tabler/icons-react @tiptap/react @tiptap/pm @tiptap/extension-link @tiptap/starter-kit
 ```
 
 Install with npm:
 
 ```bash
-npm install @mantine/tiptap @mantine/core @mantine/hooks @tabler/icons-react @tiptap/react @tiptap/pm @tiptap/extension-link @tiptap/starter-kit
+npm install @asuikit/tiptap @asuikit/core @asuikit/hooks @tabler/icons-react @tiptap/react @tiptap/pm @tiptap/extension-link @tiptap/starter-kit
 ```
 
 ## TipTap editor
 
-`@mantine/tiptap` provides a UI for [Tiptap](https://tiptap.dev/). `RichTextEditor` component
+`@asuikit/tiptap` provides a UI for [Tiptap](https://tiptap.dev/). `RichTextEditor` component
 works with [Editor](https://tiptap.dev/api/editor) instance of tiptap.
 This means that you have full control over the editor [state and configuration](https://tiptap.dev/guide/configuration)
 with [useEditor hook](https://tiptap.dev/installation/react).
@@ -119,12 +119,12 @@ npm install @tiptap/extension-placeholder
 
 ## Link extension
 
-`@mantine/tiptap` provides custom `Link` extension that is required to be used instead of
+`@asuikit/tiptap` provides custom `Link` extension that is required to be used instead of
 `@tiptap/extension-link` in order for `Ctrl + K` keyboard shortcut to work:
 
 ```tsx
-// Use Link extension exported from the @mantine/tiptap package
-import { RichTextEditor, Link } from '@mantine/tiptap';
+// Use Link extension exported from the @asuikit/tiptap package
+import { RichTextEditor, Link } from '@asuikit/tiptap';
 import { useEditor } from '@tiptap/react';
 
 function Demo() {
@@ -185,7 +185,7 @@ By default, `RichTextEditor` renders content with [TypographyStylesProvider](/co
 You can disable these styles by setting `withTypographyStyles={false}`:
 
 ```tsx
-import { RichTextEditor } from '@mantine/tiptap';
+import { RichTextEditor } from '@asuikit/tiptap';
 import { useEditor } from '@tiptap/react';
 
 function Demo() {
@@ -253,8 +253,8 @@ the context. This hook can be used to create custom control or run any operation
 by the Tiptap [editor API](https://tiptap.dev/api/editor).
 
 ```tsx
-import { useRichTextEditorContext } from '@mantine/tiptap';
-import { Button } from '@mantine/core';
+import { useRichTextEditorContext } from '@asuikit/tiptap';
+import { Button } from '@asuikit/core';
 
 function Demo() {
   const { editor } = useRichTextEditorContext();
@@ -282,7 +282,7 @@ that must handle `size` prop:
 `RichTextEditor` supports changing labels for all controls with `labels` prop:
 
 ```tsx
-import { RichTextEditor } from '@mantine/tiptap';
+import { RichTextEditor } from '@asuikit/tiptap';
 import { useEditor } from '@tiptap/react';
 
 function Demo() {
@@ -314,7 +314,7 @@ the default labels.
 All available labels:
 
 ```tsx
-// RichTextEditorLabels type can be imported from @mantine/tiptap package
+// RichTextEditorLabels type can be imported from @asuikit/tiptap package
 export interface RichTextEditorLabels {
   /** RichTextEditor.Bold control aria-label */
   boldControlLabel: string;
@@ -438,7 +438,7 @@ export interface RichTextEditorLabels {
 }
 ```
 
-Default labels (can be imported from `@mantine/tiptap` package):
+Default labels (can be imported from `@asuikit/tiptap` package):
 
 ```tsx
 export const DEFAULT_LABELS: RichTextEditorLabels = {

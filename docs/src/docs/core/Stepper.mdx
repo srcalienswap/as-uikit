@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Stepper
 order: 1
 slug: /core/stepper/
@@ -8,13 +8,13 @@ category: 'navigation'
 description: 'Display content divided into a steps sequence'
 componentPrefix: 'Stepper'
 props: ['Stepper', 'Step']
-import: "import { Stepper } from '@mantine/core';"
-source: 'mantine-core/src/Stepper/Stepper.tsx'
+import: "import { Stepper } from '@asuikit/core';"
+source: 'asuikit-core/src/Stepper/Stepper.tsx'
 docs: 'core/Stepper.mdx'
 styles: ['Stepper']
 ---
 
-import { StepperDemos } from '@mantine/demos';
+import { StepperDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -77,7 +77,7 @@ than `theme.breakpoints.md`:
 <Stepper breakpoint="md">{/* ...steps */}</Stepper>
 ```
 
-You can configure breakpoints with [MantineProvider](/theming/mantine-provider) or use number to set breakpoint:
+You can configure breakpoints with [MantineProvider](/theming/asuikit-provider) or use number to set breakpoint:
 
 ```tsx
 <Stepper breakpoint={755}>{/* ...steps */}</Stepper>
@@ -93,7 +93,7 @@ this option is most useful for RTL:
 ## Loading state
 
 To indicate loading state set `loading` prop on Step component,
-Loader will replace step icon. You can configure default loader in [MantineProvider](/theming/mantine-provider/).
+Loader will replace step icon. You can configure default loader in [MantineProvider](/theming/asuikit-provider/).
 
 <Demo data={StepperDemos.loading} />
 
@@ -111,7 +111,7 @@ You can get refs of step button and stepper root element (div):
 
 ```tsx
 import { useRef } from 'react';
-import { Stepper } from '@mantine/core';
+import { Stepper } from '@asuikit/core';
 
 function MyStepper() {
   const firstStep = useRef<HTMLButtonElement>(null);
@@ -132,7 +132,7 @@ function MyStepper() {
 Instead you will need to use different approaches:
 
 ```tsx
-import { Stepper } from '@mantine/core';
+import { Stepper } from '@asuikit/core';
 
 // This will not work, step children will not render
 function WillNotWork() {

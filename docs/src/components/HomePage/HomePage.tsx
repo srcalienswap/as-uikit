@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 import { Jumbotron } from './Jumbotron/Jumbotron';
 import { Components } from './Components/Components';
 import { Banner } from './Banner/Banner';
