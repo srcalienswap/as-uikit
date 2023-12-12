@@ -1,5 +1,5 @@
 {
-  "name": "mantine",
+  "name": "as-uikit",
   "private": true,
   "workspaces": [
     "src/*"
@@ -7,7 +7,7 @@
   "version": "6.0.21",
   "description": "Mantine Components Monorepo",
   "main": "index.js",
-  "repository": "https://github.com/mantinedev/mantine.git",
+  "repository": "https://github.com/srcalienswap/as-uikit.git",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "license": "MIT",
   "scripts": {
