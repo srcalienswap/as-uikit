@@ -1,6 +1,6 @@
 import React from 'react';
-import { Title, Text, Badge, rem } from '@mantine/core';
-import { GithubIcon, NpmIcon } from '@mantine/ds';
+import { Title, Text, Badge, rem } from '@asuikit/core';
+import { GithubIcon, NpmIcon } from '@asuikit/ds';
 import { IconPencil, IconLicense, IconCalendar } from '@tabler/icons-react';
 import { Link } from 'gatsby';
 import { ImportStatement } from './ImportStatement/ImportStatement';
@@ -91,11 +91,11 @@ export function MdxPageHeader({ frontmatter }: MdxPageProps) {
             label="Package"
             icon={<NpmIcon size={rem(14)} />}
             link={`https://www.npmjs.com/package/${frontmatter.package.replace(
-              'mantine-',
-              '@mantine/'
+              'asuikit-',
+              '@asuikit/'
             )}`}
           >
-            {frontmatter.package.replace('mantine-', '@mantine/')}
+            {frontmatter.package.replace('asuikit-', '@asuikit/')}
           </LinkItem>
         )}
 

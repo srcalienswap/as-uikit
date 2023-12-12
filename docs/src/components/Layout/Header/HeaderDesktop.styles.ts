@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@asuikit/core';
 // eslint-disable-next-line import/no-cycle
 import { NAVBAR_BREAKPOINT } from '../Navbar/Navbar.styles';
 

@@ -1,8 +1,8 @@
 {
   "extends": "./tsconfig.base.json",
   "include": [
-    "src/mantine-*/src",
-    "src/mantine-*/demos",
+    "src/asuikit-*/src",
+    "src/asuikit-*/demos",
     "./types",
     "./docs/src",
     "./scripts",
@@ -16,14 +16,14 @@
     "configuration/jest",
     "configuration/storybook/main.js",
     "node_modules",
-    "src/mantine-*/esm/**/*",
-    "src/mantine-*/lib/**/*",
-    "src/mantine-*/cjs/**/*"
+    "src/asuikit-*/esm/**/*",
+    "src/asuikit-*/lib/**/*",
+    "src/asuikit-*/cjs/**/*"
   ],
   "compilerOptions": {
     "paths": {
-      "@mantine/*": ["src/mantine-*/src"],
-      "@demos/*": ["src/mantine-*/src/demos"]
+      "@asuikit/*": ["src/asuikit-*/src"],
+      "@demos/*": ["src/asuikit-*/src/demos"]
     }
   }
 }

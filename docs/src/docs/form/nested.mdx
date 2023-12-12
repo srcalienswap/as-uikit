@@ -1,15 +1,15 @@
 ---
-group: 'mantine-form'
-package: '@mantine/form'
+group: 'asuikit-form'
+package: '@asuikit/form'
 title: 'Nested fields'
 order: 2
 slug: /form/nested/
 description: 'Manage nested arrays and object state with use-form hook'
 docs: 'form/nested.mdx'
-source: 'mantine-form/src'
+source: 'asuikit-form/src'
 ---
 
-import { FormDemos } from '@mantine/demos';
+import { FormDemos } from '@asuikit/demos';
 
 ## Properties paths
 
@@ -17,7 +17,7 @@ Most of `form` handlers accept property path as the first argument.
 Property path includes keys/indices of objects/arrays at which target property is contained:
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -56,7 +56,7 @@ form.validateField('deeply.nested.object.0.item');
 ## Set nested object value
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -78,7 +78,7 @@ form.setFieldValue('user', { name: 'Jane', occupation: 'Architect' });
 ## Nested object values validation
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -115,7 +115,7 @@ form.errors; // -> { 'user.name': 'Name is too short', 'user.occupation': 'Occup
 ## List values validation
 
 ```tsx
-import { useForm } from '@mantine/form';
+import { useForm } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {

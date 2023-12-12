@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Text } from '@mantine/core';
+import { Text } from '@asuikit/core';
 import useStyles from './LinksGroup.styles';
 
 export interface LinksGroupProps {

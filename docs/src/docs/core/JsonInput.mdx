@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: JsonInput
 order: 1
 slug: /core/json-input/
 category: 'inputs'
 description: 'Capture json data from user'
 props: ['JsonInput']
-import: "import { JsonInput } from '@mantine/core';"
-source: 'mantine-core/src/JsonInput/JsonInput.tsx'
+import: "import { JsonInput } from '@asuikit/core';"
+source: 'asuikit-core/src/JsonInput/JsonInput.tsx'
 docs: 'core/JsonInput.mdx'
 styles: ['JsonInput']
 ---
 
-import { JsonInputDemos } from '@mantine/demos';
+import { JsonInputDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -26,7 +26,7 @@ it includes json validation logic and option to format input value on blur:
 
 ```tsx
 import { useState } from 'react';
-import { JsonInput } from '@mantine/core';
+import { JsonInput } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState('');
@@ -45,7 +45,7 @@ function Demo() {
 
 ```tsx
 import { useRef } from 'react';
-import { JsonInput } from '@mantine/core';
+import { JsonInput } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLTextAreaElement>(null);

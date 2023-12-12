@@ -1,11 +1,11 @@
 import React from 'react';
-import { Group, Button, Badge, MantineProvider } from '@mantine/core';
-import { Prism } from '@mantine/prism';
+import { Group, Button, Badge, MantineProvider } from '@asuikit/core';
+import { Prism } from '@asuikit/prism';
 import { PageSection } from '../PageSection/PageSection';
 import useStyles from './Theming.styles';
 
 const code = `
-import { Badge, Button, MantineProvider } from '@mantine/core';
+import { Badge, Button, MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (

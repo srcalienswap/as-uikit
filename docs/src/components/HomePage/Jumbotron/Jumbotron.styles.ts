@@ -1,4 +1,4 @@
-import { createStyles, rem, em } from '@mantine/core';
+import { createStyles, rem, em } from '@asuikit/core';
 import { getGradient } from '../get-gradient';
 
 const BREAKPOINT = `@media (max-width: ${em(960)})`;

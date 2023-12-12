@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, rem } from '@mantine/core';
+import { Table, rem } from '@asuikit/core';
 import DocsSection from '../../../DocsSection/DocsSection';
 
 interface DataTableProps {

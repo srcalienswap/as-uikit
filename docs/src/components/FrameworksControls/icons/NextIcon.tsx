@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMantineTheme, rem } from '@mantine/core';
+import { useMantineTheme, rem } from '@asuikit/core';
 
 export function NextIcon() {
   const theme = useMantineTheme();

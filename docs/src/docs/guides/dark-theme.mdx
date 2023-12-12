@@ -5,7 +5,7 @@ slug: /guides/dark-theme/
 search: 'ColorSchemeProvider, useMantineColorScheme'
 ---
 
-import { ThemeDemos } from '@mantine/demos';
+import { ThemeDemos } from '@asuikit/demos';
 import { ColorsGroup } from '../../components/ThemeColors/ColorsGroup.tsx';
 
 # Dark theme
@@ -14,7 +14,7 @@ All mantine components support dark color scheme natively without any additional
 To use dark color scheme, wrap your application in MantineProvider and specify `colorScheme`:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -34,7 +34,7 @@ Mantine uses `theme.colors.dark` values to style components with dark color sche
 You can customize these values the same way as other colors:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -69,10 +69,10 @@ function Demo() {
 ## Global styles
 
 `theme.colors.dark[7]` shade is considered to be the body background color and `theme.colors.dark[0]` shade is used as text color with dark color scheme.
-You can create these styles on your own or add them by setting `withGlobalStyles` prop on [MantineProvider](/theming/mantine-provider/), which includes them by default:
+You can create these styles on your own or add them by setting `withGlobalStyles` prop on [MantineProvider](/theming/asuikit-provider/), which includes them by default:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -90,7 +90,7 @@ help you set up color scheme context:
 
 ```tsx
 import { useState } from 'react';
-import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
+import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@asuikit/core';
 
 function Demo() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -118,12 +118,12 @@ hook to store theme state in localStorage and sync it across all opened tabs and
 to add `Ctrl/⌘ + J` keyboard shortcut for theme toggle:
 
 ```tsx
-import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
-import { useHotkeys, useLocalStorage } from '@mantine/hooks';
+import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@asuikit/core';
+import { useHotkeys, useLocalStorage } from '@asuikit/hooks';
 
 function Demo() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
-    key: 'mantine-color-scheme',
+    key: 'asuikit-color-scheme',
     defaultValue: 'light',
     getInitialValueInEffect: true,
   });
@@ -158,8 +158,8 @@ hook and set it as default value:
 
 ```tsx
 import { useState } from 'react';
-import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
-import { useColorScheme } from '@mantine/hooks';
+import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@asuikit/core';
+import { useColorScheme } from '@asuikit/hooks';
 
 function Demo() {
   // hook will return either 'dark' or 'light' on client
@@ -190,7 +190,7 @@ The following example shows how to store color scheme in cookie with Next.js:
 import { useState } from 'react';
 import NextApp, { AppProps, AppContext } from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
-import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
+import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@asuikit/core';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -200,7 +200,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
     setColorScheme(nextColorScheme);
     // when color scheme is updated save it to cookie
-    setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
+    setCookie('asuikit-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
   };
 
   return (
@@ -216,7 +216,7 @@ App.getInitialProps = async (appContext: AppContext) => {
   const appProps = await NextApp.getInitialProps(appContext);
   return {
     ...appProps,
-    colorScheme: getCookie('mantine-color-scheme', appContext.ctx) || 'light',
+    colorScheme: getCookie('asuikit-color-scheme', appContext.ctx) || 'light',
   };
 };
 ```

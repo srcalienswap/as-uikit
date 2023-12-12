@@ -1,7 +1,7 @@
 /* eslint-disable import/no-relative-packages */
 import React from 'react';
-import { Burger } from '@mantine/core';
-import { ColorSchemeControl } from '@mantine/ds';
+import { Burger } from '@asuikit/core';
+import { ColorSchemeControl } from '@asuikit/ds';
 import useStyles from './HeaderMobile.styles';
 
 interface HeaderProps {

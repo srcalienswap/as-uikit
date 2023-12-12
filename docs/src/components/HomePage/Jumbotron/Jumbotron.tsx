@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Container, Group, Button, Text, useMantineTheme, SimpleGrid, rem } from '@mantine/core';
-import { GithubIcon } from '@mantine/ds';
+import { Container, Group, Button, Text, useMantineTheme, SimpleGrid, rem } from '@asuikit/core';
+import { GithubIcon } from '@asuikit/ds';
 import { Hero } from './Hero';
 import { FEATURES_DATA } from './features';
 import useStyles from './Jumbotron.styles';

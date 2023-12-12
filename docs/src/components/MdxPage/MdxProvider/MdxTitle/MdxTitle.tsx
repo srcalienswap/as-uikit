@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, rem } from '@mantine/core';
+import { Title, rem } from '@asuikit/core';
 import useStyles from './MdxTitle.styles';
 
 export default function MdxTitle({

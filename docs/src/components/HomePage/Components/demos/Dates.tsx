@@ -1,6 +1,6 @@
 import React from 'react';
-import { Paper, SimpleGrid, Input } from '@mantine/core';
-import { DatePickerInput, TimeInput, DatePicker, DateTimePicker } from '@mantine/dates';
+import { Paper, SimpleGrid, Input } from '@asuikit/core';
+import { DatePickerInput, TimeInput, DatePicker, DateTimePicker } from '@asuikit/dates';
 import dayjs from 'dayjs';
 
 function CalendarWrapper() {

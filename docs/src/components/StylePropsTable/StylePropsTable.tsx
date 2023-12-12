@@ -1,5 +1,5 @@
 import React from 'react';
-import { __unsafe_do_no_use_SYSTEM_PROPS, Code, Breadcrumbs } from '@mantine/core';
+import { __unsafe_do_no_use_SYSTEM_PROPS, Code, Breadcrumbs } from '@asuikit/core';
 import DataTable from '../MdxPage/MdxProvider/DataTable/DataTable';
 
 const THEME_KEYS = {

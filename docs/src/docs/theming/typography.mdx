@@ -6,7 +6,7 @@ slug: /theming/typography/
 search: 'Change fonts, @font-face, global styles'
 ---
 
-import { ThemeDemos } from '@mantine/demos';
+import { ThemeDemos } from '@asuikit/demos';
 
 # Typography
 
@@ -25,7 +25,7 @@ You can change fonts and other text styles for headings, code and all other comp
 `theme.fontSizes` property defines font-size values for all Mantine components:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -69,7 +69,7 @@ To customize headings in [Title](/core/title/) and [TypographyStylesProvider](/c
 set `theme.headings`:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -97,10 +97,10 @@ function Demo() {
 ```
 
 If you need to customize styles of heading with specific element you can use [Styles API](/styles/styles-api/) on
-[MantineProvider](/theming/mantine-provider/):
+[MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -139,7 +139,7 @@ Use [Global](/styles/global-styles/) to load custom fonts.
 The following example shows how Mantine docs website loads `Greycliff CF` font:
 
 ```tsx
-import { Global } from '@mantine/core';
+import { Global } from '@asuikit/core';
 import bold from './GreycliffCF-Bold.woff2';
 import heavy from './GreycliffCF-Heavy.woff2';
 
@@ -169,10 +169,10 @@ export function CustomFonts() {
 }
 ```
 
-Then you will be able to use custom fonts in any component or [MantineProvider](/theming/mantine-provider/):
+Then you will be able to use custom fonts in any component or [MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
-import { MantineProvider, Button } from '@mantine/core';
+import { MantineProvider, Button } from '@asuikit/core';
 // import component with custom fonts you've created before
 import { CustomFonts } from './CustomFonts';
 

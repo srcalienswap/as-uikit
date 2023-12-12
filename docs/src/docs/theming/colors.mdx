@@ -6,7 +6,7 @@ slug: /theming/colors/
 search: 'Default colors, primary colors, add additional colors'
 ---
 
-import { ThemeDemos } from '@mantine/demos';
+import { ThemeDemos } from '@asuikit/demos';
 import { ThemeColors } from '../../components/ThemeColors/ThemeColors';
 
 # Colors
@@ -56,7 +56,7 @@ For example, [Button](/core/button/) Component by default will use `theme.primar
 it should only reference value from `theme.colors`:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function DemoWithError() {
   return (
@@ -84,7 +84,7 @@ Note that for some variants with dark color scheme `primaryShade` will not be us
 `primaryShade` can also be customized for dark and light color scheme separately:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -105,7 +105,7 @@ When you use `color` prop in any Mantine component, it will reference `theme.pri
 value from `theme.colors`:
 
 ```tsx
-import { Button } from '@mantine/core';
+import { Button } from '@asuikit/core';
 
 // the following button will have theme.colors.orange[theme.primaryShade] background
 function Demo() {
@@ -127,11 +127,11 @@ separated with `.`, for example `pink.3`:
 TypeScript will only autocomplete Mantine's default colors when accessing the theme. To add your custom colors to the MantineColor type, you can use TypeScript module declaration.
 
 ```ts
-import { Tuple, DefaultMantineColor } from '@mantine/core';
+import { Tuple, DefaultMantineColor } from '@asuikit/core';
 
 type ExtendedCustomColors = 'primaryColorName' | 'secondaryColorName' | DefaultMantineColor;
 
-declare module '@mantine/core' {
+declare module '@asuikit/core' {
   export interface MantineThemeColorsOverride {
     colors: Record<ExtendedCustomColors, Tuple<string, 10>>;
   }

@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@asuikit/core';
 import { getGradient } from '../get-gradient';
 import banner from './banner.webp';
 

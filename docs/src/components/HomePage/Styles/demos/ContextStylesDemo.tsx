@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Text, Box, Anchor } from '@mantine/core';
-import { Prism } from '@mantine/prism';
+import { Text, Box, Anchor } from '@asuikit/core';
+import { Prism } from '@asuikit/prism';
 
 const code = `
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -42,7 +42,7 @@ export function ContextStylesDemo() {
     <Box pt="xl">
       <Text mb="sm">
         Add context styles with{' '}
-        <Anchor component={Link} to="/theming/mantine-provider/">
+        <Anchor component={Link} to="/theming/asuikit-provider/">
           MantineProvider
         </Anchor>{' '}
         that will be applied to every component:

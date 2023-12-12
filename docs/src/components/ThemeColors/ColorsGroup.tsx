@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColorSwatch, Text, Box, rem } from '@mantine/core';
+import { ColorSwatch, Text, Box, rem } from '@asuikit/core';
 import useStyles from './ColorsGroup.styles';
 
 interface ColorsGroupProps {

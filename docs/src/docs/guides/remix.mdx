@@ -25,10 +25,10 @@ The easiest way to get started is to use [the template on GitHub](https://github
 Init new application:
 
 ```bash
-npx create-remix@latest my-mantine-app
+npx create-remix@latest my-asuikit-app
 ```
 
-<PackagesInstallation extraPackages={['@mantine/remix', '@emotion/server']} />
+<PackagesInstallation extraPackages={['@asuikit/remix', '@emotion/server']} />
 
 Replace your `entry.server.tsx` file with
 
@@ -36,7 +36,7 @@ Replace your `entry.server.tsx` file with
 import { renderToString } from 'react-dom/server';
 import { RemixServer } from '@remix-run/react';
 import type { EntryContext } from '@remix-run/node';
-import { injectStyles, createStylesServer } from '@mantine/remix';
+import { injectStyles, createStylesServer } from '@asuikit/remix';
 
 const server = createStylesServer();
 
@@ -56,13 +56,13 @@ export default function handleRequest(
 }
 ```
 
-Add [MantineProvider](/theming/mantine-provider/) and `StylesPlaceholder` to the `root.tsx` file:
+Add [MantineProvider](/theming/asuikit-provider/) and `StylesPlaceholder` to the `root.tsx` file:
 
 ```tsx
 import type { MetaFunction } from '@remix-run/node';
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
-import { MantineProvider, createEmotionCache } from '@mantine/core';
-import { StylesPlaceholder } from '@mantine/remix';
+import { MantineProvider, createEmotionCache } from '@asuikit/core';
+import { StylesPlaceholder } from '@asuikit/remix';
 import { theme } from './theme';
 
 export const meta: MetaFunction = () => ({
@@ -99,7 +99,7 @@ Replace `entry.client.tsx` with
 ```tsx
 import { RemixBrowser } from '@remix-run/react';
 import { hydrate } from 'react-dom';
-import { ClientProvider } from '@mantine/remix';
+import { ClientProvider } from '@asuikit/remix';
 
 hydrate(
   <ClientProvider>

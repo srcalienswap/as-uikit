@@ -1,4 +1,4 @@
-import { meta } from '@mantine/ds';
+import { meta } from '@asuikit/ds';
 import { LinksGroupProps } from './LinksGroup/LinksGroup';
 
 export const FOOTER_LINKS_DATA: LinksGroupProps[] = [

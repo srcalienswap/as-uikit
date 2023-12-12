@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Container } from '@mantine/core';
+import { Container } from '@asuikit/core';
 import GatsbyLink from '../components/MdxPage/MdxProvider/GatsbyLink/GatsbyLink';
 import { components } from '../components/MdxPage/MdxProvider/MdxProvider';
 import { PageHead } from '../components/PageHead/PageHead';
@@ -31,7 +31,7 @@ export default function PageNotFound() {
             <GatsbyLink to="/others/notifications/">Mantine notifications system</GatsbyLink>
           </Li>
           <Li>
-            <GatsbyLink to="/theming/mantine-provider/">
+            <GatsbyLink to="/theming/asuikit-provider/">
               Learn how to customize Mantine theme
             </GatsbyLink>
           </Li>

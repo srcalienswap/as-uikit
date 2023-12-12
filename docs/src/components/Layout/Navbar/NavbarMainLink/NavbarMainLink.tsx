@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { ThemeIcon, useMantineTheme } from '@mantine/core';
+import { ThemeIcon, useMantineTheme } from '@asuikit/core';
 import useStyles from './NavbarMainLink.styles';
 
 interface NavbarMainLinkProps {

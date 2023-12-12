@@ -1,43 +1,43 @@
 ---
 group: 'Other packages'
-package: '@mantine/nprogress'
+package: '@asuikit/nprogress'
 title: 'Navigation progress'
 order: 1
 slug: /others/nprogress/
 description: 'Navigation progress bar'
 props: ['NavigationProgress']
-import: "import { NavigationProgress } from '@mantine/nprogress';"
-source: 'mantine-nprogress/src'
+import: "import { NavigationProgress } from '@asuikit/nprogress';"
+source: 'asuikit-nprogress/src'
 docs: 'others/nprogress.mdx'
-installation: '@mantine/nprogress'
+installation: '@asuikit/nprogress'
 license: MIT
 ---
 
-import { NProgressDemos } from '@mantine/demos';
+import { NProgressDemos } from '@asuikit/demos';
 
 ## Installation
 
-Package depends on `@mantine/core` and `@mantine/hooks`.
+Package depends on `@asuikit/core` and `@asuikit/hooks`.
 
 Install with yarn:
 
 ```bash
-yarn add @mantine/nprogress
+yarn add @asuikit/nprogress
 ```
 
 Install with npm:
 
 ```bash
-npm install @mantine/nprogress
+npm install @asuikit/nprogress
 ```
 
 ## Setup NavigationProgress
 
-Render `NavigationProgress` anywhere in your app within [MantineProvider](/theming/mantine-provider/):
+Render `NavigationProgress` anywhere in your app within [MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
-import { NavigationProgress } from '@mantine/nprogress';
+import { MantineProvider } from '@asuikit/core';
+import { NavigationProgress } from '@asuikit/nprogress';
 
 function Demo() {
   return (
@@ -61,7 +61,7 @@ Create `RouterTransition` component that will handle router events:
 // components/RouterTransition.tsx
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { NavigationProgress, nprogress } from '@mantine/nprogress';
+import { NavigationProgress, nprogress } from '@asuikit/nprogress';
 
 export function RouterTransition() {
   const router = useRouter();
@@ -85,12 +85,12 @@ export function RouterTransition() {
 }
 ```
 
-Then render it in `_app.tsx` within [MantineProvider](/theming/mantine-provider/):
+Then render it in `_app.tsx` within [MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
 // pages/_app.tsx
 import { AppProps } from 'next/app';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 import { RouterTransition } from '../components/RouterTransition';
 
 export default function App(props: AppProps) {

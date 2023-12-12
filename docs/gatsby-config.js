@@ -47,8 +47,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Mantine Docs',
-        short_name: 'mantine',
+        name: 'AS.UIKit Docs',
+        short_name: 'asuikit',
         start_url: '/',
         background_color: '#228be6',
         theme_color: '#228be6',

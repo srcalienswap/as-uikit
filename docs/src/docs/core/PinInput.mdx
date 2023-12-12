@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: PinInput
 order: 1
 slug: /core/pin-input/
 category: 'inputs'
 description: 'Capture pin code or one time password from the user'
 props: ['PinInput']
-import: "import { PinInput } from '@mantine/core';"
-source: 'mantine-core/src/PinInput/PinInput.tsx'
+import: "import { PinInput } from '@asuikit/core';"
+source: 'asuikit-core/src/PinInput/PinInput.tsx'
 docs: 'core/PinInput.mdx'
 styles: ['PinInput']
 ---
 
-import { PinInputDemos } from '@mantine/demos';
+import { PinInputDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -64,7 +64,7 @@ If the current form input asks for this code, your keyboard adapts and proposes 
 Prop `oneTimeCode` makes your input setting `autocomplete="one-time-code"` which allows using that feature.
 
 ```tsx
-import { PinInput } from '@mantine/core';
+import { PinInput } from '@asuikit/core';
 
 function OneTimeCodeInput() {
   return <PinInput oneTimeCode />;
@@ -76,7 +76,7 @@ function OneTimeCodeInput() {
 Inputs do not have associated labels, set `aria-label` to make component visible to screen reader:
 
 ```tsx
-import { PinInput } from '@mantine/core';
+import { PinInput } from '@asuikit/core';
 
 function OneTimeCodeInput() {
   return <PinInput aria-label="One time code" />;

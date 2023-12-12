@@ -7,7 +7,7 @@ search: 'Integrate your components with MantineProvider and Styles API'
 
 # Custom components
 
-This guide will help you learn how to integrate custom components with [MantineProvider](/theming/mantine-provider/)
+This guide will help you learn how to integrate custom components with [MantineProvider](/theming/asuikit-provider/)
 and how to add [Styles API](/styles/styles-api/) support.
 
 ## Add Styles API support
@@ -18,7 +18,7 @@ You will need to use [createStyles](/styles/create-styles/) to add [Styles API](
 
 ```tsx
 // MyComponent.styles.ts
-import { createStyles, MantineNumberSize } from '@mantine/core';
+import { createStyles, MantineNumberSize } from '@asuikit/core';
 
 // Styles params are optional
 export interface MyComponentStylesParams {
@@ -37,7 +37,7 @@ export default createStyles((theme, { radius }: MyComponentStylesParams) => ({
 
 ```tsx
 // MyComponent.tsx
-import { DefaultProps, Selectors, MantineNumberSize, Box } from '@mantine/core';
+import { DefaultProps, Selectors, MantineNumberSize, Box } from '@asuikit/core';
 import useStyles, { MyComponentStylesParams } from './MyComponent.styles.ts';
 
 // This type will contain a union with all selectors defined in useStyles,
@@ -98,10 +98,10 @@ function Demo() {
 }
 ```
 
-You can also add `styles` and `classNames` on [MantineProvider](/theming/mantine-provider/):
+You can also add `styles` and `classNames` on [MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -131,7 +131,7 @@ You can add [default props](/theming/default-props/) support to any component wi
 `useComponentDefaultProps` hook:
 
 ```tsx
-import { useComponentDefaultProps } from '@mantine/core';
+import { useComponentDefaultProps } from '@asuikit/core';
 
 interface CustomComponentProps {
   radius?: number;
@@ -148,10 +148,10 @@ function CustomComponent(props: CustomComponentProps) {
 }
 ```
 
-Then you will be able to add [default props](/theming/default-props/) on [MantineProvider](/theming/mantine-provider/):
+Then you will be able to add [default props](/theming/default-props/) on [MantineProvider](/theming/asuikit-provider/):
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -179,7 +179,7 @@ It accepts 2 types: styles names and styles params, both of them are optional.
 When you build components there might be 4 cases:
 
 ```tsx
-import { DefaultProps } from '@mantine/core';
+import { DefaultProps } from '@asuikit/core';
 
 type StylesNames = 'root' | 'title';
 type StylesParams = { radius: number };

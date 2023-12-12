@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["./src", "./types", "../../configuration/types"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "composite": true,
+    "paths": {
+      "@asuikit/core": ["../asuikit-core/src"],
+      "@asuikit/hooks": ["../asuikit-hooks/src"],
+      "@asuikit/prism": ["../asuikit-prism/src"]
+    }
+  },
+  "references": [{ "path": "../asuikit-hooks" }, { "path": "../asuikit-core" }]
+}

@@ -1,4 +1,4 @@
-import { createStyles, rem, em } from '@mantine/core';
+import { createStyles, rem, em } from '@asuikit/core';
 import {
   BREAKPOINT,
   TABLE_OF_CONTENTS_WIDTH,

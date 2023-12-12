@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Group, rem } from '@mantine/core';
+import { Box, Group, rem } from '@asuikit/core';
 import { IconArrowRight } from '@tabler/icons-react';
 import GatsbyLink from '../../MdxProvider/GatsbyLink/GatsbyLink';
 import { StylesApiItem } from './StylesApiItem/StylesApiItem';

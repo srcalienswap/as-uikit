@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Tooltip
 order: 1
 slug: /core/tooltip/
@@ -8,13 +8,13 @@ category: 'overlay'
 description: 'Renders tooltip at given element on mouse over or other event'
 componentPrefix: 'Tooltip'
 props: ['Tooltip', 'TooltipFloating', 'TooltipGroup']
-import: "import { Tooltip } from '@mantine/core';"
-source: 'mantine-core/src/Tooltip/Tooltip.tsx'
+import: "import { Tooltip } from '@asuikit/core';"
+source: 'asuikit-core/src/Tooltip/Tooltip.tsx'
 docs: 'core/Tooltip.mdx'
 styles: ['Tooltip']
 ---
 
-import { TooltipDemos } from '@mantine/demos';
+import { TooltipDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -28,7 +28,7 @@ Custom components must provide a prop to get root element ref,
 all Mantine components support ref out of the box.
 
 ```tsx
-import { Tooltip, Badge } from '@mantine/core';
+import { Tooltip, Badge } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -65,7 +65,7 @@ Custom components that are rendered inside `Tooltip` are required to support `re
 
 ```tsx
 // Example of code that WILL NOT WORK
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from '@asuikit/core';
 
 function MyComponent() {
   return <div>My component</div>;
@@ -86,7 +86,7 @@ Use `forwardRef` function to forward ref to root element:
 ```tsx
 // Example of code that will work
 import { forwardRef } from 'react';
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from '@asuikit/core';
 
 const MyComponent = forwardRef<HTMLDivElement>((props, ref) => (
   <div ref={ref} {...props}>
@@ -130,7 +130,7 @@ with the following properties that determine which events will trigger tooltip:
 - `touch` – events for touchscreen devices, `false` by default
 
 ```tsx
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -158,7 +158,7 @@ Set `inline` prop to use `Tooltip` with inline elements:
 Tooltip is built with [Transition](/core/transition/) component, it supports `transitionProps` props:
 
 ```tsx
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -199,7 +199,7 @@ This logic is applied to Tooltip and Tooltip.Floating components:
 
 ```tsx
 import React, { forwardRef } from 'react';
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from '@asuikit/core';
 
 // forwardRef function will allow to get root element ref
 const MyBadge = forwardRef<HTMLDivElement, { color: string }>(({ color }, ref) => (
@@ -251,7 +251,7 @@ or navigate with keyboard will not be able to get tooltip content. Set `events` 
 focus/blur tooltip events:
 
 ```tsx
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from '@asuikit/core';
 
 // Tooltip will be visible for screen readers
 function Demo() {

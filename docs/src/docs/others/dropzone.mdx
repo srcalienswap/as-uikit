@@ -1,16 +1,16 @@
 ---
 group: 'Other packages'
-package: '@mantine/dropzone'
+package: '@asuikit/dropzone'
 title: 'Dropzone'
 order: 1
 slug: /others/dropzone/
 description: 'Capture files from user with drag and drop'
 componentPrefix: 'Dropzone'
 props: ['Dropzone', 'DropzoneFullScreen']
-import: "import { Dropzone } from '@mantine/dropzone';"
-source: 'mantine-dropzone/src'
+import: "import { Dropzone } from '@asuikit/dropzone';"
+source: 'asuikit-dropzone/src'
 docs: 'others/dropzone.mdx'
-installation: '@mantine/dropzone'
+installation: '@asuikit/dropzone'
 license: MIT
 styles: ['Dropzone', 'DropzoneFullScreen']
 ---
@@ -22,23 +22,23 @@ import {
   MS_WORD_MIME_TYPE,
   MS_EXCEL_MIME_TYPE,
   MS_POWERPOINT_MIME_TYPE,
-} from '@mantine/dropzone';
-import { DropzoneDemos } from '@mantine/demos';
+} from '@asuikit/dropzone';
+import { DropzoneDemos } from '@asuikit/demos';
 
 ## Installation
 
-Package depends on `@mantine/core` and `@mantine/hooks`.
+Package depends on `@asuikit/core` and `@asuikit/hooks`.
 
 Install with yarn:
 
 ```bash
-yarn add @mantine/dropzone
+yarn add @asuikit/dropzone
 ```
 
 Install with npm:
 
 ```bash
-npm install @mantine/dropzone
+npm install @asuikit/dropzone
 ```
 
 ## Usage
@@ -94,7 +94,7 @@ and the values as an array of file extensions. Find more examples of accepting s
 in the [react-dropzone documentation](https://react-dropzone.js.org/#section-accepting-specific-file-types).
 
 ```tsx
-import { Dropzone } from '@mantine/dropzone';
+import { Dropzone } from '@asuikit/dropzone';
 
 function Demo() {
   return (
@@ -113,7 +113,7 @@ function Demo() {
 You can also specify file types by providing an array of mime types to `accept` prop:
 
 ```tsx
-import { Dropzone } from '@mantine/dropzone';
+import { Dropzone } from '@asuikit/dropzone';
 
 function Demo() {
   return (
@@ -124,10 +124,10 @@ function Demo() {
 }
 ```
 
-To save some research time you can use `MIME_TYPES` variable exported from `@mantine/dropzone`:
+To save some research time you can use `MIME_TYPES` variable exported from `@asuikit/dropzone`:
 
 ```tsx
-import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
+import { Dropzone, MIME_TYPES } from '@asuikit/dropzone';
 
 function Demo() {
   return (
@@ -159,7 +159,7 @@ Additionally you can use grouped mime types:
 />
 
 ```tsx
-import { IMAGE_MIME_TYPE, Dropzone } from '@mantine/dropzone';
+import { IMAGE_MIME_TYPE, Dropzone } from '@asuikit/dropzone';
 
 function Demo() {
   return <Dropzone accept={IMAGE_MIME_TYPE}>{/* children */}</Dropzone>;
@@ -185,7 +185,7 @@ function Demo() {
 
 ```tsx
 import { useRef, useEffect } from 'react';
-import { Dropzone } from '@mantine/dropzone';
+import { Dropzone } from '@asuikit/dropzone';
 
 function Demo() {
   const dropzoneRef = useRef<HTMLDivElement>(null);

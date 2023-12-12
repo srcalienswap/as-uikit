@@ -8,8 +8,8 @@ const getPath = (storyPath) => path.resolve(__dirname, storyPath).replace(/\\/g,
 const storiesPath = !argv._[0]
   ? [getPath('../../src/**/*.story.@(ts|tsx)')]
   : [
-      getPath(`../../src/mantine-*/**/${argv._[0]}.story.@(ts|tsx)`),
-      getPath(`../../src/mantine-*/**/${argv._[0]}.demos.story.@(ts|tsx)`),
+      getPath(`../../src/asuikit-*/**/${argv._[0]}.story.@(ts|tsx)`),
+      getPath(`../../src/asuikit-*/**/${argv._[0]}.demos.story.@(ts|tsx)`),
     ];
 
 module.exports = {

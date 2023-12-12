@@ -10,18 +10,18 @@ search: 'General approach to SSR'
 This guide covers server side rendering with custom server, [Next.js](/guides/next/) and [Gatsby](/guides/gatsby/)
 usage guides are available separately.
 
-1. Install `@mantine/ssr` package
+1. Install `@asuikit/ssr` package
 
 ```bash
-yarn add @mantine/ssr
+yarn add @asuikit/ssr
 
-npm install @mantine/ssr
+npm install @asuikit/ssr
 ```
 
 2. Create `App` component with `MantineProvider`
 
 ```tsx
-import { Button, MantineProvider } from '@mantine/core';
+import { Button, MantineProvider } from '@asuikit/core';
 
 export function App() {
   return (
@@ -60,7 +60,7 @@ export function Html({ children, styles }) {
 ```tsx
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import express from 'express';
-import { createStylesServer, ServerStyles } from '@mantine/ssr';
+import { createStylesServer, ServerStyles } from '@asuikit/ssr';
 import { App } from './App';
 import { Html } from './Html';
 

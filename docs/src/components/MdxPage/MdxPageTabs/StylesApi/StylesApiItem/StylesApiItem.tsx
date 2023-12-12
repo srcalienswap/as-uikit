@@ -1,6 +1,6 @@
 import React from 'react';
-import { Table, Title } from '@mantine/core';
-import * as STYLES_API from '@mantine/styles-api';
+import { Table, Title } from '@asuikit/core';
+import * as STYLES_API from '@asuikit/styles-api';
 import useStyles from './StylesApiItem.styles';
 
 interface StylesApiItemProps {
@@ -19,7 +19,7 @@ export function StylesApiItem({ component }: StylesApiItemProps) {
   const rows = CLASS_NAMES.map((name) => (
     <tr key={name}>
       <td>{name}</td>
-      <td>{`.mantine-${component}-${name}`}</td>
+      <td>{`.asuikit-${component}-${name}`}</td>
       <td>{COMPONENT_STYLES[name]}</td>
     </tr>
   ));

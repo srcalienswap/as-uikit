@@ -1,8 +1,8 @@
 /* eslint-disable import/no-relative-packages */
 import React from 'react';
-import { RemoveScroll } from '@mantine/core';
-import { useSpotlight } from '@mantine/spotlight';
-import { HeaderControls } from '@mantine/ds';
+import { RemoveScroll } from '@asuikit/core';
+import { useSpotlight } from '@asuikit/spotlight';
+import { HeaderControls } from '@asuikit/ds';
 import { useDirectionContext } from '../DirectionContext';
 import useStyles from './HeaderDesktop.styles';
 

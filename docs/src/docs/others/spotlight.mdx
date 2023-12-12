@@ -1,35 +1,35 @@
 ---
 group: 'Other packages'
-package: '@mantine/spotlight'
+package: '@asuikit/spotlight'
 title: 'Spotlight'
 order: 1
 slug: /others/spotlight/
 description: 'Command center for your application'
 props: ['SpotlightProvider']
-import: "import { SpotlightProvider } from '@mantine/spotlight';"
-source: 'mantine-spotlight/src'
+import: "import { SpotlightProvider } from '@asuikit/spotlight';"
+source: 'asuikit-spotlight/src'
 docs: 'others/spotlight.mdx'
-installation: '@mantine/spotlight'
+installation: '@asuikit/spotlight'
 license: MIT
 styles: ['SpotlightProvider']
 ---
 
-import { SpotlightDemos } from '@mantine/demos';
+import { SpotlightDemos } from '@asuikit/demos';
 
 ## Installation
 
-Package depends on `@mantine/core` and `@mantine/hooks`.
+Package depends on `@asuikit/core` and `@asuikit/hooks`.
 
 Install with yarn:
 
 ```bash
-yarn add @mantine/spotlight
+yarn add @asuikit/spotlight
 ```
 
 Install with npm:
 
 ```bash
-npm install @mantine/spotlight
+npm install @asuikit/spotlight
 ```
 
 ## Usage
@@ -40,11 +40,11 @@ with `SpotlightProvider` component:
 
 <Demo data={SpotlightDemos.usage} />
 
-Note that if you are using [MantineProvider](/theming/mantine-provider/), `SpotlightProvider` must be used as its child:
+Note that if you are using [MantineProvider](/theming/asuikit-provider/), `SpotlightProvider` must be used as its child:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
-import { SpotlightProvider } from '@mantine/spotlight';
+import { MantineProvider } from '@asuikit/core';
+import { SpotlightProvider } from '@asuikit/spotlight';
 
 function Demo() {
   return (
@@ -66,7 +66,7 @@ when users press `⌘ + K` on MacOS and `Ctrl + K` on any other os.
 You can setup multiple shortcuts, for example, Mantine documentation uses the following setup:
 
 ```tsx
-import { SpotlightProvider } from '@mantine/spotlight';
+import { SpotlightProvider } from '@asuikit/spotlight';
 
 function Demo() {
   return (
@@ -96,7 +96,7 @@ Keyboard shortcuts will not work if:
 To disabled keyboard shortcuts set `shortcut={null}`:
 
 ```tsx
-import { SpotlightProvider } from '@mantine/spotlight';
+import { SpotlightProvider } from '@asuikit/spotlight';
 
 function Demo() {
   return (
@@ -109,12 +109,12 @@ function Demo() {
 
 ## Event based functions
 
-`@mantine/spotlight` exports `spotlight` object with functions which can be used to perform certain actions
+`@asuikit/spotlight` exports `spotlight` object with functions which can be used to perform certain actions
 from any part of your application:
 
 ```tsx
 // All functions can be called from anywhere (not only from components)
-import { spotlight } from '@mantine/spotlight';
+import { spotlight } from '@asuikit/spotlight';
 
 // Opens spotlight
 spotlight.open();
@@ -152,8 +152,8 @@ spotlight.removeActions(['secret-action-1', 'secret-action-2']);
 For example, it can be used to open spotlight with button click:
 
 ```tsx
-import { useSpotlight } from '@mantine/spotlight';
-import { Button, Group } from '@mantine/core';
+import { useSpotlight } from '@asuikit/spotlight';
+import { Button, Group } from '@asuikit/core';
 
 function SpotlightControl() {
   const spotlight = useSpotlight();
@@ -232,10 +232,10 @@ interface SpotlightAction {
 }
 ```
 
-You can import `SpotlightAction` type from `@mantine/spotlight` package:
+You can import `SpotlightAction` type from `@asuikit/spotlight` package:
 
 ```tsx
-import type { SpotlightAction } from '@mantine/spotlight';
+import type { SpotlightAction } from '@asuikit/spotlight';
 ```
 
 ## Controlled query
@@ -328,7 +328,7 @@ To disable transitions set `transitionProps={{ duration: 0 }}`:
 package to lock scroll. To properly size these `elements` add a `className` to them ([documentation](https://github.com/theKashey/react-remove-scroll#positionfixed-elements)):
 
 ```tsx
-import { RemoveScroll } from '@mantine/core';
+import { RemoveScroll } from '@asuikit/core';
 
 // to make "width: 100%"
 <div className={RemoveScroll.classNames.fullWidth} />

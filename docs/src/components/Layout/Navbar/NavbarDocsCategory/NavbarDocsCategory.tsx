@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { IconChevronDown } from '@tabler/icons-react';
-import { Text } from '@mantine/core';
+import { Text } from '@asuikit/core';
 import { useLocation } from '@reach/router';
 import { getDocsData } from '../../get-docs-data';
 import useStyles from './NavbarDocsCategory.styles';

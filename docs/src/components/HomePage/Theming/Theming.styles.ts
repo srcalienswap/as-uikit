@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@asuikit/core';
 
 export default createStyles((theme) => ({
   prism: {
@@ -12,11 +12,11 @@ export default createStyles((theme) => ({
       paddingBottom: rem(30),
     },
 
-    '& .mantine-ScrollArea-viewport': {
+    '& .asuikit-ScrollArea-viewport': {
       borderRadius: theme.radius.md,
     },
 
-    '& .mantine-ScrollArea-root': {
+    '& .asuikit-ScrollArea-root': {
       marginTop: theme.spacing.xl,
       borderRadius: theme.radius.md,
       boxShadow: theme.shadows.md,

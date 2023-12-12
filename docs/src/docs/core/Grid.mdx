@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Grid
 order: 1
 slug: /core/grid/
@@ -8,12 +8,12 @@ category: 'layout'
 description: 'Flexbox grid system with variable amount of columns'
 componentPrefix: 'Grid'
 props: ['Grid', 'Col']
-import: "import { Grid } from '@mantine/core';"
-source: 'mantine-core/src/Grid/Grid.tsx'
+import: "import { Grid } from '@asuikit/core';"
+source: 'asuikit-core/src/Grid/Grid.tsx'
 docs: 'core/Grid.mdx'
 ---
 
-import { GridDemos } from '@mantine/demos';
+import { GridDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -61,7 +61,7 @@ Since grid is a flexbox container, you can control `justify-content` and `align-
 ## Responsive columns
 
 Use breakpoint props (`xs`, `sm`, `md`, `lg`, `xl`) to make columns respond to viewport changes.
-You can configure breakpoint values with [MantineProvider](/theming/mantine-provider/).
+You can configure breakpoint values with [MantineProvider](/theming/asuikit-provider/).
 
 In this example up to `md` there will be 1 column, from `md` to `lg` there will be 2 columns and from `lg` and up, there will be 4 columns:
 
@@ -98,7 +98,7 @@ To fix this issue either wrap `Grid` with [Container](/core/container/) or remov
 `m` prop:
 
 ```tsx
-import { Grid, Container } from '@mantine/core';
+import { Grid, Container } from '@asuikit/core';
 
 function WithContainer() {
   return (

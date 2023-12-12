@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Text, DefaultProps, Box } from '@mantine/core';
+import { Container, Text, DefaultProps, Box } from '@asuikit/core';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import useStyles from './PageSection.styles';
 

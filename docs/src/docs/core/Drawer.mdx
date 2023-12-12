@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Drawer
 order: 1
 slug: /core/drawer/
 category: 'overlay'
 description: 'Display overlay area at any side of the screen'
 props: ['Drawer']
-import: "import { Drawer } from '@mantine/core';"
-source: 'mantine-core/src/Drawer/Drawer.tsx'
+import: "import { Drawer } from '@asuikit/core';"
+source: 'asuikit-core/src/Drawer/Drawer.tsx'
 docs: 'core/Drawer.mdx'
 styles: ['Drawer']
 ---
 
-import { DrawerDemos } from '@mantine/demos';
+import { DrawerDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -105,7 +105,7 @@ You can use the following compound components to have full control over the `Dra
 package to lock scroll. To properly size these `elements` add a `className` to them ([documentation](https://github.com/theKashey/react-remove-scroll#positionfixed-elements)):
 
 ```tsx
-import { RemoveScroll } from '@mantine/core';
+import { RemoveScroll } from '@asuikit/core';
 
 // to make "width: 100%"
 <div className={RemoveScroll.classNames.fullWidth} />
@@ -123,7 +123,7 @@ import { RemoveScroll } from '@mantine/core';
 Set `title` props to make component accessible, will add `aria-labelledby` to the content element:
 
 ```tsx
-import { Drawer } from '@mantine/core';
+import { Drawer } from '@asuikit/core';
 
 function Demo() {
   return <Drawer title="Drawer label" opened onClose={() => {}} />;
@@ -133,7 +133,7 @@ function Demo() {
 To set close button `aria-label` use `closeButtonProps`:
 
 ```tsx
-import { Drawer } from '@mantine/core';
+import { Drawer } from '@asuikit/core';
 
 function Demo() {
   return <Drawer closeButtonProps={{ 'aria-label': 'Close modal' }} opened onClose={() => {}} />;

@@ -1,12 +1,12 @@
 ---
 group: 'theming'
 title: MantineProvider
-slug: /theming/mantine-provider/
+slug: /theming/asuikit-provider/
 order: 1
 search: 'Theme context, CSS reset, CSS variables, context classes and styles'
 ---
 
-import { ThemeDemos } from '@mantine/demos';
+import { ThemeDemos } from '@asuikit/demos';
 
 # MantineProvider
 
@@ -15,7 +15,7 @@ MantineProvider component can be used to change theme. It is not required if you
 ## Usage
 
 ```tsx
-import { MantineProvider, Button } from '@mantine/core';
+import { MantineProvider, Button } from '@asuikit/core';
 
 function App() {
   return <Button>My app button</Button>;
@@ -44,7 +44,7 @@ and global styles (`withGlobalStyles`). It is recommended to enable these option
 - font-size to `theme.fontSizes.md`
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -61,7 +61,7 @@ If you prefer to style components with CSS/SCSS or other styling solutions that 
 context, then you can use Mantine CSS variables. To add CSS variables to the `:root` set `withCSSVariables` prop on `MantineProvider`:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -76,29 +76,29 @@ Then you will be able to use variables anywhere in your CSS:
 
 ```css
 .my-button {
-  background-color: var(--mantine-color-blue-6);
-  font-family: var(--mantine-font-family);
-  line-height: var(--mantine-line-height);
+  background-color: var(--asuikit-color-blue-6);
+  font-family: var(--asuikit-font-family);
+  line-height: var(--asuikit-line-height);
 }
 ```
 
 Mantine exposes the following CSS variables based on [theme](/theming/theme-object/) you provide:
 
-- `--mantine-color-white`
-- `--mantine-color-black`
-- `--mantine-transition-timing-function`
-- `--mantine-line-height`
-- `--mantine-font-family`
-- `--mantine-font-family-monospace`
-- `--mantine-font-family-headings`
-- `--mantine-heading-font-weight`
-- `--mantine-shadow-{size}`, e.g. `--mantine-shadow-sm`, `--mantine-shadow-xl`
-- `--mantine-radius-{size}`, e.g. `--mantine-radius-sm`, `--mantine-radius-xl`
-- `--mantine-spacing-{size}`, e.g. `--mantine-spacing-sm`, `--mantine-spacing-xl`
-- `--mantine-font-size-{size}`, e.g. `--mantine-font-size-sm`, `--mantine-font-size-xl`
-- `--mantine-color-{color}-{shade}`, e.g. `--mantine-color-blue-6`, `--mantine-color-gray-0`
-- `--mantine-{heading}-font-size`, e.g. `--mantine-h1-font-size`
-- `--mantine-{heading}-line-height`, e.g, `--mantine-h3-line-height`
+- `--asuikit-color-white`
+- `--asuikit-color-black`
+- `--asuikit-transition-timing-function`
+- `--asuikit-line-height`
+- `--asuikit-font-family`
+- `--asuikit-font-family-monospace`
+- `--asuikit-font-family-headings`
+- `--asuikit-heading-font-weight`
+- `--asuikit-shadow-{size}`, e.g. `--asuikit-shadow-sm`, `--asuikit-shadow-xl`
+- `--asuikit-radius-{size}`, e.g. `--asuikit-radius-sm`, `--asuikit-radius-xl`
+- `--asuikit-spacing-{size}`, e.g. `--asuikit-spacing-sm`, `--asuikit-spacing-xl`
+- `--asuikit-font-size-{size}`, e.g. `--asuikit-font-size-sm`, `--asuikit-font-size-xl`
+- `--asuikit-color-{color}-{shade}`, e.g. `--asuikit-color-blue-6`, `--asuikit-color-gray-0`
+- `--asuikit-{heading}-font-size`, e.g. `--asuikit-h1-font-size`
+- `--asuikit-{heading}-line-height`, e.g, `--asuikit-h3-line-height`
 
 ## Nested MantineProviders
 
@@ -109,7 +109,7 @@ If some parts of your application require different theme settings, you can wrap
 Note that nested `MantineProvider` will inherit `theme` override from parent provider only if `inherit` prop is set:
 
 ```tsx
-import { MantineProvider, Button } from '@mantine/core';
+import { MantineProvider, Button } from '@asuikit/core';
 
 function App() {
   return (
@@ -142,7 +142,7 @@ All components that are rendered inside MantineProvider will inherit those style
 If component does not specify Styles API selectors, then in most cases you can add styles using `root` selector:
 
 ```tsx
-import { MantineProvider, Text } from '@mantine/core';
+import { MantineProvider, Text } from '@asuikit/core';
 
 function App() {
   return (
@@ -171,7 +171,7 @@ Same as with `styles` you can add classes to all components with `classNames`.
 This approach is useful when you want to styles components with utility based CSS libraries.
 
 ```tsx
-import { MantineProvider, Button } from '@mantine/core';
+import { MantineProvider, Button } from '@asuikit/core';
 
 function App() {
   return (

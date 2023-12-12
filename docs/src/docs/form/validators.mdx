@@ -1,19 +1,19 @@
 ---
-group: 'mantine-form'
-package: '@mantine/form'
+group: 'asuikit-form'
+package: '@asuikit/form'
 title: 'Form validators'
 order: 2
 slug: /form/validators/
 description: 'Premade validation functions'
 docs: 'form/validators.mdx'
-source: 'mantine-form/src'
+source: 'asuikit-form/src'
 ---
 
-import { FormDemos } from '@mantine/demos';
+import { FormDemos } from '@asuikit/demos';
 
 ## Usage
 
-`@mantine/form` package exports several functions that can be used in [validation rules object](/form/validation/#validation-with-rules-object).
+`@asuikit/form` package exports several functions that can be used in [validation rules object](/form/validation/#validation-with-rules-object).
 Validation functions are tiny in size and provide basic validation, if you have complex validation requirements, use other types of [validation](/form/validation/).
 
 <Demo data={FormDemos.validators} />
@@ -31,7 +31,7 @@ only have invalid styles without error message:
 values are considered to be empty. Strings are trimmed before validation.
 
 ```tsx
-import { useForm, isNotEmpty } from '@mantine/form';
+import { useForm, isNotEmpty } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -62,7 +62,7 @@ const form = useForm({
 `isEmail` uses `/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/` regexp to determine whether form value is an email:
 
 ```tsx
-import { useForm, isEmail } from '@mantine/form';
+import { useForm, isEmail } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -80,7 +80,7 @@ const form = useForm({
 `matches` checks whether form value matches given regexp. If form value is not a string, validation will be failed.
 
 ```tsx
-import { useForm, matches } from '@mantine/form';
+import { useForm, matches } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -98,7 +98,7 @@ const form = useForm({
 `isInRange` checks whether form value is within given `min`-`max` range. If form value is not a number, validation will be failed.
 
 ```tsx
-import { useForm, isInRange } from '@mantine/form';
+import { useForm, isInRange } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -122,7 +122,7 @@ const form = useForm({
 Strings are trimmed before validation.
 
 ```tsx
-import { useForm, hasLength } from '@mantine/form';
+import { useForm, hasLength } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {
@@ -147,7 +147,7 @@ const form = useForm({
 Note that `matchesField` can only work with primitive values (arrays and objects cannot be compared).
 
 ```tsx
-import { useForm, matchesField } from '@mantine/form';
+import { useForm, matchesField } from '@asuikit/form';
 
 const form = useForm({
   initialValues: {

@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: NativeSelect
 order: 1
 slug: /core/native-select/
 category: 'inputs'
 description: 'Capture user feedback limited to large set of options'
 props: ['NativeSelect']
-import: "import { NativeSelect } from '@mantine/core';"
-source: 'mantine-core/src/NativeSelect/NativeSelect.tsx'
+import: "import { NativeSelect } from '@asuikit/core';"
+source: 'asuikit-core/src/NativeSelect/NativeSelect.tsx'
 docs: 'core/NativeSelect.mdx'
 styles: ['NativeSelect']
 ---
 
-import { NativeSelectDemos } from '@mantine/demos';
+import { NativeSelectDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -32,7 +32,7 @@ Note that item value should always be a string, other data formats (numbers, boo
 
 ```tsx
 import { useState } from 'react';
-import { NativeSelect } from '@mantine/core';
+import { NativeSelect } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState('');
@@ -70,7 +70,7 @@ Note that in this case `clearable` option will not work and will need to handle 
 
 ```tsx
 import { useRef } from 'react';
-import { NativeSelect } from '@mantine/core';
+import { NativeSelect } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLSelectElement>(null);

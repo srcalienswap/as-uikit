@@ -1,16 +1,16 @@
 /* eslint-disable import/no-webpack-loader-syntax */
 import React from 'react';
-import { SimpleGrid, Button, Group, createStyles, DEFAULT_THEME, rem } from '@mantine/core';
-import { useClipboard } from '@mantine/hooks';
+import { SimpleGrid, Button, Group, createStyles, DEFAULT_THEME, rem } from '@asuikit/core';
+import { useClipboard } from '@asuikit/hooks';
 
-import fullLogoCode from '!!raw-loader!./assets/mantine-logo-full.svg';
-import fullLogoImage from './assets/mantine-logo-full.svg';
+import fullLogoCode from '!!raw-loader!./assets/asuikit-logo-full.svg';
+import fullLogoImage from './assets/asuikit-logo-full.svg';
 
-import whiteLogoCode from '!!raw-loader!./assets/mantine-logo-white.svg';
-import whiteLogoImage from './assets/mantine-logo-white.svg';
+import whiteLogoCode from '!!raw-loader!./assets/asuikit-logo-white.svg';
+import whiteLogoImage from './assets/asuikit-logo-white.svg';
 
-import logoCode from '!!raw-loader!./assets/mantine-logo.svg';
-import logoImage from './assets/mantine-logo.svg';
+import logoCode from '!!raw-loader!./assets/asuikit-logo.svg';
+import logoImage from './assets/asuikit-logo.svg';
 
 interface LogoAssetProps {
   image: string;
@@ -70,21 +70,21 @@ export function LogoAssets() {
         image={logoImage}
         code={logoCode}
         background="#fff"
-        fileName="mantine-logo.svg"
+        fileName="asuikit-logo.svg"
         imageWidth={47}
       />
       <LogoAsset
         image={fullLogoImage}
         code={fullLogoCode}
         background="#fff"
-        fileName="mantine-logo-full.svg"
+        fileName="asuikit-logo-full.svg"
         imageWidth={180}
       />
       <LogoAsset
         image={whiteLogoImage}
         code={whiteLogoCode}
         background={DEFAULT_THEME.colors.dark[6]}
-        fileName="mantine-logo-full.svg"
+        fileName="asuikit-logo-full.svg"
         imageWidth={180}
       />
     </SimpleGrid>

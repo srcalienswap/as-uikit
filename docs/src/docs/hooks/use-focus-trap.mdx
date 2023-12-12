@@ -1,17 +1,17 @@
 ---
-group: 'mantine-hooks'
-package: '@mantine/hooks'
+group: 'asuikit-hooks'
+package: '@asuikit/hooks'
 category: 'dom'
 title: 'use-focus-trap'
 order: 1
 slug: /hooks/use-focus-trap/
 description: 'Trap focus inside given node'
-import: "import { useFocusTrap } from '@mantine/hooks';"
+import: "import { useFocusTrap } from '@asuikit/hooks';"
 docs: 'hooks/use-focus-trap.mdx'
-source: 'mantine-hooks/src/use-focus-trap/use-focus-trap.ts'
+source: 'asuikit-hooks/src/use-focus-trap/use-focus-trap.ts'
 ---
 
-import { ModalDemos, MenuDemos } from '@mantine/demos';
+import { ModalDemos, MenuDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -19,7 +19,7 @@ use-focus-trap traps focus at given node, for example in modal, drawer or menu.
 Node must include at least one focusable element. When node unmounts, focus trap is automatically disabled.
 
 ```tsx
-import { useFocusTrap } from '@mantine/hooks';
+import { useFocusTrap } from '@asuikit/hooks';
 
 function Demo() {
   const focusTrapRef = useFocusTrap();
@@ -61,7 +61,7 @@ Usually focus trap is not used alone. To combine use-focus-trap hook with other 
 
 ```tsx
 import { useRef } from 'react';
-import { useClickOutside, useFocusTrap, useMergedRef } from '@mantine/hooks';
+import { useClickOutside, useFocusTrap, useMergedRef } from '@asuikit/hooks';
 
 function Demo() {
   const myRef = useRef();
@@ -80,7 +80,7 @@ To specify element that should receive initial focus add `data-autofocus` attrib
 note that focus trap works with dom and this attribute should be added to element:
 
 ```tsx
-import { useFocusTrap } from '@mantine/hooks';
+import { useFocusTrap } from '@asuikit/hooks';
 
 function Demo() {
   const focusTrapRef = useFocusTrap();

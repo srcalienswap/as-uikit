@@ -26,7 +26,7 @@ export function PageHead({ title, description, disableTitleTemplate }: PageHeadP
       <meta name="og:description" content={metaDescription} />
       <meta name="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@mantinedev" />
+      <meta name="twitter:creator" content="@asuikitdev" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
     </>

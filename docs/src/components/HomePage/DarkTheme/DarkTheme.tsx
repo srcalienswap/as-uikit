@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Image, SimpleGrid, Text, useMantineColorScheme, Group, rem } from '@mantine/core';
-import { Prism } from '@mantine/prism';
+import { Button, Image, SimpleGrid, Text, useMantineColorScheme, Group, rem } from '@asuikit/core';
+import { Prism } from '@asuikit/prism';
 import { IconMoonStars, IconSun } from '@tabler/icons-react';
 import { PageSection } from '../PageSection/PageSection';
 import image from './dark-theme-image.png';
@@ -11,7 +11,7 @@ export function DarkTheme() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   const code = `
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@asuikit/core';
 
 function Demo() {
   return (

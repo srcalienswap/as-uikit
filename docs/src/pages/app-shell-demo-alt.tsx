@@ -9,7 +9,7 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
-} from '@mantine/core';
+} from '@asuikit/core';
 
 export default function AppShellDemo() {
   const theme = useMantineTheme();

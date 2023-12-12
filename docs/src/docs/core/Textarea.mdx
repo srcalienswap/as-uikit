@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Textarea
 order: 1
 slug: /core/textarea/
 category: 'inputs'
 description: 'Renders textarea with optional autosize variant'
 props: ['Textarea']
-import: "import { Textarea } from '@mantine/core';"
-source: 'mantine-core/src/Textarea/Textarea.tsx'
+import: "import { Textarea } from '@asuikit/core';"
+source: 'asuikit-core/src/Textarea/Textarea.tsx'
 docs: 'core/Textarea.mdx'
 styles: ['Textarea']
 ---
 
-import { TextareaDemos } from '@mantine/demos';
+import { TextareaDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -30,7 +30,7 @@ Textarea height will grow until `maxRows` are reached or indefinitely if `maxRow
 
 ```tsx
 import { useState } from 'react';
-import { Textarea } from '@mantine/core';
+import { Textarea } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState('');
@@ -50,7 +50,7 @@ function Demo() {
 
 ```tsx
 import { useRef } from 'react';
-import { Textarea } from '@mantine/core';
+import { Textarea } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLTextAreaElement>(null);

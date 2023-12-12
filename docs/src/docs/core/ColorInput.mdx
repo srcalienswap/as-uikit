@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: ColorInput
 order: 1
 slug: /core/color-input/
 category: 'inputs'
 description: 'Capture color data from user'
 props: ['ColorInput']
-import: "import { ColorInput } from '@mantine/core';"
-source: 'mantine-core/src/ColorInput/ColorInput.tsx'
+import: "import { ColorInput } from '@asuikit/core';"
+source: 'asuikit-core/src/ColorInput/ColorInput.tsx'
 docs: 'core/ColorInput.mdx'
 styles: ['ColorInput']
 ---
 
-import { ColorInputDemos, ColorPickerDemos } from '@mantine/demos';
+import { ColorInputDemos, ColorPickerDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -23,7 +23,7 @@ import { ColorInputDemos, ColorPickerDemos } from '@mantine/demos';
 
 ```tsx
 import { useState } from 'react';
-import { ColorInput } from '@mantine/core';
+import { ColorInput } from '@asuikit/core';
 
 function Demo() {
   const [value, setValue] = useState('');
@@ -94,7 +94,7 @@ the eye dropper will not be rendered if the API is not supported.
 
 ```tsx
 import { useRef } from 'react';
-import { ColorInput } from '@mantine/core';
+import { ColorInput } from '@asuikit/core';
 
 function Demo() {
   const ref = useRef<HTMLInputElement>(null);

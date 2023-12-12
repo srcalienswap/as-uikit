@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: HoverCard
 order: 1
 slug: /core/hover-card/
@@ -8,13 +8,13 @@ category: 'overlay'
 description: 'Display popover section when target element is hovered'
 componentPrefix: 'HoverCard'
 props: ['HoverCard', 'HoverCardTarget', 'HoverCardDropdown']
-import: "import { HoverCard } from '@mantine/core';"
-source: 'mantine-core/src/HoverCard/HoverCard.tsx'
+import: "import { HoverCard } from '@asuikit/core';"
+source: 'asuikit-core/src/HoverCard/HoverCard.tsx'
 docs: 'core/HoverCard.mdx'
 styles: ['HoverCard']
 ---
 
-import { HoverCardDemos } from '@mantine/demos';
+import { HoverCardDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -40,7 +40,7 @@ strings, fragments, numbers and multiple elements/components are not supported a
 Custom components must provide a prop to get root element ref, all Mantine components support ref out of the box.
 
 ```tsx
-import { HoverCard, Badge } from '@mantine/core';
+import { HoverCard, Badge } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -81,7 +81,7 @@ Custom components that are rendered inside `HoverCard.Target` are required to su
 
 ```tsx
 // Example of code that WILL NOT WORK
-import { HoverCard } from '@mantine/core';
+import { HoverCard } from '@asuikit/core';
 
 function MyComponent() {
   return <div>My component</div>;
@@ -104,7 +104,7 @@ Use `forwardRef` function to forward ref to root element:
 ```tsx
 // Example of code that will work
 import { forwardRef } from 'react';
-import { HoverCard } from '@mantine/core';
+import { HoverCard } from '@asuikit/core';
 
 const MyComponent = forwardRef((props, ref) => (
   <div ref={ref} {...props}>

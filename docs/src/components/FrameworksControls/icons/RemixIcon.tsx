@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMantineTheme, Center, rem } from '@mantine/core';
+import { useMantineTheme, Center, rem } from '@asuikit/core';
 
 export function RemixIcon() {
   const theme = useMantineTheme();

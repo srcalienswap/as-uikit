@@ -1,19 +1,19 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Modal
 order: 1
 slug: /core/modal/
 category: 'overlay'
 description: 'An accessible overlay dialog'
 props: ['Modal']
-import: "import { Modal } from '@mantine/core';"
-source: 'mantine-core/src/Modal/Modal.tsx'
+import: "import { Modal } from '@asuikit/core';"
+source: 'asuikit-core/src/Modal/Modal.tsx'
 docs: 'core/Modal.mdx'
 styles: ['Modal']
 ---
 
-import { ModalDemos } from '@mantine/demos';
+import { ModalDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -127,7 +127,7 @@ You can use the following compound components to have full control over the `Mod
 package to lock scroll. To properly size these `elements` add a `className` to them ([documentation](https://github.com/theKashey/react-remove-scroll#positionfixed-elements)):
 
 ```tsx
-import { RemoveScroll } from '@mantine/core';
+import { RemoveScroll } from '@asuikit/core';
 
 // to make "width: 100%"
 <div className={RemoveScroll.classNames.fullWidth} />
@@ -145,7 +145,7 @@ import { RemoveScroll } from '@mantine/core';
 Set `title` props to make component accessible, will add `aria-labelledby` to the content element:
 
 ```tsx
-import { Modal } from '@mantine/core';
+import { Modal } from '@asuikit/core';
 
 function Demo() {
   return <Modal title="Modal label" opened onClose={() => {}} />;
@@ -155,7 +155,7 @@ function Demo() {
 To set close button `aria-label` use `closeButtonProps`:
 
 ```tsx
-import { Modal } from '@mantine/core';
+import { Modal } from '@asuikit/core';
 
 function Demo() {
   return <Modal closeButtonProps={{ 'aria-label': 'Close modal' }} opened onClose={() => {}} />;

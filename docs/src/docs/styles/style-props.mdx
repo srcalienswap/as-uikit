@@ -7,7 +7,7 @@ search: 'Add responsive styles with props'
 ---
 
 import { StylePropsTable } from '../../components/StylePropsTable/StylePropsTable';
-import { ThemeDemos } from '@mantine/demos';
+import { ThemeDemos } from '@asuikit/demos';
 
 # Style props
 
@@ -15,7 +15,7 @@ With style props you can add responsive styles to any Mantine component.
 Style props add styles to the **root** element, if you want to style nested elements use [Styles API](https://mantine.dev/styles/styles-api/) instead.
 
 ```tsx
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 function Demo() {
   return (
@@ -38,7 +38,7 @@ Some style props can reference values from theme, for example `mt` will use `the
 if you set `xs`, `sm`, `md`, `lg`, `xl`:
 
 ```tsx
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 // margin-top: theme.spacing.xs
 <Box mt="xs" />
@@ -59,7 +59,7 @@ import { Box } from '@mantine/core';
 In `c` and `bg` props you can reference colors from `theme.colors`:
 
 ```tsx
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 // color: theme.colors.blue[theme.fn.primaryShade()]
 <Box c="blue" />
@@ -89,7 +89,7 @@ Responsive values are calculated the following way:
 - `xs`, `sm`, `md`, `lg`, `xl` values are used when the viewport width is larger that the value of corresponding breakpoint specified in [theme.breakpoints](/styles/responsive/)
 
 ```tsx
-import { Box } from '@mantine/core';
+import { Box } from '@asuikit/core';
 
 <Box w={{ base: 320, sm: 480, lg: 640 }} />
 ```

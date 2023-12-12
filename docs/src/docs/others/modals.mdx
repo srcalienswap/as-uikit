@@ -1,34 +1,34 @@
 ---
 group: 'Other packages'
-package: '@mantine/modals'
+package: '@asuikit/modals'
 title: 'Modals manager'
 order: 1
 slug: /others/modals/
 description: 'Centralized modals manager with option to handle state of multi-step modals'
 props: ['ModalsProvider']
-import: "import { ModalsProvider } from '@mantine/modals';"
-source: 'mantine-modals/src'
+import: "import { ModalsProvider } from '@asuikit/modals';"
+source: 'asuikit-modals/src'
 docs: 'others/modals.mdx'
-installation: '@mantine/modals'
+installation: '@asuikit/modals'
 license: MIT
 ---
 
-import { ModalsDemos } from '@mantine/demos';
+import { ModalsDemos } from '@asuikit/demos';
 
 ## Installation
 
-Package depends on `@mantine/core` and `@mantine/hooks`.
+Package depends on `@asuikit/core` and `@asuikit/hooks`.
 
 Install with yarn:
 
 ```bash
-yarn add @mantine/modals
+yarn add @asuikit/modals
 ```
 
 Install with npm:
 
 ```bash
-npm install @mantine/modals
+npm install @asuikit/modals
 ```
 
 ## Setup ModalsProvider
@@ -36,8 +36,8 @@ npm install @mantine/modals
 Wrap your app with `ModalsProvider` component:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
-import { ModalsProvider } from '@mantine/modals';
+import { MantineProvider } from '@asuikit/core';
+import { ModalsProvider } from '@asuikit/modals';
 
 function Demo() {
   return (
@@ -52,7 +52,7 @@ function Demo() {
 
 ## Confirm modal
 
-@mantine/modals package includes special modal that can be used for confirmations.
+@asuikit/modals package includes special modal that can be used for confirmations.
 Component includes confirm and cancel buttons and supports children to display additional
 information about action. Use `openConfirmModal` function to open a confirm modal:
 
@@ -78,7 +78,7 @@ Using this properties you can customize confirm modal to match current context r
 To setup shared labels for confirm modals set `labels` on `ModalsProvider`:
 
 ```tsx
-import { ModalsProvider } from '@mantine/modals';
+import { ModalsProvider } from '@asuikit/modals';
 
 function Demo() {
   return (
@@ -94,8 +94,8 @@ function Demo() {
 You can define any amount of modals in ModalsProvider context:
 
 ```tsx
-import { ContextModalProps, ModalsProvider } from '@mantine/modals';
-import { Text, Button } from '@mantine/core';
+import { ContextModalProps, ModalsProvider } from '@asuikit/modals';
+import { Text, Button } from '@asuikit/core';
 
 const TestModal = ({ context, id, innerProps }: ContextModalProps<{ modalBody: string }>) => (
   <>
@@ -137,7 +137,7 @@ const modals = {
   demonstration: TestModal,
   /* ...other modals */
 };
-declare module '@mantine/modals' {
+declare module '@asuikit/modals' {
   export interface MantineModalsOverride {
     modals: typeof modals;
   }
@@ -154,7 +154,7 @@ function Demo() {
 Typesafe context modals will force you to use the correct types for `openContextModal`:
 
 ```tsx
-import { openContextModal, closeModal } from '@mantine/modals';
+import { openContextModal, closeModal } from '@asuikit/modals';
 openContextModal({
   modal: 'demonstration',
   title: 'Test modal from context',

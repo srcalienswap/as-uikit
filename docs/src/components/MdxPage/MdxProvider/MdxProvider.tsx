@@ -1,8 +1,8 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import { Code, Anchor, rem } from '@mantine/core';
-import { Prism } from '@mantine/prism';
-import { Demo } from '@mantine/ds';
+import { Code, Anchor, rem } from '@asuikit/core';
+import { Prism } from '@asuikit/prism';
+import { Demo } from '@asuikit/ds';
 import { KeyboardEventsTable } from './KeyboardEventsTable/KeyboardEventsTable';
 import GatsbyLink from './GatsbyLink/GatsbyLink';
 import DataTable from './DataTable/DataTable';

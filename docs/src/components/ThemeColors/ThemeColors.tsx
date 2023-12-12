@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMantineTheme } from '@mantine/core';
+import { useMantineTheme } from '@asuikit/core';
 import { ColorsGroup } from './ColorsGroup';
 
 export function ThemeColors() {

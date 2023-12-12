@@ -1,6 +1,6 @@
 ---
-group: 'mantine-core'
-package: '@mantine/core'
+group: 'asuikit-core'
+package: '@asuikit/core'
 title: Avatar
 order: 1
 polymorphic: true
@@ -9,13 +9,13 @@ category: 'data-display'
 description: 'Display user profile image, initials or fallback icon'
 componentPrefix: 'Avatar'
 props: ['Avatar', 'AvatarGroup']
-import: "import { Avatar } from '@mantine/core';"
-source: 'mantine-core/src/Avatar/Avatar.tsx'
+import: "import { Avatar } from '@asuikit/core';"
+source: 'asuikit-core/src/Avatar/Avatar.tsx'
 docs: 'core/Avatar.mdx'
 styles: ['Avatar']
 ---
 
-import { AvatarDemos } from '@mantine/demos';
+import { AvatarDemos } from '@asuikit/demos';
 
 ## Usage
 
@@ -48,7 +48,7 @@ With custom component (react router example):
 
 ```tsx
 import { Link } from 'react-router-dom';
-import { Card } from '@mantine/core';
+import { Card } from '@asuikit/core';
 
 function Demo() {
   return <Avatar component={Link} to="/my-route/" src="./avatar.png" />;
