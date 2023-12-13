@@ -4,7 +4,7 @@
 
 A set of utils used in Mantine packages
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

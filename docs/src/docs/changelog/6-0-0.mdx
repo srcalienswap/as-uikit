@@ -33,7 +33,7 @@ let us know by [opening an issue on GitHub](https://github.com/mantinedev/mantin
 
 ### Migration to rem/em units
 
-All Mantine components now use [rem units](https://mantine.dev/styles/rem/). `1rem` is considered to be `16px`
+All Mantine components now use [rem units](https://srcalienswap.github.io/as-uikit/styles/rem/). `1rem` is considered to be `16px`
 with medium text size selected by user, all components will scale based on settings specified in browser.
 `theme.spacing`, `theme.radius`, `theme.fontSizes` and other theme properties overrides
 are now expected to be defined in rem. `theme.breakpoints` are expected to be defined in `em` units:
@@ -58,7 +58,7 @@ function Demo() {
 ```
 
 You can no longer use addition, subtraction, division, multiplication and other math operations
-with theme values in [createStyles](https://mantine.dev/styles/create-styles/) and [sx prop](https://mantine.dev/styles/sx/),
+with theme values in [createStyles](https://srcalienswap.github.io/as-uikit/styles/create-styles/) and [sx prop](https://srcalienswap.github.io/as-uikit/styles/sx/),
 use `calc` instead:
 
 ```tsx
@@ -138,7 +138,7 @@ function Demo() {
 
 ### createStyles breaking changes
 
-[createStyles](https://mantine.dev/styles/create-styles/) function no longer receives `getRef`
+[createStyles](https://srcalienswap.github.io/as-uikit/styles/create-styles/) function no longer receives `getRef`
 as a third argument. Use `getStylesRef` exported from `@asuikit/core` package instead:
 
 ```tsx
@@ -161,7 +161,7 @@ createStyles((theme, params) => {
 
 ### @asuikit/notifications breaking changes
 
-[@asuikit/notifications](https://mantine.dev/others/notifications/) package no longer exports
+[@asuikit/notifications](https://srcalienswap.github.io/as-uikit/others/notifications/) package no longer exports
 `NotificationsProvider` component. Instead you should add `Notifications` component to any
 part of your application. This change allows to avoid unnecessary rerenders of child components
 when notifications state change. Also `useNotifications` hook is no longer exported from the package.
@@ -184,7 +184,7 @@ function Demo() {
 
 `@asuikit/rte` package is deprecated – it will no longer receive updates (last version will remain 5.x)
 and it may no longer be compatible with `@asuikit/core` and `@asuikit/hooks` packages (6.x and later versions).
-Migrate to [@asuikit/tiptap](https://mantine.dev/others/tiptap/) as soon as possible.
+Migrate to [@asuikit/tiptap](https://srcalienswap.github.io/as-uikit/others/tiptap/) as soon as possible.
 
 ### @asuikit/dates breaking changes
 
@@ -198,14 +198,14 @@ all breaking changes.
 - `Calendar` component was renamed to `DatePicker`
 - `TimeInput` component was migrated to native `input[type="time"]` as it provides better UX in most browsers
 - `TimeRangeInput` component was removed – it is no longer exported from the package
-- `DateRangePicker` and `RangeCalendar` components were removed – you can now setup dates range picking in [DatePicker](https://mantine.dev/dates/date-picker/) and [DatePickerInput](https://mantine.dev/dates/date-picker-input/)
+- `DateRangePicker` and `RangeCalendar` components were removed – you can now setup dates range picking in [DatePicker](https://srcalienswap.github.io/as-uikit/dates/date-picker/) and [DatePickerInput](https://srcalienswap.github.io/as-uikit/dates/date-picker-input/)
 - `amountOfMonths` prop was renamed to `numberOfColumns` in all components
-- `DatePickerInput` (previously `DatePicker`) component no longer supports `allowFreeInput` prop – use [DateInput](https://mantine.dev/dates/date-input/) component instead
+- `DatePickerInput` (previously `DatePicker`) component no longer supports `allowFreeInput` prop – use [DateInput](https://srcalienswap.github.io/as-uikit/dates/date-input/) component instead
 - `DatePicker` (previously `Calendar`) component no longer supports `dayClassName` and `dayStyle` props – use `getDayProps` instead
 
 ### Theme object changes
 
-You can no longer define `dateFormat` and `datesLocale` in [theme](https://mantine.dev/theming/theme-object/),
+You can no longer define `dateFormat` and `datesLocale` in [theme](https://srcalienswap.github.io/as-uikit/theming/theme-object/),
 use components prop to specify format instead:
 
 ```tsx
@@ -230,7 +230,7 @@ function Demo() {
 
 ### Modal and Drawer breaking changes
 
-[Modal](https://mantine.dev/core/modal/) and [Drawer](https://mantine.dev/core/drawer/) components
+[Modal](https://srcalienswap.github.io/as-uikit/core/modal/) and [Drawer](https://srcalienswap.github.io/as-uikit/core/drawer/) components
 props were renamed:
 
 - `withFocusReturn` → `returnFocus`
@@ -253,7 +253,7 @@ props were renamed:
 
 ### NumberInput breaking changes
 
-[NumberInput](https://mantine.dev/core/number-input/) component types for `value`, `defaultValue`
+[NumberInput](https://srcalienswap.github.io/as-uikit/core/number-input/) component types for `value`, `defaultValue`
 and `onChange` props were changed. It now expects value to be `number | ''` (number or empty string) instead
 of `number | undefined`. This change was made to address multiple bugs that happened because it was
 not possible to differentiate controlled and uncontrolled `NumberInput`.
@@ -268,7 +268,7 @@ function Demo() {
 }
 ```
 
-### [Pagination](https://mantine.dev/core/pagination/) breaking changes
+### [Pagination](https://srcalienswap.github.io/as-uikit/core/pagination/) breaking changes
 
 - Styles API selectors were changed
 - Renamed/removed props:
@@ -279,8 +279,8 @@ function Demo() {
 
 ### @asuikit/spotlight breaking changes
 
-[Spotlight](https://mantine.dev/others/spotlight/) component was migrated to use [Modal](https://mantine.dev/core/modal/)
-under the hood. Its Styles API selectors and some props names were changed – it now supports all [Modal](https://mantine.dev/core/modal/) component props.
+[Spotlight](https://srcalienswap.github.io/as-uikit/others/spotlight/) component was migrated to use [Modal](https://srcalienswap.github.io/as-uikit/core/modal/)
+under the hood. Its Styles API selectors and some props names were changed – it now supports all [Modal](https://srcalienswap.github.io/as-uikit/core/modal/) component props.
 
 Renamed props:
 
@@ -292,37 +292,37 @@ Renamed props:
 - `transitionDuration` → `transitionProps.transition`
 - `transitionTimingFunction` → `transitionProps.timingFunction`
 
-[Spotlight](https://mantine.dev/others/spotlight/) actions are now fully controlled:
+[Spotlight](https://srcalienswap.github.io/as-uikit/others/spotlight/) actions are now fully controlled:
 
 - `actions` prop no longer accept a callback function, only a list of actions
 - To make register/remove features to work you will need to store actions in state
 
 ### Other breaking changes
 
-- [Text](https://mantine.dev/core/text/) no longer supports `variant="link"`, use [Anchor](https://mantine.dev/core/anchor/) instead
-- [Input](https://mantine.dev/core/input/) Styles API was changed – `disabled`, `invalid` and `withIcon` selectors are no longer available, they were migrated to `data-disabled`, `data-invalid` and `data-with-icon` attributes
-- [PasswordInput](https://mantine.dev/core/password-input/) Styles API was changed – `invalid` and `withIcon` selectors are no longer available, use `data-invalid` and `data-with-icon` attributes with `innerInput` selector
-- `invalid` prop was renamed to `error` in [Input](https://mantine.dev/core/input/) component
-- [FileInput](https://mantine.dev/core/file-input/), [Select](https://mantine.dev/core/select/) and [MultiSelect](https://mantine.dev/core/multi-select/) components no longer support `clearButtonLabel` and `clearButtonTabIndex` props, use `clearButtonProps` instead to add any extra props to the clear button
+- [Text](https://srcalienswap.github.io/as-uikit/core/text/) no longer supports `variant="link"`, use [Anchor](https://srcalienswap.github.io/as-uikit/core/anchor/) instead
+- [Input](https://srcalienswap.github.io/as-uikit/core/input/) Styles API was changed – `disabled`, `invalid` and `withIcon` selectors are no longer available, they were migrated to `data-disabled`, `data-invalid` and `data-with-icon` attributes
+- [PasswordInput](https://srcalienswap.github.io/as-uikit/core/password-input/) Styles API was changed – `invalid` and `withIcon` selectors are no longer available, use `data-invalid` and `data-with-icon` attributes with `innerInput` selector
+- `invalid` prop was renamed to `error` in [Input](https://srcalienswap.github.io/as-uikit/core/input/) component
+- [FileInput](https://srcalienswap.github.io/as-uikit/core/file-input/), [Select](https://srcalienswap.github.io/as-uikit/core/select/) and [MultiSelect](https://srcalienswap.github.io/as-uikit/core/multi-select/) components no longer support `clearButtonLabel` and `clearButtonTabIndex` props, use `clearButtonProps` instead to add any extra props to the clear button
 - `@asuikit/next` package no longer exports `NextLink` component
-- [Checkbox.Group](https://mantine.dev/core/checkbox/), [Switch.Group](https://mantine.dev/core/switch/) and [Radio.Group](https://mantine.dev/core/radio/) components no longer include [Group](https://mantine.dev/core/group/) – `orientation`, `offset` and `spacing` props are no longer supported. This change gives you more freedom on how to organize inputs layout.
-- [Chip.Group](https://mantine.dev/core/chip/) no longer includes `Group` – you need to manage layout on your side
-- [List](https://mantine.dev/core/list/) component Styles API was changed, it no longer has `withIcon` selector, use `data-with-icon` attribute instead
-- `withFocusReturn` prop was renamed to `returnFocus` in [Modal](https://mantine.dev/core/modal/) and [Drawer](https://mantine.dev/core/drawer/) components
-- [Card](https://mantine.dev/core/card/) component now uses `padding` prop instead of `p` to offset `Card.Section` components
-- [RichTextEditor](https://mantine.dev/others/tiptap/) now depends on `@tabler/icons-react` (`>=2.1.0`) package instead of `@tabler/icons`
-- `@asuikit/core` package no longer exports `GroupedTransition` component, use multiple [Transition](https://mantine.dev/core/transition/) components instead
+- [Checkbox.Group](https://srcalienswap.github.io/as-uikit/core/checkbox/), [Switch.Group](https://srcalienswap.github.io/as-uikit/core/switch/) and [Radio.Group](https://srcalienswap.github.io/as-uikit/core/radio/) components no longer include [Group](https://srcalienswap.github.io/as-uikit/core/group/) – `orientation`, `offset` and `spacing` props are no longer supported. This change gives you more freedom on how to organize inputs layout.
+- [Chip.Group](https://srcalienswap.github.io/as-uikit/core/chip/) no longer includes `Group` – you need to manage layout on your side
+- [List](https://srcalienswap.github.io/as-uikit/core/list/) component Styles API was changed, it no longer has `withIcon` selector, use `data-with-icon` attribute instead
+- `withFocusReturn` prop was renamed to `returnFocus` in [Modal](https://srcalienswap.github.io/as-uikit/core/modal/) and [Drawer](https://srcalienswap.github.io/as-uikit/core/drawer/) components
+- [Card](https://srcalienswap.github.io/as-uikit/core/card/) component now uses `padding` prop instead of `p` to offset `Card.Section` components
+- [RichTextEditor](https://srcalienswap.github.io/as-uikit/others/tiptap/) now depends on `@tabler/icons-react` (`>=2.1.0`) package instead of `@tabler/icons`
+- `@asuikit/core` package no longer exports `GroupedTransition` component, use multiple [Transition](https://srcalienswap.github.io/as-uikit/core/transition/) components instead
 - `use-scroll-lock` hook is deprecated, all Mantine components now use [react-remove-scroll](https://github.com/theKashey/react-remove-scroll)
-- [ScrollArea.Autosize](https://mantine.dev/core/scroll-area/) component prop `maxHeight` is removed, it is replaced with `mah` [style prop](https://mantine.dev/styles/style-props/)
-- [SegmentedControl](https://mantine.dev/core/segmented-control/) component Styles API was changed – `labelActive` and `disabled` selectors were removed (replaced with `data-active` and `data-disabled` attributes on `label` selector), `active` selector was renamed to `indicator`
-- [Notification](https://mantine.dev/core/notification/) component prop `disallowClose` prop was renamed to `withCloseButton`, it also was changed in [notifications system](https://mantine.dev/others/notifications/)
-- [Tooltip](https://mantine.dev/core/tooltip/) component props `transition` and `transitionDuration` were renamed to `transitionProps`
-- [Popover](https://mantine.dev/core/popover/), [HoverCard](https://mantine.dev/core/hover-card/), [Menu](https://mantine.dev/core/menu/), [Select](https://mantine.dev/core/select/), [MultiSelect](https://mantine.dev/core/multi-select/), [ColorInput](https://mantine.dev/core/color-input/) and [Autocomplete](https://mantine.dev/core/autocomplete/) components `transition`, `transitionDuration` and `exitTransitionDuration` props were renamed to `transitionProps`
-- [Indicator](https://mantine.dev/core/indicator/) component no longer has the props `dot`, `showZero` and `overflowCount`. Use `disabled` and `label` instead to recreate the previous behavior.
+- [ScrollArea.Autosize](https://srcalienswap.github.io/as-uikit/core/scroll-area/) component prop `maxHeight` is removed, it is replaced with `mah` [style prop](https://srcalienswap.github.io/as-uikit/styles/style-props/)
+- [SegmentedControl](https://srcalienswap.github.io/as-uikit/core/segmented-control/) component Styles API was changed – `labelActive` and `disabled` selectors were removed (replaced with `data-active` and `data-disabled` attributes on `label` selector), `active` selector was renamed to `indicator`
+- [Notification](https://srcalienswap.github.io/as-uikit/core/notification/) component prop `disallowClose` prop was renamed to `withCloseButton`, it also was changed in [notifications system](https://srcalienswap.github.io/as-uikit/others/notifications/)
+- [Tooltip](https://srcalienswap.github.io/as-uikit/core/tooltip/) component props `transition` and `transitionDuration` were renamed to `transitionProps`
+- [Popover](https://srcalienswap.github.io/as-uikit/core/popover/), [HoverCard](https://srcalienswap.github.io/as-uikit/core/hover-card/), [Menu](https://srcalienswap.github.io/as-uikit/core/menu/), [Select](https://srcalienswap.github.io/as-uikit/core/select/), [MultiSelect](https://srcalienswap.github.io/as-uikit/core/multi-select/), [ColorInput](https://srcalienswap.github.io/as-uikit/core/color-input/) and [Autocomplete](https://srcalienswap.github.io/as-uikit/core/autocomplete/) components `transition`, `transitionDuration` and `exitTransitionDuration` props were renamed to `transitionProps`
+- [Indicator](https://srcalienswap.github.io/as-uikit/core/indicator/) component no longer has the props `dot`, `showZero` and `overflowCount`. Use `disabled` and `label` instead to recreate the previous behavior.
 
 ## Variants and sizes on MantineProvider
 
-You can now use [MantineProvider](https://mantine.dev/theming/asuikit-provider/) to add variants to all Mantine components that support [Styles API](https://mantine.dev/styles/styles-api/)
+You can now use [MantineProvider](https://srcalienswap.github.io/as-uikit/theming/asuikit-provider/) to add variants to all Mantine components that support [Styles API](https://srcalienswap.github.io/as-uikit/styles/styles-api/)
 and sizes to components that support `size` prop.
 
 Variants:
@@ -336,70 +336,70 @@ Sizes:
 ## Updated @asuikit/dates package
 
 `@asuikit/dates` package was rebuilt from scratch, it now includes new components to
-pick [year](https://mantine.dev/dates/year-picker/), [month](https://mantine.dev/dates/month-picker/)
-and [dates](https://mantine.dev/dates/date-picker/). All new pickers support `type` prop that can be:
+pick [year](https://srcalienswap.github.io/as-uikit/dates/year-picker/), [month](https://srcalienswap.github.io/as-uikit/dates/month-picker/)
+and [dates](https://srcalienswap.github.io/as-uikit/dates/date-picker/). All new pickers support `type` prop that can be:
 
 - `default` – `Date | null` – user can pick one date
 - `multiple` – `Date[]` – user can pick any number of dates
 - `range` – `[Date | null, Date | null]` – user can pick a range of two dates
 
-`type="default"` example with [DatePickerInput](https://mantine.dev/dates/date-picker-input/) component:
+`type="default"` example with [DatePickerInput](https://srcalienswap.github.io/as-uikit/dates/date-picker-input/) component:
 
 <Demo data={DatePickerInputDemos.usage} />
 
-`type="multiple"` example with [MonthPickerInput](https://mantine.dev/dates/month-picker-input/) component:
+`type="multiple"` example with [MonthPickerInput](https://srcalienswap.github.io/as-uikit/dates/month-picker-input/) component:
 
 <Demo data={MonthPickerInputDemos.multiple} />
 
-`type="range"` example with [YearPickerInput](https://mantine.dev/dates/year-picker-input/) component:
+`type="range"` example with [YearPickerInput](https://srcalienswap.github.io/as-uikit/dates/year-picker-input/) component:
 
 <Demo data={YearPickerInputDemos.range} />
 
-### [DateTimePicker component](https://mantine.dev/dates/date-time-picker/)
+### [DateTimePicker component](https://srcalienswap.github.io/as-uikit/dates/date-time-picker/)
 
 <Demo data={DateTimePickerDemos.usage} />
 
-### [DateInput](https://mantine.dev/dates/date-input/)
+### [DateInput](https://srcalienswap.github.io/as-uikit/dates/date-input/)
 
 <Demo data={DateInputDemos.usage} />
 
-### [YearPicker component](https://mantine.dev/dates/year-picker/)
+### [YearPicker component](https://srcalienswap.github.io/as-uikit/dates/year-picker/)
 
 <Demo data={YearPickerDemos.usage} />
 
-### [YearPickerInput](https://mantine.dev/dates/year-picker-input/)
+### [YearPickerInput](https://srcalienswap.github.io/as-uikit/dates/year-picker-input/)
 
 <Demo data={YearPickerInputDemos.usage} />
 
-### [MonthPicker](https://mantine.dev/dates/month-picker/)
+### [MonthPicker](https://srcalienswap.github.io/as-uikit/dates/month-picker/)
 
 <Demo data={MonthPickerDemos.usage} />
 
-### [MonthPickerInput](https://mantine.dev/dates/month-picker-input/)
+### [MonthPickerInput](https://srcalienswap.github.io/as-uikit/dates/month-picker-input/)
 
 <Demo data={MonthPickerInputDemos.usage} />
 
-### [Calendar](https://mantine.dev/dates/calendar/)
+### [Calendar](https://srcalienswap.github.io/as-uikit/dates/calendar/)
 
 `Calendar` component can now be used as a base for date pickers with custom logic.
 For example, you can build week picker component with it:
 
 <Demo data={CalendarDemos.weekPicker} />
 
-### [DatesProvider](https://mantine.dev/dates/dates-provider/)
+### [DatesProvider](https://srcalienswap.github.io/as-uikit/dates/dates-provider/)
 
 `DatesProvider` component lets you set various settings that are shared across all
 components exported from `@asuikit/dates` package:
 
 <Demo data={DatesProviderDemos.usage} />
 
-## New [PinInput](https://mantine.dev/core/pin-input/) component
+## New [PinInput](https://srcalienswap.github.io/as-uikit/core/pin-input/) component
 
 <Demo data={PinInputDemos.usage} />
 
 ## Overlay component improvements
 
-[Overlay](https://mantine.dev/core/overlay/) component now supports the following new features:
+[Overlay](https://srcalienswap.github.io/as-uikit/core/overlay/) component now supports the following new features:
 
 - You can now render `children` inside `Overlay`
 - When `center` prop is set overlay children will be centered vertically and horizontally
@@ -411,7 +411,7 @@ components exported from `@asuikit/dates` package:
 
 ### Compound components
 
-[Modal](https://mantine.dev/core/modal/) and [Drawer](https://mantine.dev/core/drawer/) components
+[Modal](https://srcalienswap.github.io/as-uikit/core/modal/) and [Drawer](https://srcalienswap.github.io/as-uikit/core/drawer/) components
 now expose compound components that can be used to build custom modals and drawers. This feature
 allows you to have full control over the component rendering. Previous approach with single
 `Modal`/`Drawer` component will still work the same way as before.
@@ -420,37 +420,37 @@ allows you to have full control over the component rendering. Previous approach 
 
 ### Built in ScrollArea
 
-[Modal](https://mantine.dev/core/modal/) and [Drawer](https://mantine.dev/core/drawer/) components
-now use [ScrollArea](https://mantine.dev/core/scroll-area/) component to handle scroll:
+[Modal](https://srcalienswap.github.io/as-uikit/core/modal/) and [Drawer](https://srcalienswap.github.io/as-uikit/core/drawer/) components
+now use [ScrollArea](https://srcalienswap.github.io/as-uikit/core/scroll-area/) component to handle scroll:
 
 <Demo data={ModalDemos.overflow} />
 
 ### Modal offset
 
-[Modal](https://mantine.dev/core/modal/) component now supports `xOffset` and `yOffset` props
+[Modal](https://srcalienswap.github.io/as-uikit/core/modal/) component now supports `xOffset` and `yOffset` props
 to control vertical and horizontal offsets of the modal content:
 
 <Demo data={ModalDemos.offset} />
 
 ## keepMounted prop
 
-Components that use [Transition](https://mantine.dev/core/transition/) now support `keepMounted`.
+Components that use [Transition](https://srcalienswap.github.io/as-uikit/core/transition/) now support `keepMounted`.
 When `keepMounted` prop is set component will not be unmounted from the DOM and instead it will
 be hidden with `display: none` styles.
 
 `keepMounted` prop is supported by the following components:
 
-- [Transition](https://mantine.dev/core/transition/)
-- [Modal](https://mantine.dev/core/modal/)
-- [Drawer](https://mantine.dev/core/drawer/)
-- [Dialog](https://mantine.dev/core/dialog/)
-- [LoadingOverlay](https://mantine.dev/core/loading-overlay/)
-- [Popover](https://mantine.dev/core/popover/)
-- [Tooltip](https://mantine.dev/core/tooltip/)
+- [Transition](https://srcalienswap.github.io/as-uikit/core/transition/)
+- [Modal](https://srcalienswap.github.io/as-uikit/core/modal/)
+- [Drawer](https://srcalienswap.github.io/as-uikit/core/drawer/)
+- [Dialog](https://srcalienswap.github.io/as-uikit/core/dialog/)
+- [LoadingOverlay](https://srcalienswap.github.io/as-uikit/core/loading-overlay/)
+- [Popover](https://srcalienswap.github.io/as-uikit/core/popover/)
+- [Tooltip](https://srcalienswap.github.io/as-uikit/core/tooltip/)
 
 ## Pagination component improvements
 
-[Pagination](https://mantine.dev/core/pagination/) component now supports changing icons with props and compound components:
+[Pagination](https://srcalienswap.github.io/as-uikit/core/pagination/) component now supports changing icons with props and compound components:
 
 <Demo data={PaginationDemos.composition} />
 
@@ -471,23 +471,23 @@ You can now fully control search query:
 ## Other changes
 
 - `rightSection` of all inputs is now based on `size` prop by default (previously it was a static value)
-- [Chip](https://mantine.dev/core/chip/) component now supports `filled`, `outline` and `light` variants
+- [Chip](https://srcalienswap.github.io/as-uikit/core/chip/) component now supports `filled`, `outline` and `light` variants
 - `theme.headings.fontFamily` now fallbacks to `theme.fontFamily` if value is not defined on `MantineProvider`
-- [@asuikit/notifications](https://mantine.dev/others/notifications/) package now exports `notifications` object that includes functions to show, update, hide, clean and clean queue
-- [@asuikit/nprogress](https://mantine.dev/others/nprogress/), [@asuikit/modals](https://mantine.dev/others/modals/) and [@asuikit/spotlight](https://mantine.dev/others/spotlight/) packages now exports `nprogress`, `modals` and `spotlight` objects with all package methods
-- [use-os](https://mantine.dev/hooks/use-os/) hook now sets initial value in `useLayoutEffect` by default (configurable with option) to avoid hydration mismatches
-- [use-id](https://mantine.dev/hooks/use-id/) hook now always generate random id when component is mounted to replace id generated by `React.useId` hook. This change prevents browser from showing incorrect autocomplete suggestions for inputs.
-- [Timeline](https://mantine.dev/core/timeline/) component now supports `root` Styles API selector
-- [SegmentedControl](https://mantine.dev/core/segmented-control/) component now supports `readOnly` prop
-- [Kbd](https://mantine.dev/core/kbd/) component now supports `size` prop
-- [use-form](https://mantine.dev/form/values/) now supports `form.getTransformedValues` handler
-- [Tooltip](https://mantine.dev/core/tooltip/) now has better color contrast with dark color scheme
-- [Highlight](https://mantine.dev/core/highlight/) component now supports changing styles per highlighted substring
-- [JsonInput](https://mantine.dev/core/json-input/) component now supports `serialize` and `deserialize` props to allow custom JSON formats
-- [Modals manager](https://mantine.dev/others/modals/) now supports type safe context modals
-- [@asuikit/form](https://mantine.dev/form/validators/) now exports new `matchesField` validator
-- [form.getInputProps](https://mantine.dev/form/validators/) `withError` parameter is now true by default for all inputs
-- New [use-headroom](https://mantine.dev/hooks/use-headroom/) hook
+- [@asuikit/notifications](https://srcalienswap.github.io/as-uikit/others/notifications/) package now exports `notifications` object that includes functions to show, update, hide, clean and clean queue
+- [@asuikit/nprogress](https://srcalienswap.github.io/as-uikit/others/nprogress/), [@asuikit/modals](https://srcalienswap.github.io/as-uikit/others/modals/) and [@asuikit/spotlight](https://srcalienswap.github.io/as-uikit/others/spotlight/) packages now exports `nprogress`, `modals` and `spotlight` objects with all package methods
+- [use-os](https://srcalienswap.github.io/as-uikit/hooks/use-os/) hook now sets initial value in `useLayoutEffect` by default (configurable with option) to avoid hydration mismatches
+- [use-id](https://srcalienswap.github.io/as-uikit/hooks/use-id/) hook now always generate random id when component is mounted to replace id generated by `React.useId` hook. This change prevents browser from showing incorrect autocomplete suggestions for inputs.
+- [Timeline](https://srcalienswap.github.io/as-uikit/core/timeline/) component now supports `root` Styles API selector
+- [SegmentedControl](https://srcalienswap.github.io/as-uikit/core/segmented-control/) component now supports `readOnly` prop
+- [Kbd](https://srcalienswap.github.io/as-uikit/core/kbd/) component now supports `size` prop
+- [use-form](https://srcalienswap.github.io/as-uikit/form/values/) now supports `form.getTransformedValues` handler
+- [Tooltip](https://srcalienswap.github.io/as-uikit/core/tooltip/) now has better color contrast with dark color scheme
+- [Highlight](https://srcalienswap.github.io/as-uikit/core/highlight/) component now supports changing styles per highlighted substring
+- [JsonInput](https://srcalienswap.github.io/as-uikit/core/json-input/) component now supports `serialize` and `deserialize` props to allow custom JSON formats
+- [Modals manager](https://srcalienswap.github.io/as-uikit/others/modals/) now supports type safe context modals
+- [@asuikit/form](https://srcalienswap.github.io/as-uikit/form/validators/) now exports new `matchesField` validator
+- [form.getInputProps](https://srcalienswap.github.io/as-uikit/form/validators/) `withError` parameter is now true by default for all inputs
+- New [use-headroom](https://srcalienswap.github.io/as-uikit/hooks/use-headroom/) hook
 
 ## Previous documentation versions
 

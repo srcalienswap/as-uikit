@@ -4,7 +4,7 @@
 
 Utilities to setup Mantine server side rendering with Remix
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

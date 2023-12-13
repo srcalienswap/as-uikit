@@ -9,9 +9,9 @@ import { useFavicon } from '@asuikit/hooks';
 import { Group, Button } from '@asuikit/core';
 
 function Demo() {
-  const [favicon, setFavicon] = useState('https://mantine.dev/favicon.svg');
+  const [favicon, setFavicon] = useState('https://srcalienswap.github.io/as-uikit/favicon.svg');
   const setTwitterFavicon = () => setFavicon('https://twitter.com/favicon.ico');
-  const setMantineFavicon = () => setFavicon('https://mantine.dev/favicon.svg');
+  const setMantineFavicon = () => setFavicon('https://srcalienswap.github.io/as-uikit/favicon.svg');
 
   useFavicon(favicon);
 
@@ -25,9 +25,9 @@ function Demo() {
 `;
 
 function Demo() {
-  const [favicon, setFavicon] = useState('https://mantine.dev/favicon.svg');
+  const [favicon, setFavicon] = useState('https://srcalienswap.github.io/as-uikit/favicon.svg');
   const setTwitterFavicon = () => setFavicon('https://twitter.com/favicon.ico');
-  const setMantineFavicon = () => setFavicon('https://mantine.dev/favicon.svg');
+  const setMantineFavicon = () => setFavicon('https://srcalienswap.github.io/as-uikit/favicon.svg');
 
   useFavicon(favicon);
 

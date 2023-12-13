@@ -84,7 +84,7 @@ export function Unstyled() {
 export function CustomComponent() {
   return (
     <div style={{ padding: 40 }}>
-      <Badge component="a" href="https://mantine.dev/">
+      <Badge component="a" href="https://srcalienswap.github.io/as-uikit/">
         Anchor
       </Badge>
 

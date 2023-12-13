@@ -4,7 +4,7 @@
 
 A set of react hooks for state and UI management
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

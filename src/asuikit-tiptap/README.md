@@ -4,7 +4,7 @@
 
 Rich text editor based on [tiptap](https://tiptap.dev/)
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

@@ -4,7 +4,7 @@
 
 Embla based carousel
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

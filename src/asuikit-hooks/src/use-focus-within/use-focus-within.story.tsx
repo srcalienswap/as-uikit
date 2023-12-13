@@ -10,7 +10,7 @@ export const Usage = () => {
       <input />
       <button type="button">Button</button>
       <input />
-      <a href="https://mantine.dev/">Link</a>
+      <a href="https://srcalienswap.github.io/as-uikit/">Link</a>
     </div>
   );
 };

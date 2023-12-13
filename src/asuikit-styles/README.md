@@ -4,7 +4,7 @@
 
 Mantine CSS-in-JS library built on top of emotion
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 
