@@ -1,5 +1,7 @@
 const remarkSlug = require('remark-slug');
 
+const corePackage = require('../src/asuikit-core/package.json');
+
 module.exports = {
   pathPrefix: 'as-uikit',
   flags: {
@@ -12,6 +14,7 @@ module.exports = {
     description: 'AS.UIKit documentation',
     author: '@rtivital',
     siteUrl: 'https://srcalienswap.github.io/as-uikit/',
+    version: corePackage.version,
   },
 
   plugins: [

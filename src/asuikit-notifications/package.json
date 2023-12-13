@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/notifications",
-  "description": "Notification system based on Mantine components",
+  "description": "Notification system based on AS.UIKit components",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

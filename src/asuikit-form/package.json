@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/form",
-  "description": "Mantine form management library",
+  "description": "AS.UIKit form management library",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/remix",
-  "description": "Mantine integration for Remix",
+  "description": "AS.UIKit integration for Remix",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

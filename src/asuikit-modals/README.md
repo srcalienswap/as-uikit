@@ -1,4 +1,4 @@
-# Mantine modals manager
+# AS.UIKit modals manager
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/modals)](https://www.npmjs.com/package/@asuikit/modals)
 

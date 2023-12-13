@@ -1,4 +1,4 @@
-# Mantine Hooks
+# AS.UIKit Hooks
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/hooks)](https://www.npmjs.com/package/@asuikit/hooks)
 

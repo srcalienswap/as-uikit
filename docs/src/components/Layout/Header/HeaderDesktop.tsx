@@ -3,6 +3,7 @@ import React from 'react';
 import { RemoveScroll } from '@asuikit/core';
 import { useSpotlight } from '@asuikit/spotlight';
 import { HeaderControls } from '@asuikit/ds';
+import { useSiteMetadata } from 'src/hooks/useSiteMetadata';
 import { useDirectionContext } from '../DirectionContext';
 import useStyles from './HeaderDesktop.styles';
 
@@ -18,6 +19,7 @@ export function HeaderDesktop() {
   const { classes, cx } = useStyles();
   const { dir, toggleDirection } = useDirectionContext();
   const spotlight = useSpotlight();
+  const siteMetaData = useSiteMetadata();
 
   /* const versionItems = versions.map((item) => (
     <Menu.Item
@@ -42,6 +44,7 @@ export function HeaderDesktop() {
             {/* <Logo /> */}
             <img src="https://alienswap.xyz/images/Navbar/default_logo.svg" alt="" />
           </div>
+          <div className={classes.logo}>v{siteMetaData.version}</div>
           {/* <Menu width={160} position="bottom-start" withArrow>
             <Menu.Target>
               <UnstyledButton mt={2}>

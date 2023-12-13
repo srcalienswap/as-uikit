@@ -1,8 +1,8 @@
-# Mantine SSR
+# AS.UIKit SSR
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/ssr)](https://www.npmjs.com/package/@asuikit/ssr)
 
-General purpose utilities for Mantine server side rendering
+General purpose utilities for AS.UIKit server side rendering
 
 [View documentation](https://srcalienswap.github.io/as-uikit/)
 

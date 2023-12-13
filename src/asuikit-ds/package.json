@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/ds",
-  "description": "Internal Mantine components used on *.mantine.dev websites",
+  "description": "Internal AS.UIKit components used on *.mantine.dev websites",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

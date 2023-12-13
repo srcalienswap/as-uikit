@@ -1,4 +1,4 @@
-# Mantine carousel
+# AS.UIKit carousel
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/carousel)](https://www.npmjs.com/package/@asuikit/carousel)
 

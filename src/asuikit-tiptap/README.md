@@ -1,4 +1,4 @@
-# Mantine tiptap
+# AS.UIKit tiptap
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/dates)](https://www.npmjs.com/package/@asuikit/tiptap)
 

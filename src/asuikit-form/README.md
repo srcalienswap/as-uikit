@@ -1,4 +1,4 @@
-# Mantine Form
+# AS.UIKit Form
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/form)](https://www.npmjs.com/package/@asuikit/form)
 

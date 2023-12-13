@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/modals",
-  "description": "Modals manager based on Mantine components",
+  "description": "Modals manager based on AS.UIKit components",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

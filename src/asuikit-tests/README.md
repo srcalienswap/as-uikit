@@ -1,4 +1,4 @@
-# Mantine tests
+# AS.UIKit tests
 
 @asuikit/tests is a helper package that is used to contain commonly repeated tests logic. It is not published on npm.
 

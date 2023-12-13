@@ -1,4 +1,4 @@
-# Mantine notifications system
+# AS.UIKit notifications system
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/notifications)](https://www.npmjs.com/package/@asuikit/notifications)
 

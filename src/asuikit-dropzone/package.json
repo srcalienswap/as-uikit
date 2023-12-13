@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/dropzone",
-  "description": "Dropzone component built with Mantine theme and components",
+  "description": "Dropzone component built with AS.UIKit theme and components",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

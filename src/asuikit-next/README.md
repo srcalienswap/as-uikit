@@ -1,8 +1,8 @@
-# Mantine integration for Next.js
+# AS.UIKit integration for Next.js
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/next)](https://www.npmjs.com/package/@asuikit/next)
 
-Utilities to setup Mantine server side rendering with Next.js
+Utilities to setup AS.UIKit server side rendering with Next.js
 
 [View documentation](https://srcalienswap.github.io/as-uikit/)
 
