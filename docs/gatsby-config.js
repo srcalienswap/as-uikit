@@ -1,16 +1,17 @@
 const remarkSlug = require('remark-slug');
 
 module.exports = {
+  pathPrefix: 'as-uikit',
   flags: {
     DEV_SSR: false,
     FAST_DEV: true,
   },
 
   siteMetadata: {
-    title: 'Mantine Docs',
-    description: 'Mantine documentation',
+    title: 'AS.UIKit Docs',
+    description: 'AS.UIKit documentation',
     author: '@rtivital',
-    siteUrl: 'https://mantine.dev',
+    siteUrl: 'https://srcalienswap.github.io/as-uikit/',
   },
 
   plugins: [
