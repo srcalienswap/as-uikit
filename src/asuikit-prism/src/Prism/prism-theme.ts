@@ -129,7 +129,7 @@ export const light = (theme: MantineTheme): PrismTheme => ({
     {
       types: ['variable'],
       style: {
-        color: theme.colors.violet[9],
+        color: theme.colors.purple[9],
       },
     },
     {
@@ -147,7 +147,7 @@ export const light = (theme: MantineTheme): PrismTheme => ({
     {
       types: ['tag', 'deleted'],
       style: {
-        color: theme.colors.violet[9],
+        color: theme.colors.purple[9],
       },
     },
     {

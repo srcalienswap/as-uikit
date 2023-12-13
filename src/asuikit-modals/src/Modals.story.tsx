@@ -96,7 +96,7 @@ export function Usage() {
         <Button onClick={showSingleConfirmModal} color="cyan">
           Open single confirm modal
         </Button>
-        <Button onClick={showContentModal} color="violet">
+        <Button onClick={showContentModal} color="purple">
           Open content modal
         </Button>
       </Group>

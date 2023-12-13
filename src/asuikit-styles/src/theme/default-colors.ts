@@ -66,7 +66,7 @@ export const DEFAULT_COLORS = {
     '#862e9c',
   ],
 
-  violet: [
+  purple: [
     '#f3f0ff',
     '#e5dbff',
     '#d0bfff',

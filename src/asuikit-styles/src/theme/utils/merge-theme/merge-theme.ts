@@ -70,6 +70,8 @@ export function mergeTheme(
     );
   }
 
+  result.colors = result.colorScheme === 'light' ? result.lightColors : result.darkColors;
+
   return result;
 }
 

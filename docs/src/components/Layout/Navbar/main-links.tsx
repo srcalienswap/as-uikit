@@ -13,7 +13,7 @@ export default [
   {
     to: '/pages/basics/',
     label: 'Learn the basics',
-    color: DEFAULT_THEME.colors.violet[5],
+    color: DEFAULT_THEME.colors.purple[5],
     icon: IconStar,
   },
   {

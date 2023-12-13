@@ -6,7 +6,7 @@ export type DefaultMantineColor =
   | 'red'
   | 'pink'
   | 'grape'
-  | 'violet'
+  | 'purple'
   | 'indigo'
   | 'blue'
   | 'cyan'

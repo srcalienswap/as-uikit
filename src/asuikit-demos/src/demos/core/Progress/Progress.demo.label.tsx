@@ -16,7 +16,7 @@ function Demo() {
         sections={[
           { value: 30, color: 'pink', label: 'Documents' },
           { value: 30, color: 'grape', label: 'Apps' },
-          { value: 25, color: 'violet', label: 'Other' },
+          { value: 25, color: 'purple', label: 'Other' },
         ]}
       />
     </>
@@ -35,7 +35,7 @@ function Label() {
         sections={[
           { value: 30, color: 'pink', label: 'Documents' },
           { value: 30, color: 'grape', label: 'Apps' },
-          { value: 25, color: 'violet', label: 'Other' },
+          { value: 25, color: 'purple', label: 'Other' },
         ]}
       />
     </>

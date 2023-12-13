@@ -27,7 +27,7 @@ const useStyles = createStyles((theme) => ({
 
     // reference button with nested selector
     [\`&:hover .\${getStylesRef('button')}\`]: {
-      backgroundColor: theme.colors.violet[6],
+      backgroundColor: theme.colors.purple[6],
     },
   },
 }));
@@ -66,7 +66,7 @@ const useStyles = createStyles((theme) => ({
 
     // reference button with nested selector
     [`&:hover .${getStylesRef('button')}`]: {
-      backgroundColor: theme.colors.violet[6],
+      backgroundColor: theme.colors.purple[6],
     },
   },
 }));

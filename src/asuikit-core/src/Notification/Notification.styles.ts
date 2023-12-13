@@ -11,22 +11,33 @@ export default createStyles((theme, { color, radius, withTitle }: NotificationSt
   const colors = theme.fn.variant({ variant: 'filled', color });
 
   return {
-    closeButton: theme.fn.hover({
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
-    }),
+    closeButton: {
+      alignSelf: 'flex-start',
+      ...theme.fn.hover({
+        backgroundColor: theme.colors.grey[0],
+      }),
+    },
 
     icon: {
       boxSizing: 'border-box',
-      marginRight: theme.spacing.md,
-      width: rem(28),
-      height: rem(28),
-      borderRadius: rem(28),
+      marginRight: theme.spacing.xs,
+      width: rem(24),
+      height: rem(24),
+      // borderRadius: rem(28),
       display: 'flex',
       flex: 'none',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: colors.background,
-      color: theme.white,
+      background: 'none',
+      color: colors.background,
+      fontSize: rem(24),
+      svg: {
+        width: rem(24),
+        height: rem(24),
+      },
+      marginTop: 2,
+      // color: colors.background,
+      // color: theme.white,
     },
 
     root: {
@@ -34,11 +45,13 @@ export default createStyles((theme, { color, radius, withTitle }: NotificationSt
       boxSizing: 'border-box',
       position: 'relative',
       display: 'flex',
-      alignItems: 'center',
-      paddingLeft: rem(22),
-      paddingRight: theme.spacing.xs,
-      paddingTop: theme.spacing.xs,
-      paddingBottom: theme.spacing.xs,
+      alignItems: 'flex-start',
+      padding: rem(16),
+
+      // paddingLeft: rem(22),
+      // paddingRight: theme.spacing.xs,
+      // paddingTop: theme.spacing.xs,
+      // paddingBottom: theme.spacing.xs,
       borderRadius: _radius,
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
       boxShadow: theme.shadows.lg,
@@ -56,7 +69,7 @@ export default createStyles((theme, { color, radius, withTitle }: NotificationSt
       },
 
       '&[data-with-icon]': {
-        paddingLeft: theme.spacing.xs,
+        paddingLeft: rem(16),
 
         '&::before': {
           display: 'none',
@@ -74,18 +87,27 @@ export default createStyles((theme, { color, radius, withTitle }: NotificationSt
       flex: 1,
       overflow: 'hidden',
       marginRight: theme.spacing.xs,
+      marginTop: 2,
+      lineHeight: rem(24),
     },
 
     loader: {
-      marginRight: theme.spacing.md,
+      marginRight: theme.spacing.xs,
+      width: `${rem(24)} !important`,
+      height: `${rem(24)} !important`,
+      marginTop: 2,
     },
 
     title: {
-      lineHeight: 1.4,
-      marginBottom: rem(2),
+      fontSize: rem(14),
+      lineHeight: rem(24),
+      // marginBottom: rem(2),
+      marginBottom: 0,
       overflow: 'hidden',
       textOverflow: 'ellipsis',
-      color: theme.colorScheme === 'dark' ? theme.white : theme.colors.gray[9],
+      // color: theme.colorScheme === 'dark' ? theme.white : theme.colors.gray[9],
+      color: theme.colors.text[1],
+      fontWeight: 600,
     },
 
     description: {

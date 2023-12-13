@@ -22,7 +22,7 @@ function Demo() {
 
           Input: {
             styles: (theme) => ({
-              input: { borderColor: theme.colors.violet[theme.fn.primaryShade()] },
+              input: { borderColor: theme.colors.purple[theme.fn.primaryShade()] },
             }),
           },
         },
@@ -62,7 +62,7 @@ function Demo() {
 
             Input: {
               styles: (theme) => ({
-                input: { borderColor: theme.colors.violet[theme.fn.primaryShade()] },
+                input: { borderColor: theme.colors.purple[theme.fn.primaryShade()] },
               }),
             },
           },

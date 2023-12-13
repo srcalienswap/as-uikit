@@ -96,10 +96,71 @@ function getVariantStyles({ variant, theme, color, gradient }: GetVariantStyles)
     };
   }
 
+  if (variant === 'light') {
+    return {
+      border: 0,
+      backgroundColor: theme.fn.themeColor(color, 0),
+      color: theme.fn.themeColor(color, 9),
+      ...theme.fn.hover({ backgroundColor: theme.fn.themeColor(color, 1) }),
+    };
+  }
+
+  if (variant === 'outline') {
+    return {
+      border: `1px solid ${theme.fn.themeColor(color, 9)}`,
+      backgroundColor: 'transparent',
+      color: theme.fn.themeColor(color, 9),
+      ...theme.fn.hover({
+        backgroundColor: color?.startsWith('grey')
+          ? theme.fn.themeColor('grey', 9)
+          : theme.fn.themeColor(color, 9),
+        color: color?.startsWith('grey') ? theme.colors.grey[0] : theme.white,
+      }),
+
+      '&:disabled, &[data-disabled]': {
+        backgroundColor: 'transparent',
+        color: theme.colors.grey[3],
+        border: `1px solid ${theme.colors.grey[3]}`,
+      },
+    };
+  }
+
+  if (variant === 'subtle') {
+    return {
+      border: 0,
+      backgroundColor: 'transparent',
+      color: theme.fn.themeColor(color, 9),
+      ...theme.fn.hover({ backgroundColor: theme.fn.themeColor(color, 0) }),
+
+      '&:disabled, &[data-disabled]': {
+        backgroundColor: 'transparent',
+        color: theme.colors.text[4],
+      },
+
+      '&[data-loading]': {
+        pointerEvents: 'none',
+        opacity: 0.6,
+
+        '&::before': {
+          content: '""',
+          ...theme.fn.cover(rem(-1)),
+          backgroundColor: 'transparent',
+          cursor: 'not-allowed',
+        },
+      },
+    };
+  }
+
+  // const special =
+  //   (theme.colorScheme === 'dark' && color === 'white') ||
+  //   (theme.colorScheme === 'light' && color === 'black');
+  // const specialColor =
+  //   theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.grey[0];
+
   return {
     border: `${rem(1)} solid ${colors.border}`,
     backgroundColor: colors.background,
-    color: colors.color,
+    color: color?.startsWith('grey') ? theme.colors.grey[0] : colors.color,
     ...theme.fn.hover({ backgroundColor: colors.hover }),
   };
 }
@@ -123,21 +184,34 @@ export default createStyles(
       ...theme.fn.fontStyles(),
       ...theme.fn.focusStyles(),
       ...getWidthStyles(fullWidth),
-      borderRadius: theme.fn.radius(radius),
-      fontWeight: 600,
+      borderRadius: radius
+        ? theme.fn.radius(radius)
+        : getSize({
+            size,
+            sizes: {
+              xs: rem(4),
+              sm: rem(8),
+              md: rem(8),
+              lg: rem(12),
+              xl: rem(12),
+            },
+          }),
+      fontWeight: size === 'xs' ? 500 : 600,
       position: 'relative',
       lineHeight: 1,
-      fontSize: getSize({ size, sizes: theme.fontSizes }),
+      fontSize: getSize({
+        size: size === 'xs' ? 'sm' : size,
+        sizes: theme.fontSizes,
+      }),
       userSelect: 'none',
       cursor: 'pointer',
-      ...getVariantStyles({ variant, theme, color, gradient }),
 
       '&:active': theme.activeStyles,
 
       '&:disabled, &[data-disabled]': {
         borderColor: 'transparent',
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[5],
+        backgroundColor: theme.colors.grey[1],
+        color: theme.colors.grey[4],
         cursor: 'not-allowed',
         backgroundImage: 'none',
         pointerEvents: 'none',
@@ -161,6 +235,8 @@ export default createStyles(
           cursor: 'not-allowed',
         },
       },
+
+      ...getVariantStyles({ variant, theme, color, gradient }),
     },
 
     icon: {
@@ -169,11 +245,14 @@ export default createStyles(
     },
 
     leftIcon: {
-      marginRight: theme.spacing.xs,
+      marginRight: theme.spacing.sm,
     },
 
     rightIcon: {
       marginLeft: theme.spacing.xs,
+      fontSize: getSize({ size, sizes: theme.fontSizes }),
+      // height: getSize({ size, sizes: theme.fontSizes }),
+      // marginLeft: 4,
     },
 
     centerLoader: {

@@ -8,7 +8,7 @@ export const NEXT_STEPS_DATA = [
     link: '/pages/basics/',
     type: 'gatsby',
     icon: IconStar,
-    color: 'violet',
+    color: 'purple',
   },
   {
     title: 'Learn about theming',

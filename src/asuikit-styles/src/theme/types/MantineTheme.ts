@@ -67,6 +67,8 @@ export interface MantineTheme {
   white: string;
   black: string;
   colors: MantineThemeColors;
+  darkColors: MantineThemeColors;
+  lightColors: MantineThemeColors;
   fontFamily: CSSProperties['fontFamily'];
   lineHeight: CSSProperties['lineHeight'];
   transitionTimingFunction: CSSProperties['transitionTimingFunction'];

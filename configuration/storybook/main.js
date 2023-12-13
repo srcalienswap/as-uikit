@@ -1,12 +1,13 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const { argv } = require('yargs');
+// console.log("💬️ ~ file: main.js:4 ~ argv:", argv._[0])
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin').default;
 
 const getPath = (storyPath) => path.resolve(__dirname, storyPath).replace(/\\/g, '/');
 
 const storiesPath = !argv._[0]
-  ? [getPath('../../src/**/*.story.@(ts|tsx)')]
+  ? [getPath('../../src/**/*.story.@(ts|tsx)'),]
   : [
       getPath(`../../src/asuikit-*/**/${argv._[0]}.story.@(ts|tsx)`),
       getPath(`../../src/asuikit-*/**/${argv._[0]}.demos.story.@(ts|tsx)`),
@@ -34,5 +35,8 @@ module.exports = {
     config.plugins.pop();
 
     return config;
+  },
+  stats: {
+    errorDetails: true,
   },
 };

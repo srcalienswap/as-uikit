@@ -9,8 +9,10 @@ import { BUTTON_VARIANTS } from './Button.styles';
 export default { title: 'Button' };
 
 export function Colors() {
-  const items = MANTINE_COLORS.map((color) => (
+  const theme = useMantineTheme();
+  const items = Object.keys(theme.colors).map((color) => (
     <Group mt="xl" key={color}>
+      {color}
       <Button color={color}>Filled</Button>
       <Button color={color} variant="default">
         Default

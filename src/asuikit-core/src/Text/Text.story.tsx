@@ -8,7 +8,7 @@ export function WithNumberAsSize() {
 }
 
 export function ColorIndex() {
-  return <Text color="violet.9">Red 1 text</Text>;
+  return <Text color="purple.9">Red 1 text</Text>;
 }
 export function TruncateStart() {
   return (
