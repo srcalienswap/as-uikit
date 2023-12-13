@@ -4,7 +4,7 @@
 
 General purpose utilities for Mantine server side rendering
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

@@ -4,7 +4,7 @@
 
 Mantine logo and other utility components.
 
-[View documentation](https://mantine.dev/)
+[View documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

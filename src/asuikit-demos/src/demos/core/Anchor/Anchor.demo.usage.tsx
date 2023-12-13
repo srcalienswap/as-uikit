@@ -7,7 +7,7 @@ import { Anchor } from '@asuikit/core';
 
 function Demo() {
   return (
-    <Anchor href="https://mantine.dev/" target="_blank">
+    <Anchor href="https://srcalienswap.github.io/as-uikit/" target="_blank">
       Mantine docs
     </Anchor>
   );
@@ -16,7 +16,7 @@ function Demo() {
 
 function Demo() {
   return (
-    <Anchor href="https://mantine.dev/" target="_blank">
+    <Anchor href="https://srcalienswap.github.io/as-uikit/" target="_blank">
       Mantine docs
     </Anchor>
   );

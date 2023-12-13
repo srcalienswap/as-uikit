@@ -4,7 +4,7 @@
 
 Overlay command center for your application
 
-[Documentation](https://mantine.dev/)
+[Documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

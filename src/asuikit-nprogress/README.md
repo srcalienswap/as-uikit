@@ -4,7 +4,7 @@
 
 A navigation progress bar
 
-[Documentation](https://mantine.dev/)
+[Documentation](https://srcalienswap.github.io/as-uikit/)
 
 ## Installation
 

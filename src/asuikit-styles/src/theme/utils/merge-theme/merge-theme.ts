@@ -66,7 +66,7 @@ export function mergeTheme(
 
   if (!(result.primaryColor in result.colors)) {
     throw new Error(
-      'MantineProvider: Invalid theme.primaryColor, it accepts only key of theme.colors, learn more – https://mantine.dev/theming/colors/#primary-color'
+      'MantineProvider: Invalid theme.primaryColor, it accepts only key of theme.colors, learn more – https://srcalienswap.github.io/as-uikit/theming/colors/#primary-color'
     );
   }
 

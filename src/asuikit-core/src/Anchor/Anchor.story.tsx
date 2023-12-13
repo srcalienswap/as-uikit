@@ -30,7 +30,7 @@ export function WithTextProps() {
 export function InheritFontSize() {
   return (
     <div style={{ padding: 40, fontSize: 50 }}>
-      <Anchor href="https://mantine.dev/">Should be 50px</Anchor>
+      <Anchor href="https://srcalienswap.github.io/as-uikit/">Should be 50px</Anchor>
     </div>
   );
 }
