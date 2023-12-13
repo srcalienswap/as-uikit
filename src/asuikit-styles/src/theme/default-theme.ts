@@ -1,15 +1,17 @@
 import { MantineThemeBase } from './types';
 import { DEFAULT_COLORS } from './default-colors';
 import { attachFunctions } from './functions/attach-functions';
+import { LIGHT_COLORS } from './light-colors';
+import { DARK_COLORS } from './dark-colors';
 
-export const MANTINE_COLORS = Object.keys(DEFAULT_COLORS);
+export const MANTINE_COLORS = Object.keys(LIGHT_COLORS);
 export const MANTINE_SIZES = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 
 export const _DEFAULT_THEME: MantineThemeBase = {
   dir: 'ltr',
   primaryShade: {
-    light: 6,
-    dark: 8,
+    light: 9,
+    dark: 9,
   },
   focusRing: 'auto',
   loader: 'oval',
@@ -18,13 +20,15 @@ export const _DEFAULT_THEME: MantineThemeBase = {
   black: '#000',
   defaultRadius: 'sm',
   transitionTimingFunction: 'ease',
-  colors: DEFAULT_COLORS,
+  colors: LIGHT_COLORS,
+  darkColors: DARK_COLORS,
+  lightColors: LIGHT_COLORS,
   lineHeight: 1.55,
   fontFamily:
     '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
   fontFamilyMonospace:
     'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
-  primaryColor: 'blue',
+  primaryColor: 'purple',
   respectReducedMotion: true,
   cursorType: 'default',
   defaultGradient: {

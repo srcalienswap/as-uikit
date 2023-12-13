@@ -8,25 +8,28 @@ export interface RadioStylesParams {
 }
 
 const sizes = {
-  xs: rem(16),
-  sm: rem(20),
-  md: rem(24),
-  lg: rem(30),
-  xl: rem(36),
+  xs: rem(12),
+  sm: rem(16),
+  md: rem(20),
+  lg: rem(24),
+  xl: rem(30),
 };
 
 const iconSizes = {
-  xs: rem(6),
-  sm: rem(8),
-  md: rem(10),
-  lg: rem(14),
-  xl: rem(16),
+  xs: rem(5),
+  sm: rem(6),
+  md: rem(8),
+  lg: rem(10),
+  xl: rem(14),
 };
 
 export default createStyles(
   (theme, { color, transitionDuration, labelPosition, error }: RadioStylesParams, { size }) => {
     const colors = theme.fn.variant({ variant: 'filled', color });
-    const errorColor = theme.fn.variant({ variant: 'filled', color: 'red' }).background;
+    const errorColor = theme.fn.variant({
+      variant: 'filled',
+      color: 'red.9',
+    }).background;
 
     return {
       inner: {
@@ -37,7 +40,10 @@ export default createStyles(
 
       icon: {
         ref: getStylesRef('icon'),
-        color: theme.white,
+        color:
+          theme.colorScheme === 'dark' && color === 'grey' && !error
+            ? theme.colors.grey[0]
+            : theme.white,
         opacity: 0,
         transform: `scale(0.75) translateY(${rem(2)})`,
         transition: `opacity ${transitionDuration}ms ${theme.transitionTimingFunction}`,
@@ -51,14 +57,8 @@ export default createStyles(
 
       radio: {
         ...theme.fn.focusStyles(),
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
-        border: `${rem(1)} solid ${
-          error
-            ? errorColor
-            : theme.colorScheme === 'dark'
-              ? theme.colors.dark[4]
-              : theme.colors.gray[4]
-        }`,
+        backgroundColor: theme.colors.bg[1],
+        border: `${rem(1)} solid ${error ? errorColor : theme.colors.grey[4]}`,
         position: 'relative',
         appearance: 'none',
         width: getSize({ sizes, size }),
@@ -74,8 +74,8 @@ export default createStyles(
         cursor: theme.cursorType,
 
         '&:checked': {
-          background: colors.background,
-          borderColor: colors.background,
+          background: error ? errorColor : colors.background,
+          borderColor: error ? errorColor : colors.background,
 
           [`& + .${getStylesRef('icon')}`]: {
             opacity: 1,
@@ -84,13 +84,44 @@ export default createStyles(
         },
 
         '&:disabled': {
-          borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[4],
-          backgroundColor:
-            theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+          borderColor: theme.colors.grey[2],
+          backgroundColor: theme.colors.bg[3],
 
           [`& + .${getStylesRef('icon')}`]: {
             color: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[4],
           },
+        },
+
+        '&:disabled:checked': {
+          borderColor: theme.fn.themeColor(color, 3),
+          backgroundColor: theme.fn.themeColor(color, 3),
+
+          [`& + .${getStylesRef('icon')}`]: {
+            color: theme.fn.themeColor('white', 9),
+          },
+        },
+      },
+
+      labelWrapper: {
+        fontSize: size in sizes ? getSize({ size, sizes: theme.fontSizes }) : undefined,
+        lineHeight: size in sizes ? getSize({ size, sizes }) : undefined,
+        // color: `${error ? 'red' : 'green'}`,
+        color: 'inherit',
+      },
+
+      label: {
+        [labelPosition === 'left' ? 'paddingRight' : 'paddingLeft']: getSize({
+          size,
+          sizes: {
+            xs: rem(6),
+            sm: rem(8),
+            md: rem(8),
+            lg: rem(8),
+            xl: rem(8),
+          },
+        }),
+        '&[data-disabled]': {
+          color: theme.colors.text[3],
         },
       },
     };

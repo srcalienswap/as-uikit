@@ -72,8 +72,7 @@ function getVariantStyles({ theme, variant, color, size, gradient }: GetVariantS
     };
   }
 
-  const colors = theme.fn.variant({ color, variant, gradient });
-
+  const colors = theme.fn.variant({ color, variant, gradient, primaryFallback: true });
   return {
     background: colors.background,
     color: colors.color,
@@ -88,10 +87,15 @@ export default createStyles(
     return {
       leftSection: {
         marginRight: `calc(${theme.spacing.xs} / 2)`,
+        display: 'inline-flex',
       },
 
       rightSection: {
         marginLeft: `calc(${theme.spacing.xs} / 2)`,
+        display: 'inline-flex',
+        '.asuikit-ActionIcon-root': {
+          color: 'inherit',
+        },
       },
 
       inner: {
@@ -108,7 +112,7 @@ export default createStyles(
         WebkitTapHighlightColor: 'transparent',
         lineHeight: `calc(${height} - ${rem(2)})`,
         textDecoration: 'none',
-        padding: `0 calc(${getSize({ size, sizes: theme.spacing })} / 1.5)`,
+        padding: `0 calc(${getSize({ size, sizes: theme.spacing })} / 1.3)`,
         boxSizing: 'border-box',
         display: fullWidth ? 'flex' : 'inline-flex',
         alignItems: 'center',
@@ -116,7 +120,7 @@ export default createStyles(
         width: fullWidth ? '100%' : 'auto',
         textTransform: 'uppercase',
         borderRadius: theme.fn.radius(radius),
-        fontWeight: 700,
+        fontWeight: 400,
         letterSpacing: rem(0.25),
         cursor: 'inherit',
         textOverflow: 'ellipsis',

@@ -16,11 +16,11 @@ const switchHeight = {
 };
 
 const switchWidth = {
-  xs: rem(32),
-  sm: rem(38),
-  md: rem(46),
-  lg: rem(56),
-  xl: rem(72),
+  xs: rem(26),
+  sm: rem(34),
+  md: rem(42),
+  lg: rem(54),
+  xl: rem(70),
 };
 
 const handleSizes = {
@@ -31,6 +31,14 @@ const handleSizes = {
   xl: rem(28),
 };
 
+/* const handleCartoonSizes = {
+  xs: rem(6),
+  sm: rem(7),
+  md: rem(9),
+  lg: rem(11),
+  xl: rem(14),
+};
+ */
 const labelFontSizes = {
   xs: rem(5),
   sm: rem(6),

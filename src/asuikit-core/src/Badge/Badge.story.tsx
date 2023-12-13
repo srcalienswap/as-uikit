@@ -1,9 +1,57 @@
-import { MANTINE_SIZES } from '@asuikit/styles';
+import { MANTINE_SIZES, useMantineTheme } from '@asuikit/styles';
 import React from 'react';
+import { TbCircleCheck } from 'react-icons/tb';
+import { RiCloseCircleFill } from 'react-icons/ri';
 import { Group } from '../Group';
 import { Badge } from './Badge';
+import { CloseButton } from '../CloseButton';
+import { ActionIcon } from '../ActionIcon';
 
 export default { title: 'Badge' };
+
+export function Colors() {
+  const theme = useMantineTheme();
+  const items = Object.keys(theme.colors).map((color) => (
+    <Group mt="xl" key={color}>
+      {color}
+      <Badge color={color}>Filled</Badge>
+      <Badge leftSection={<TbCircleCheck />} color={color}>
+        Default
+      </Badge>
+      <Badge rightSection={<CloseButton size="1em" color={color} />} color={color}>
+        Default
+      </Badge>
+      <Badge
+        rightSection={
+          <ActionIcon size="1em" color="inherit">
+            <RiCloseCircleFill size="0.8em" />
+          </ActionIcon>
+        }
+        color={color}
+      >
+        Default
+      </Badge>
+      <Badge color={color} variant="default">
+        Default
+      </Badge>
+
+      <Badge color={color} variant="white">
+        White
+      </Badge>
+      <Badge color={color} variant="light">
+        Light
+      </Badge>
+      <Badge color={color} variant="outline">
+        Outline
+      </Badge>
+      <Badge color={color} variant="gradient">
+        Gradient
+      </Badge>
+    </Group>
+  ));
+
+  return <div style={{ padding: 40 }}>{items}</div>;
+}
 
 export function Variants() {
   return (
@@ -50,7 +98,7 @@ export function CustomComponent() {
 export function ColorsIndex() {
   return (
     <div style={{ padding: 40 }}>
-      <Badge color="violet.2" variant="dot">
+      <Badge color="purple.2" variant="dot">
         Anchor
       </Badge>
     </div>

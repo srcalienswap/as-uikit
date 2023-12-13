@@ -21,11 +21,11 @@ const useStyles = createStyles((theme) => ({
     },
 
     '&:not(:first-of-type)': {
-      backgroundColor: theme.colors.violet[6],
+      backgroundColor: theme.colors.purple[6],
 
       // pseudo-classes can be nested
       '&:hover': {
-        backgroundColor: theme.colors.violet[9],
+        backgroundColor: theme.colors.purple[9],
       },
     },
   },
@@ -65,11 +65,11 @@ const useStyles = createStyles((theme) => ({
     },
 
     '&:not(:first-of-type)': {
-      backgroundColor: theme.colors.violet[6],
+      backgroundColor: theme.colors.purple[6],
 
       // pseudo-classes can be nested
       '&:hover': {
-        backgroundColor: theme.colors.violet[9],
+        backgroundColor: theme.colors.purple[9],
       },
     },
   },

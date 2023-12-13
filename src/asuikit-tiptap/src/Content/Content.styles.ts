@@ -53,7 +53,7 @@ function getCodeHighlight(withCodeHighlightStyles: boolean, theme: MantineTheme)
       },
 
       '& .hljs-keyword, & .hljs-selector-tag': {
-        color: theme.colors.violet[highlightIndex],
+        color: theme.colors.purple[highlightIndex],
       },
 
       '& .hljs-emphasis': {

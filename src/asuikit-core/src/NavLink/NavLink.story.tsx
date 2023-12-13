@@ -49,7 +49,7 @@ export function Usage() {
       <NavLink
         label="Navigation link"
         icon={<IconHome2 size={16} stroke={1.5} />}
-        color="violet"
+        color="purple"
         variant="filled"
         rightSection={<IconChevronRight size={16} stroke={1.5} />}
         active
@@ -57,7 +57,7 @@ export function Usage() {
       <NavLink
         label="Navigation link"
         icon={<IconHome2 size={16} stroke={1.5} />}
-        color="violet"
+        color="purple"
         variant="subtle"
         rightSection={<IconChevronRight size={16} stroke={1.5} />}
         active
