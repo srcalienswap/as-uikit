@@ -1,0 +1,60 @@
+
+name: Publish to NPM
+
+on:
+  workflow_dispatch:
+    inputs:
+        version:
+          description: Environment for Deploy
+          required: true
+          type: choice
+          options: 
+            - patch
+            - minor
+            - major
+jobs:
+  publish:
+    name: "Publish to NPM"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      
+      - name: Clean
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: clean
+      
+      - name: Docs Clean 
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: docs:clean
+
+      # - name: Build production bundle
+      #   uses: borales/actions-yarn@v4
+      #   with:
+      #     cmd: build:all
+
+      # - name: Setup .yarnrc.yml
+      #   run: |
+      #     yarn config set npmScopes.my-org.npmRegistryServer "https://npm.pkg.github.com"
+      #     yarn config set npmScopes.my-org.npmAlwaysAuth true
+      #     yarn config set npmScopes.my-org.npmAuthToken $NPM_AUTH_TOKEN
+      #   env:
+      #     NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Release
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: release:${{ github.event.inputs.version }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
