@@ -49,6 +49,17 @@ export function mergeTheme(
       };
     }
 
+    if (key === 'colors') {
+      return {
+        ...acc,
+        colors: {
+          ...currentTheme[themeOverride.colorScheme === 'light' ? 'lightColors' : 'darkColors'],
+          ...(themeOverride[themeOverride.colorScheme === 'light' ? 'lightColors' : 'darkColors'] ||
+            themeOverride.colors),
+        },
+      };
+    }
+
     acc[key] =
       typeof themeOverride[key] === 'object'
         ? { ...currentTheme[key], ...themeOverride[key] }
@@ -70,7 +81,7 @@ export function mergeTheme(
     );
   }
 
-  result.colors = result.colorScheme === 'light' ? result.lightColors : result.darkColors;
+  // result.colors = result.colorScheme === 'light' ? result.lightColors : result.darkColors;
 
   return result;
 }
