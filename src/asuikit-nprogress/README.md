@@ -1,4 +1,4 @@
-# Mantine Navigation Progress
+# AS.UIKit Navigation Progress
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/nprogress)](https://www.npmjs.com/package/@asuikit/nprogress)
 

@@ -1,8 +1,8 @@
-# Mantine core
+# AS.UIKit core
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/core)](https://www.npmjs.com/package/@asuikit/core)
 
-Mantine core components library.
+AS.UIKit core components library.
 
 [View documentation](https://srcalienswap.github.io/as-uikit/)
 

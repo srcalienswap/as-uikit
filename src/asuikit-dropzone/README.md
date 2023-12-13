@@ -1,4 +1,4 @@
-# Mantine Dropzone
+# AS.UIKit Dropzone
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/dropzone)](https://www.npmjs.com/package/@asuikit/dropzone)
 

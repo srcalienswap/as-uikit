@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/next",
-  "description": "Mantine integration for Next.js",
+  "description": "AS.UIKit integration for Next.js",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

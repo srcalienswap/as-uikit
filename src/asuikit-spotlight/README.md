@@ -1,4 +1,4 @@
-# Mantine Spotlight
+# AS.UIKit Spotlight
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/spotlight)](https://www.npmjs.com/package/@asuikit/spotlight)
 

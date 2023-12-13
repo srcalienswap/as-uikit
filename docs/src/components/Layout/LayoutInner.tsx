@@ -115,6 +115,7 @@ export function LayoutInner({ children, location }: LayoutProps) {
   const { classes, cx } = useStyles({ shouldRenderHeader });
   const [navbarOpened, setNavbarState] = useState(false);
   const data = getDocsData(useStaticQuery(query));
+
   const [spotlightQuery, setSpotlightQuery] = useState('');
 
   useEffect(() => {

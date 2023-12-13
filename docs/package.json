@@ -1,7 +1,7 @@
 {
   "name": "asuikit-docs",
   "private": true,
-  "description": "Mantine docs",
+  "description": "AS.UIKit docs",
   "version": "1.0.0",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "resolutions": {

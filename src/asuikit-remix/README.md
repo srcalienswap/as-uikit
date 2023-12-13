@@ -1,8 +1,8 @@
-# Mantine integration for Remix
+# AS.UIKit integration for Remix
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/remix)](https://www.npmjs.com/package/@asuikit/remix)
 
-Utilities to setup Mantine server side rendering with Remix
+Utilities to setup AS.UIKit server side rendering with Remix
 
 [View documentation](https://srcalienswap.github.io/as-uikit/)
 

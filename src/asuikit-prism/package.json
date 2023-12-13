@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/prism",
-  "description": "Code highlight with Mantine theme",
+  "description": "Code highlight with AS.UIKit theme",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

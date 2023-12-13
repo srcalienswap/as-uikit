@@ -1,14 +1,14 @@
-# Contributing to Mantine
+# Contributing to AS.UIKit
 
-First of all, thank you for showing interest in contributing to Mantine, all your contributions are extremely valuable to the project!
+First of all, thank you for showing interest in contributing to AS.UIKit, all your contributions are extremely valuable to the project!
 
 ## Ways to contribute
 
 - **Improve documentation:** fix incomplete or missing docs, bad wording, examples or explanations
-- **Give feedback:** we are constantly working on making Mantine better, please share how you use Mantine, what features are missing and what is done good via [GitHub Discussions](https://github.com/mantinedev/mantine/discussions/new) or [Discord](https://discord.gg/wbH82zuWMN)
-- **Share Mantine:** share link to Mantine docs with everyone who can be interested, [share Mantine on Twitter](https://twitter.com/intent/tweet?text=Mantine%20%E2%80%93%20new%20React%20library%20with%20100%2B%20components%20and%20hooks.%20It%20has%20native%20dark%20theme%20support%20and%20focuses%20on%20accessibility%20and%20usability.%0A%0Ahttp%3A%2F%2Fmantine.dev%0A%0A%23reactjs%20)
+- **Give feedback:** we are constantly working on making AS.UIKit better, please share how you use AS.UIKit, what features are missing and what is done good via [GitHub Discussions](https://github.com/mantinedev/mantine/discussions/new) or [Discord](https://discord.gg/wbH82zuWMN)
+- **Share AS.UIKit:** share link to AS.UIKit docs with everyone who can be interested, [share AS.UIKit on Twitter](https://twitter.com/intent/tweet?text=AS.UIKit%20%E2%80%93%20new%20React%20library%20with%20100%2B%20components%20and%20hooks.%20It%20has%20native%20dark%20theme%20support%20and%20focuses%20on%20accessibility%20and%20usability.%0A%0Ahttp%3A%2F%2Fmantine.dev%0A%0A%23reactjs%20)
 - **Contribute to codebase:** propose new feature via [GitHub Issues](https://github.com/mantinedev/mantine/issues/new) or find an [existing one](https://github.com/mantinedev/mantine/labels/help%20wanted) that you are interested in and work on it
-- **Give us a code review:** help us identify problems with [source code](https://github.com/mantinedev/mantine/tree/master/src) or make Mantine more performant
+- **Give us a code review:** help us identify problems with [source code](https://github.com/mantinedev/mantine/tree/master/src) or make AS.UIKit more performant
 
 ## Contributing workflow
 
@@ -17,12 +17,12 @@ First of all, thank you for showing interest in contributing to Mantine, all you
 - After finalizing issue details work on code, please follow commit convention
 - Run tests with `npm test` and submit a PR if everything is fine
 - Get a code review and fix all issues noticed by maintainer
-- If you cannot finish your task or changed your mind – that's totally fine, just let us know in GitHub issue that you've created in first step. Mantine community is friendly – we won't judge or ask any questions if you decide to cancel your submission
+- If you cannot finish your task or changed your mind – that's totally fine, just let us know in GitHub issue that you've created in first step. AS.UIKit community is friendly – we won't judge or ask any questions if you decide to cancel your submission
 - Your PR is merged, you are awesome!
 
 ## Commit convention
 
-Mantine is a monorepo and it is important to write correct commit messages to keep git history clean.
+AS.UIKit is a monorepo and it is important to write correct commit messages to keep git history clean.
 All commits made in this repository are divided in 3 groups:
 
 - **package commits** related to particular package
@@ -47,7 +47,7 @@ Examples:
 - **master** – current version, patches for current minor version (1.0.x)
 - **dev** – contains next minor version (1.x.0), most likely you would want to create a PR to this branch
 
-## Get started with Mantine locally
+## Get started with AS.UIKit locally
 
 - Install [editorconfig](https://editorconfig.org/) extension for your editor
 - Fork [repository](https://github.com/mantinedev/mantine), clone or download your fork

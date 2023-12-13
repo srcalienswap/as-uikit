@@ -13,7 +13,7 @@ export function PageHead({ title, description, disableTitleTemplate }: PageHeadP
 
   return (
     <>
-      <title>{disableTitleTemplate ? title : `${title} | Mantine`}</title>
+      <title>{disableTitleTemplate ? title : `${title} | AS.UIKIT`}</title>
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <meta name="description" content={metaDescription} />
       <meta name="og:title" content={title} />

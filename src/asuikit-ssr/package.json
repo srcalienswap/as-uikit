@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/ssr",
-  "description": "Mantine server side rendering utils",
+  "description": "AS.UIKit server side rendering utils",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",

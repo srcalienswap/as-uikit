@@ -1,4 +1,4 @@
-# Mantine
+# AS.UIKit
 
 [![NPM](https://img.shields.io/npm/l/@asuikit/core)](https://github.com/mantinedev/mantine/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/mantinedev/mantine)](https://github.com/mantinedev/mantine/graphs/contributors)
@@ -20,7 +20,7 @@
 ## Packages
 
 - `@asuikit/hooks` – collection of 50+ hooks for state and UI management
-- [`@asuikit/styles`](https://srcalienswap.github.io/as-uikit/styles/create-styles/) – [emotion](https://emotion.sh/) based css-in-js library that is used in all Mantine components
+- [`@asuikit/styles`](https://srcalienswap.github.io/as-uikit/styles/create-styles/) – [emotion](https://emotion.sh/) based css-in-js library that is used in all AS.UIKit components
 - `@asuikit/core` – core components library – 100+ components, exports everything from `@asuikit/styles`
 - [`@asuikit/form`](https://srcalienswap.github.io/as-uikit/form/use-form/) – forms management library
 - [`@asuikit/notifications`](https://srcalienswap.github.io/as-uikit/others/notifications/) – a fully featured notifications system
@@ -35,11 +35,11 @@
 - [`@asuikit/next`](https://srcalienswap.github.io/as-uikit/guides/next/) – server side rendering utilities for Next.js
 - [`@asuikit/remix`](https://srcalienswap.github.io/as-uikit/guides/remix/) – server side rendering utilities for Remix
 - [`gatsby-plugin-mantine`](https://srcalienswap.github.io/as-uikit/guides/gatsby/) – Gatsby plugin to setup server side rendering
-- [`eslint-config-mantine`](https://www.npmjs.com/package/eslint-config-mantine) – ESLint and Prettier configuration that is used in all Mantine projects
+- [`eslint-config-mantine`](https://www.npmjs.com/package/eslint-config-mantine) – ESLint and Prettier configuration that is used in all AS.UIKit projects
 
 ## Getting help
 
-Mantine has a very friendly community, we are always happy to help you get started:
+AS.UIKit has a very friendly community, we are always happy to help you get started:
 
 - [Join Discord community](https://discord.gg/wbH82zuWMN) – it is the easiest way to get help, all questions are usually answered in about 30 minutes
 - [GitHub Discussions](https://github.com/mantinedev/mantine/discussions) – ask anything about the project or give feedback

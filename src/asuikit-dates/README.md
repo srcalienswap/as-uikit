@@ -1,4 +1,4 @@
-# Mantine dates
+# AS.UIKit dates
 
 [![npm](https://img.shields.io/npm/dm/@asuikit/dates)](https://www.npmjs.com/package/@asuikit/dates)
 

@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/styles",
-  "description": "Mantine css-in-js styles engine, based on emotion",
+  "description": "AS.UIKit css-in-js styles engine, based on emotion",
   "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",
