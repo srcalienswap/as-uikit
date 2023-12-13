@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/dates",
   "description": "Calendars, date and time pickers based on Mantine components",
-  "version": "6.0.23",
+  "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -29,13 +29,13 @@
     "picker"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.23",
-    "@asuikit/hooks": "6.0.23",
+    "@asuikit/core": "6.0.24",
+    "@asuikit/hooks": "6.0.24",
     "dayjs": ">=1.0.0",
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@asuikit/utils": "6.0.23"
+    "@asuikit/utils": "6.0.24"
   },
   "devDependencies": {}
 }

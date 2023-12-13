@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/next",
   "description": "Mantine integration for Next.js",
-  "version": "6.0.23",
+  "version": "6.0.24",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -25,8 +25,8 @@
     "next": "*"
   },
   "dependencies": {
-    "@asuikit/ssr": "6.0.23",
-    "@asuikit/styles": "6.0.23"
+    "@asuikit/ssr": "6.0.24",
+    "@asuikit/styles": "6.0.24"
   },
   "devDependencies": {}
 }
