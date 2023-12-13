@@ -1,6 +1,6 @@
 
 name: Publish to NPM
-
+permissions: write-all
 on:
   workflow_dispatch:
     inputs:
@@ -18,16 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: fregante/setup-git-user@v2
 
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
           cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+          always-auth: true
 
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: install
+          cmd: install --frozen-lockfile
       
       - name: Clean
         uses: borales/actions-yarn@v4
@@ -55,6 +58,20 @@ jobs:
       - name: Release
         uses: borales/actions-yarn@v4
         with:
-          cmd: release:${{ github.event.inputs.version }}
+          cmd: _release ${{ github.event.inputs.version }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - run: git commit -a -m "bump version"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn run docs:deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
