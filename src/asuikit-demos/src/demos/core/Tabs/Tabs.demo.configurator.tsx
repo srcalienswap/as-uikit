@@ -8,7 +8,7 @@ function Wrapper(props: TabsProps) {
   return (
     <Tabs defaultValue="gallery" {...props}>
       <Tabs.List>
-        <Tabs.Tab value="gallery" icon={<IconPhoto size="0.8rem" />}>
+        <Tabs.Tab iconPosition="right" value="gallery" icon={<IconPhoto size="0.8rem" />}>
           Gallery
         </Tabs.Tab>
         <Tabs.Tab value="messages" icon={<IconMessageCircle size="0.8rem" />}>
@@ -43,7 +43,7 @@ import { IconPhoto, IconMessageCircle, IconSettings } from '@tabler/icons-react'
 function Demo() {
   return (
     <Tabs${props} defaultValue="gallery">
-      <Tabs.List>
+      <Tabs.List >
         <Tabs.Tab value="gallery" icon={<IconPhoto size="0.8rem" />}>Gallery</Tabs.Tab>
         <Tabs.Tab value="messages" icon={<IconMessageCircle size="0.8rem" />}>Messages</Tabs.Tab>
         <Tabs.Tab value="settings" icon={<IconSettings size="0.8rem" />}>Settings</Tabs.Tab>
@@ -74,16 +74,18 @@ export const configurator: MantineDemo = {
     { name: 'color', type: 'color', initialValue: 'blue', defaultValue: 'blue' },
     {
       name: 'variant',
-      type: 'segmented',
+      type: 'select',
       initialValue: 'default',
       defaultValue: 'default',
       data: [
         { value: 'default', label: 'Default' },
+        { value: 'subtle', label: 'Subtle' },
         { value: 'outline', label: 'Outline' },
         { value: 'pills', label: 'Pills' },
       ],
     },
     { name: 'radius', type: 'size', initialValue: 'sm', defaultValue: 'sm' },
+    { name: 'noBorder', type: 'boolean', initialValue: false, defaultValue: false },
     {
       name: 'orientation',
       type: 'segmented',

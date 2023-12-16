@@ -38,6 +38,17 @@ function getColorIndexInfo(color: string, theme: MantineThemeBase): ColorInfo {
   return { isSplittedColor: false };
 }
 
+const hexToLuma = (color) => {
+  const hex = color.replace(/#/, '');
+  const r = parseInt(hex.substr(0, 2), 16);
+  const g = parseInt(hex.substr(2, 2), 16);
+  const b = parseInt(hex.substr(4, 2), 16);
+
+  return [0.299 * r, 0.587 * g, 0.114 * b].reduce((x, y) => x + y) / 255;
+};
+
+const isHightLuma = (color) => hexToLuma(color) > 0.5;
+
 export function variant(theme: MantineThemeBase) {
   const getThemeColor = themeColor(theme);
   const getPrimaryShade = primaryShade(theme);
@@ -142,11 +153,15 @@ export function variant(theme: MantineThemeBase) {
         const _primaryShade = getPrimaryShade();
         const _shade = colorInfo.isSplittedColor ? colorInfo.shade : _primaryShade;
         const _color = colorInfo.isSplittedColor ? colorInfo.key : color;
+        const bgColor = getThemeColor(_color, _shade, primaryFallback);
+        const textColor = isHightLuma(bgColor)
+          ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
+          : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
 
         return {
           border: 'transparent',
-          background: getThemeColor(_color, _shade, primaryFallback),
-          color: theme.white,
+          background: bgColor,
+          color: textColor,
           hover: getThemeColor(_color, _shade === 9 ? 8 : _shade + 1),
         };
       }

@@ -4,6 +4,7 @@ import { TabsStylesParams } from '../Tabs.types';
 interface TabStylesParams extends TabsStylesParams {
   withIcon: boolean;
   withRightSection: boolean;
+  iconPosition: 'right' | 'left';
 }
 
 function getVariantStyles(
@@ -24,7 +25,7 @@ function getVariantStyles(
         ? `0 0 ${radiusValue} ${radiusValue}`
         : `${radiusValue} ${radiusValue} 0 0`;
 
-  if (variant === 'default') {
+  if (variant === 'default' || variant === 'subtle') {
     return {
       [vertical
         ? placement === 'left'
@@ -39,17 +40,17 @@ function getVariantStyles(
           : 'marginLeft'
         : inverted
           ? 'marginTop'
-          : 'marginBottom']: rem(-2),
-      borderRadius,
-
+          : 'marginBottom']: rem(-1),
+      // borderRadius,
       ...theme.fn.hover({
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-        borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
+        // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+        // borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
+        color: theme.colors.text[1],
       }),
 
       '&[data-active]': {
         borderColor: filledScheme.background,
-        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+        color: theme.colors.text[1],
         ...theme.fn.hover({ borderColor: filledScheme.background }),
       },
     };
@@ -93,7 +94,7 @@ function getVariantStyles(
 
       '&[data-active]': {
         backgroundColor: filledScheme.background,
-        color: theme.white,
+        color: filledScheme.color,
         ...theme.fn.hover({ backgroundColor: filledScheme.background }),
       },
     };
@@ -106,6 +107,9 @@ export default createStyles((theme, params: TabStylesParams, { variant }) => ({
   tabLabel: {},
 
   tab: {
+    color: theme.colors.text[3],
+    fontWeight: 600,
+
     position: 'relative',
     padding: `${theme.spacing.xs} ${theme.spacing.md}`,
     paddingLeft: params.withIcon ? theme.spacing.xs : undefined,
@@ -135,7 +139,7 @@ export default createStyles((theme, params: TabStylesParams, { variant }) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-
+    order: 2,
     '&:not(:only-child)': {
       marginLeft: rem(7),
     },
@@ -145,9 +149,9 @@ export default createStyles((theme, params: TabStylesParams, { variant }) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-
+    order: params.iconPosition === 'right' ? 1 : 0,
     '&:not(:only-child)': {
-      marginRight: rem(7),
+      [params.iconPosition === 'right' ? 'marginLeft' : 'marginRight']: rem(7),
     },
   },
 }));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Group, Input, useMantineTheme, ColorSwatch, CheckIcon, rem } from '@asuikit/core';
+import { Group, Input, useMantineTheme, ColorSwatch, CheckIcon, rem, Tooltip } from '@asuikit/core';
 import { upperFirst } from '@asuikit/hooks';
 
 interface ColorControlProps {
@@ -12,23 +12,25 @@ export function ColorControl({ value, label, onChange, ...others }: ColorControl
   const theme = useMantineTheme();
 
   const colors = Object.keys(theme.colors).map((color) => (
-    <ColorSwatch
-      color={theme.colorScheme === 'dark' ? theme.colors[color][7] : theme.colors[color][5]}
-      component="button"
-      key={color}
-      onClick={() => onChange(color)}
-      radius="sm"
-      sx={{
-        cursor: 'pointer',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: theme.colorScheme === 'dark' ? theme.colors[color][2] : theme.white,
-        flex: `1 0 calc(15% - ${rem(4)})`,
-      }}
-    >
-      {value === color && <CheckIcon width={rem(12)} height={rem(12)} />}
-    </ColorSwatch>
+    <Tooltip label={color}>
+      <ColorSwatch
+        color={theme.colorScheme === 'dark' ? theme.colors[color][7] : theme.colors[color][5]}
+        component="button"
+        key={color}
+        onClick={() => onChange(color)}
+        radius="sm"
+        sx={{
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: theme.colorScheme === 'dark' ? theme.colors[color][2] : theme.white,
+          flex: `1 0 calc(15% - ${rem(4)})`,
+        }}
+      >
+        {value === color && <CheckIcon width={rem(12)} height={rem(12)} />}
+      </ColorSwatch>
+    </Tooltip>
   ));
 
   return (

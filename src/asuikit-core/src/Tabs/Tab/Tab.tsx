@@ -17,8 +17,11 @@ export interface TabProps extends DefaultProps, React.ComponentPropsWithoutRef<'
   /** Section of content displayed after label */
   rightSection?: React.ReactNode;
 
-  /** Section of content displayed before label */
+  /** Section of content displayed label */
   icon?: React.ReactNode;
+
+  /** Before label or after label */
+  iconPosition?: 'left' | 'right';
 
   /** Key of theme.colors */
   color?: MantineColor;
@@ -27,8 +30,18 @@ export interface TabProps extends DefaultProps, React.ComponentPropsWithoutRef<'
 const defaultProps: Partial<TabProps> = {};
 
 export const Tab = forwardRef<HTMLButtonElement, TabProps>((props, ref) => {
-  const { value, children, onKeyDown, onClick, className, icon, rightSection, color, ...others } =
-    useComponentDefaultProps('TabsTab', defaultProps, props);
+  const {
+    value,
+    children,
+    onKeyDown,
+    onClick,
+    className,
+    icon,
+    rightSection,
+    color,
+    iconPosition,
+    ...others
+  } = useComponentDefaultProps('TabsTab', defaultProps, props);
   const ctx = useTabsContext();
 
   const hasIcon = !!icon;
@@ -38,6 +51,7 @@ export const Tab = forwardRef<HTMLButtonElement, TabProps>((props, ref) => {
     {
       withIcon: hasIcon || (hasRightSection && !children),
       withRightSection: hasRightSection || (hasIcon && !children),
+      iconPosition,
       orientation: ctx.orientation,
       color: color || ctx.color,
       radius: ctx.radius,
