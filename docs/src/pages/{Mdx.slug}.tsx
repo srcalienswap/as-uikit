@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { removePathNamePrefix } from 'src/tools';
 import { PageHead } from '../components/PageHead/PageHead';
 import { MdxPage } from '../components/MdxPage/MdxPage';
 import { getDocsData, DocsQuery } from '../components/Layout/get-docs-data';
@@ -28,7 +29,7 @@ function findSiblings(data: ReturnType<typeof getDocsData>, pathname: string) {
 export default function DocPage({ data, location }: DocPageProps) {
   const { mdx } = data;
   const allMdx = getDocsData(data);
-  const siblings = findSiblings(allMdx, location.pathname);
+  const siblings = findSiblings(allMdx, removePathNamePrefix(location.pathname));
 
   return (
     <article>

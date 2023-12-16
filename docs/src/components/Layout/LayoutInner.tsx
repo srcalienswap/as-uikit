@@ -6,6 +6,7 @@ import { ModalsProvider, ContextModalProps } from '@asuikit/modals';
 import { SpotlightProvider, SpotlightAction, useSpotlight } from '@asuikit/spotlight';
 import { Text, Button, rem, em } from '@asuikit/core';
 import { IconSearch } from '@tabler/icons-react';
+import { removePathNamePrefix } from 'src/tools';
 import MdxProvider from '../MdxPage/MdxProvider/MdxProvider';
 import Navbar from './Navbar/Navbar';
 import Header from './Header/Header';
@@ -110,8 +111,10 @@ function AutoOpenSpotlight() {
 
 export function LayoutInner({ children, location }: LayoutProps) {
   const navbarCollapsed = useMediaQuery(`(max-width: ${em(NAVBAR_BREAKPOINT)})`);
-  const shouldRenderHeader = !shouldExcludeHeader(location.pathname);
-  const shouldRenderNavbar = !shouldExcludeNavbar(location.pathname) || navbarCollapsed;
+
+  const shouldRenderHeader = !shouldExcludeHeader(removePathNamePrefix(location.pathname));
+  const shouldRenderNavbar =
+    !shouldExcludeNavbar(removePathNamePrefix(location.pathname)) || navbarCollapsed;
   const { classes, cx } = useStyles({ shouldRenderHeader });
   const [navbarOpened, setNavbarState] = useState(false);
   const data = getDocsData(useStaticQuery(query));

@@ -1,4 +1,4 @@
-export const EXCLUDE_LAYOUT_PATHS = ['/', '/as-uikit', '/app-shell-demo'];
+export const EXCLUDE_LAYOUT_PATHS = ['/', '/as-uikit/', '/app-shell-demo'];
 export const EXCLUDE_NAVBAR_PATHS = ['/app-shell-demo'];
 export const EXCLUDE_HEADER_PATHS = ['/app-shell-demo'];
 

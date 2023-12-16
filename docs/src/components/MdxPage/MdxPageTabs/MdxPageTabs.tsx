@@ -5,6 +5,7 @@ import { Tabs, Title, TextInput, rem, em } from '@asuikit/core';
 import { IconSearch } from '@tabler/icons-react';
 import { useMediaQuery } from '@asuikit/hooks';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { removePathNamePrefix } from 'src/tools';
 import { MdxSiblings } from '../MdxSiblings/MdxSiblings';
 import TableOfContents from '../TableOfContents/TableOfContents';
 import { MdxPageBase } from '../MdxPageBase/MdxPageBase';
@@ -18,6 +19,10 @@ export function MdxPageTabs({ body, frontmatter, headings, siblings }: MdxPagePr
   const { classes } = useStyles();
   const mobile = useMediaQuery(`(max-width: ${em(500)})`);
   const location = useLocation();
+  console.log(
+    '💬️ ~ file: MdxPageTabs.tsx:22 ~ MdxPageTabs ~ location:',
+    removePathNamePrefix(location.pathname)
+  );
   const [activeTab, setActiveTab] = useState('docs');
   const hasProps = Array.isArray(frontmatter.props);
   const hasStyles = Array.isArray(frontmatter.styles);
@@ -55,7 +60,10 @@ export function MdxPageTabs({ body, frontmatter, headings, siblings }: MdxPagePr
         variant="outline"
         value={activeTab}
         onTabChange={(value) => {
-          const nextPath = value === 'docs' ? location.pathname : `${location.pathname}?t=${value}`;
+          const nextPath =
+            value === 'docs'
+              ? removePathNamePrefix(location.pathname)
+              : `${removePathNamePrefix(location.pathname)}?t=${value}`;
           navigate(nextPath, { replace: true });
           setActiveTab(value);
         }}

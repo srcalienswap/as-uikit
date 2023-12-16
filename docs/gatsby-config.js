@@ -3,7 +3,7 @@ const remarkSlug = require('remark-slug');
 const corePackage = require('../src/asuikit-core/package.json');
 
 module.exports = {
-  pathPrefix: 'as-uikit',
+  pathPrefix: '/as-uikit',
   flags: {
     DEV_SSR: false,
     FAST_DEV: true,
