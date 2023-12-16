@@ -14,7 +14,7 @@ function Demo() {
         <Tabs.Tab icon={<IconMessageCircle size="0.8rem" />} value="chat">
           Chat
         </Tabs.Tab>
-        <Tabs.Tab icon={<IconSettings size="0.8rem" />} value="settings">
+        <Tabs.Tab iconPosition="right" icon={<IconSettings size="0.8rem" />} value="settings">
           Settings
         </Tabs.Tab>
         <Tabs.Tab icon={<IconCoin size="0.8rem" />} value="money" aria-label="Get money" />
@@ -31,7 +31,7 @@ function Demo() {
         <Tabs.Tab icon={<IconMessageCircle size="0.8rem" />} value="chat">
           Chat
         </Tabs.Tab>
-        <Tabs.Tab icon={<IconSettings size="0.8rem" />} value="settings">
+        <Tabs.Tab iconPosition="right" icon={<IconSettings size="0.8rem" />} value="settings">
           Settings
         </Tabs.Tab>
         <Tabs.Tab icon={<IconCoin size="0.8rem" />} value="money" aria-label="Get money" />

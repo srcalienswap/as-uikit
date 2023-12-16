@@ -22,7 +22,7 @@ function getVariantStyles(
           : 'borderLeft'
         : inverted
           ? 'borderTop'
-          : 'borderBottom']: `${rem(2)} solid ${
+          : 'borderBottom']: `${rem(1)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
       }`,
     };
