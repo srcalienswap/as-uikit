@@ -13,11 +13,19 @@ export interface SegmentedControlStylesParams {
 }
 
 const sizes = {
-  xs: `${rem(3)} ${rem(6)}`,
-  sm: `${rem(5)} ${rem(10)}`,
-  md: `${rem(7)} ${rem(14)}`,
-  lg: `${rem(9)} ${rem(16)}`,
+  xs: `${rem(4)} ${rem(6)}`,
+  sm: `${rem(6)} ${rem(10)}`,
+  md: `${rem(8)} ${rem(14)}`,
+  lg: `${rem(12)} ${rem(16)}`,
   xl: `${rem(12)} ${rem(20)}`,
+};
+
+const radiusSizes = {
+  xs: rem(6),
+  sm: rem(8),
+  md: rem(8),
+  lg: rem(12),
+  xl: rem(12),
 };
 
 export default createStyles(
@@ -36,6 +44,7 @@ export default createStyles(
   ) => {
     const vertical = orientation === 'vertical';
     const colors = theme.fn.variant({ variant: 'filled', color });
+    console.log('💬️ ~ file: SegmentedControl.styles.ts:48 ~ colors:', colors);
 
     return {
       label: {
@@ -43,9 +52,10 @@ export default createStyles(
         ...theme.fn.focusStyles(),
         ...theme.fn.fontStyles(),
         WebkitTapHighlightColor: 'transparent',
-        borderRadius: theme.fn.radius(radius),
+        borderRadius: (radius ? theme.fn.radius(radius) : radiusSizes[size]) || radiusSizes.md,
         fontWeight: 500,
         fontSize: size in theme.fontSizes ? theme.fontSizes[size] : theme.fontSizes.sm,
+        lineHeight: 1,
         cursor: 'pointer',
         display: 'block',
         textAlign: 'center',
@@ -54,7 +64,8 @@ export default createStyles(
         overflow: 'hidden',
         textOverflow: 'ellipsis',
         userSelect: 'none',
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[7],
+        // color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[7],
+        color: theme.colors.text[3],
         transition: `color ${shouldAnimate ? 0 : transitionDuration}ms ${
           transitionTimingFunction || theme.transitionTimingFunction
         }`,
@@ -73,7 +84,8 @@ export default createStyles(
 
         '&[data-active]': {
           '&, &:hover': {
-            color: color || theme.colorScheme === 'dark' ? theme.white : theme.black,
+            // color: color || theme.colorScheme === 'dark' ? theme.white : theme.black,
+            color: color ? colors.color : theme.colorScheme === 'dark' ? theme.white : theme.black,
           },
         },
       },
@@ -88,11 +100,11 @@ export default createStyles(
           transitionTimingFunction || theme.transitionTimingFunction
         }`,
 
-        '&:not(:first-of-type)': {
-          borderStyle: 'solid',
-          borderWidth: vertical ? `${rem(1)} 0 0 0` : `0 0 0 ${rem(1)}`,
-          borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
-        },
+        // '&:not(:first-of-type)': {
+        //   borderStyle: 'solid',
+        //   borderWidth: vertical ? `${rem(1)} 0 0 0` : `0 0 0 ${rem(1)}`,
+        //   borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
+        // },
       },
 
       input: {
@@ -136,10 +148,12 @@ export default createStyles(
         display: fullWidth || vertical ? 'flex' : 'inline-flex',
         width: vertical && !fullWidth ? 'max-content' : 'auto',
         flexDirection: vertical ? 'column' : 'row',
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[1],
-        borderRadius: theme.fn.radius(radius),
+        // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[1],
+        background: theme.colors.bg[2],
+        borderRadius: (radius ? theme.fn.radius(radius) : radiusSizes[size]) || radiusSizes.md,
         overflow: 'hidden',
         padding: WRAPPER_PADDING,
+        gap: '2px',
       },
 
       controlActive: {
@@ -178,8 +192,8 @@ export default createStyles(
         backgroundColor: color
           ? colors.background
           : theme.colorScheme === 'dark'
-            ? theme.colors.dark[5]
-            : theme.white,
+            ? theme.colors.bg[3]
+            : theme.colors.white[9],
       },
     };
   }

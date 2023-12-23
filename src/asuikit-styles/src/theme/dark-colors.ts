@@ -152,7 +152,7 @@ export const DARK_COLORS = {
     '#862e9c',
   ],
 
- /*  purple: [
+  /*  purple: [
     '#f3f0ff',
     '#e5dbff',
     '#d0bfff',
@@ -221,24 +221,24 @@ export const DARK_COLORS = {
     '#1F1F1F',
     '#333333',
     '#404040',
-    '#404040',
-    '#404040',
-    '#404040',
-    '#404040',
-    '#404040',
-    '#404040',
+    '#1F1F1F',
+    '#1F1F1F',
+    '#1F1F1F',
+    '#1F1F1F',
+    '#1F1F1F',
+    '#1F1F1F',
   ],
   bg: [
     '#0A0A0A',
     '#0A0A0A',
     '#141414',
     '#1F1F1F',
-    '#1F1F1F',
-    '#1F1F1F',
-    '#1F1F1F',
-    '#1F1F1F',
-    '#1F1F1F',
-    '#1F1F1F',
+    '#0A0A0A',
+    '#0A0A0A',
+    '#0A0A0A',
+    '#0A0A0A',
+    '#0A0A0A',
+    '#0A0A0A',
   ],
 
   raise: [
@@ -265,5 +265,5 @@ export const DARK_COLORS = {
     '#FC5555',
     '#FC5555',
   ],
-  text: [grey[9], grey[9], grey[7], grey[5], grey[2], grey[2], grey[2], grey[2], grey[2], grey[2]],
+  text: [grey[9], grey[9], grey[7], grey[5], grey[2], grey[9], grey[9], grey[9], grey[9], grey[9]],
 } as Record<string, Tuple<string, 10>>;
