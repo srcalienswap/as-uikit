@@ -38,16 +38,46 @@ function getColorIndexInfo(color: string, theme: MantineThemeBase): ColorInfo {
   return { isSplittedColor: false };
 }
 
-const hexToLuma = (color) => {
-  const hex = color.replace(/#/, '');
-  const r = parseInt(hex.substr(0, 2), 16);
-  const g = parseInt(hex.substr(2, 2), 16);
-  const b = parseInt(hex.substr(4, 2), 16);
-
-  return [0.299 * r, 0.587 * g, 0.114 * b].reduce((x, y) => x + y) / 255;
+const hexToRgb = (color: string): number[] => {
+  if (color.toLowerCase().startsWith('#')) {
+    // 处理 hex 格式
+    const hex = color.replace(/^#/, '');
+    return [
+      parseInt(hex.substring(0, 2), 16),
+      parseInt(hex.substring(2, 4), 16),
+      parseInt(hex.substring(4, 6), 16),
+    ];
+  }
+  if (color.toLowerCase().startsWith('rgba')) {
+    // 处理 rgba 格式
+    const rgbaMatch = color.match(/(\d+(\.\d+)?)/g);
+    if (rgbaMatch && rgbaMatch.length >= 3) {
+      return [parseFloat(rgbaMatch[0]), parseFloat(rgbaMatch[1]), parseFloat(rgbaMatch[2])];
+    }
+    throw new Error('Invalid RGBA format');
+  } else if (color.toLowerCase().startsWith('rgb')) {
+    // 处理 rgb 格式
+    const rgbMatch = color.match(/(\d+(\.\d+)?)/g);
+    if (rgbMatch && rgbMatch.length >= 3) {
+      return [parseFloat(rgbMatch[0]), parseFloat(rgbMatch[1]), parseFloat(rgbMatch[2])];
+    }
+    throw new Error('Invalid RGB format');
+  } else {
+    throw new Error('Invalid color format');
+  }
 };
 
-const isHightLuma = (color) => hexToLuma(color) > 0.5;
+const getRelativeLuminance = (rgb: number[]): number => {
+  const [r, g, b] = rgb.map((val) => {
+    // eslint-disable-next-line no-param-reassign
+    val /= 255.0;
+    return val <= 0.03928 ? val / 12.92 : ((val + 0.055) / 1.055) ** 2.4;
+  });
+
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+
+const isHightLuma = (color) => getRelativeLuminance(hexToRgb(color)) > 0.5;
 
 export function variant(theme: MantineThemeBase) {
   const getThemeColor = themeColor(theme);
@@ -153,11 +183,17 @@ export function variant(theme: MantineThemeBase) {
         const _primaryShade = getPrimaryShade();
         const _shade = colorInfo.isSplittedColor ? colorInfo.shade : _primaryShade;
         const _color = colorInfo.isSplittedColor ? colorInfo.key : color;
+        console.log('💬️ ~ file: variant.ts:157 ~ return ~ _shade:', _shade);
         const bgColor = getThemeColor(_color, _shade, primaryFallback);
         const textColor = isHightLuma(bgColor)
           ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
           : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
 
+        console.log(
+          '💬️ ~ file: variant.ts:158 ~ return ~ isHightLuma(bgColor):',
+          isHightLuma(bgColor),
+          bgColor
+        );
         return {
           border: 'transparent',
           background: bgColor,
