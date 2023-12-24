@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/styles",
   "description": "AS.UIKit css-in-js styles engine, based on emotion",
-  "version": "6.0.25",
+  "version": "6.0.26",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
