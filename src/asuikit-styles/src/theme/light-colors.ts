@@ -151,7 +151,7 @@ export const LIGHT_COLORS = {
     '#862e9c',
   ],
 
-/*   purple: [
+  /*   purple: [
     '#f3f0ff',
     '#e5dbff',
     '#d0bfff',
