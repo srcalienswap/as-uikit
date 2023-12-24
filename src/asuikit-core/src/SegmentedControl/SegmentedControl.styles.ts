@@ -44,7 +44,6 @@ export default createStyles(
   ) => {
     const vertical = orientation === 'vertical';
     const colors = theme.fn.variant({ variant: 'filled', color });
-    console.log('💬️ ~ file: SegmentedControl.styles.ts:48 ~ colors:', colors);
 
     return {
       label: {

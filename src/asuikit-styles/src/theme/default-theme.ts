@@ -1,5 +1,4 @@
 import { MantineThemeBase } from './types';
-import { DEFAULT_COLORS } from './default-colors';
 import { attachFunctions } from './functions/attach-functions';
 import { LIGHT_COLORS } from './light-colors';
 import { DARK_COLORS } from './dark-colors';

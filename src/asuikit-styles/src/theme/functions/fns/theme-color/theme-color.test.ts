@@ -23,6 +23,6 @@ describe('@asuikit/styles/theme-color', () => {
   });
 
   it('returns color with primary shade if shade is not specified', () => {
-    expect(getThemeColor('orange')).toBe(DEFAULT_THEME.colors.orange[6]);
+    expect(getThemeColor('orange')).toBe(DEFAULT_THEME.colors.orange[9]);
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { removePathNamePrefix } from 'src/tools';
+import { removePathNamePrefix } from '../tools';
 import { PageHead } from '../components/PageHead/PageHead';
 import { MdxPage } from '../components/MdxPage/MdxPage';
 import { getDocsData, DocsQuery } from '../components/Layout/get-docs-data';

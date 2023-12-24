@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { MANTINE_COLORS, useMantineTheme } from '@asuikit/styles';
+import { useMantineTheme } from '@asuikit/styles';
 import { IconExternalLink } from '@tabler/icons-react';
 import { Button } from './Button';
 import { Group } from '../Group';

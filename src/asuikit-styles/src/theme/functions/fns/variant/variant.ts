@@ -183,17 +183,12 @@ export function variant(theme: MantineThemeBase) {
         const _primaryShade = getPrimaryShade();
         const _shade = colorInfo.isSplittedColor ? colorInfo.shade : _primaryShade;
         const _color = colorInfo.isSplittedColor ? colorInfo.key : color;
-        console.log('💬️ ~ file: variant.ts:157 ~ return ~ _shade:', _shade);
+
         const bgColor = getThemeColor(_color, _shade, primaryFallback);
         const textColor = isHightLuma(bgColor)
           ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
           : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
 
-        console.log(
-          '💬️ ~ file: variant.ts:158 ~ return ~ isHightLuma(bgColor):',
-          isHightLuma(bgColor),
-          bgColor
-        );
         return {
           border: 'transparent',
           background: bgColor,

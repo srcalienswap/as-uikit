@@ -53,8 +53,8 @@ export function mergeTheme(
       return {
         ...acc,
         colors: {
-          ...currentTheme[themeOverride.colorScheme === 'light' ? 'lightColors' : 'darkColors'],
-          ...(themeOverride[themeOverride.colorScheme === 'light' ? 'lightColors' : 'darkColors'] ||
+          ...currentTheme[themeOverride.colorScheme === 'dark' ? 'darkColors' : 'lightColors'],
+          ...(themeOverride[themeOverride.colorScheme === 'dark' ? 'darkColors' : 'lightColors'] ||
             themeOverride.colors),
         },
       };
