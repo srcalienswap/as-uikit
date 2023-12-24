@@ -21,6 +21,6 @@ describe('@asuikit/core/Loader', () => {
 
   it('sets svg fill based on color prop', () => {
     const { container } = render(<Loader color="yellow" variant="bars" />);
-    expect(container.querySelector('svg')).toHaveAttribute('fill', DEFAULT_THEME.colors.yellow[6]);
+    expect(container.querySelector('svg')).toHaveAttribute('fill', DEFAULT_THEME.colors.yellow[9]);
   });
 });

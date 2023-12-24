@@ -6,7 +6,7 @@ import { ModalsProvider, ContextModalProps } from '@asuikit/modals';
 import { SpotlightProvider, SpotlightAction, useSpotlight } from '@asuikit/spotlight';
 import { Text, Button, rem, em } from '@asuikit/core';
 import { IconSearch } from '@tabler/icons-react';
-import { removePathNamePrefix } from 'src/tools';
+import { removePathNamePrefix } from '../../tools';
 import MdxProvider from '../MdxPage/MdxProvider/MdxProvider';
 import Navbar from './Navbar/Navbar';
 import Header from './Header/Header';

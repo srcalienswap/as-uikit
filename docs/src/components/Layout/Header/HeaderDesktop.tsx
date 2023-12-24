@@ -3,7 +3,7 @@ import React from 'react';
 import { RemoveScroll } from '@asuikit/core';
 import { useSpotlight } from '@asuikit/spotlight';
 import { HeaderControls } from '@asuikit/ds';
-import { useSiteMetadata } from 'src/hooks/useSiteMetadata';
+import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
 import { useDirectionContext } from '../DirectionContext';
 import useStyles from './HeaderDesktop.styles';
 
