@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/ds",
   "description": "Internal AS.UIKit components used on *.mantine.dev websites",
-  "version": "6.0.24",
+  "version": "6.0.25",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -18,14 +18,14 @@
     "react"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.24",
-    "@asuikit/hooks": "6.0.24",
-    "@asuikit/prism": "6.0.24",
+    "@asuikit/core": "6.0.25",
+    "@asuikit/hooks": "6.0.25",
+    "@asuikit/prism": "6.0.25",
     "@tabler/icons-react": "*",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@asuikit/utils": "6.0.24"
+    "@asuikit/utils": "6.0.25"
   }
 }
