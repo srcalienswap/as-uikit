@@ -160,7 +160,7 @@ function getVariantStyles({ variant, theme, color, gradient }: GetVariantStyles)
   return {
     border: `${rem(1)} solid ${colors.border}`,
     backgroundColor: colors.background,
-    color: color?.startsWith('grey') ? theme.colors.grey[0] : colors.color,
+    color: colors.color,
     ...theme.fn.hover({ backgroundColor: colors.hover }),
   };
 }
