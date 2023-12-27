@@ -5,6 +5,7 @@ import { useLocation } from '@reach/router';
 import { Text, ScrollArea, useMantineTheme, rem } from '@asuikit/core';
 import { IconList } from '@tabler/icons-react';
 import useStyles from './TableOfContents.styles';
+import { removePathNamePrefix } from '../../../tools';
 
 interface Heading {
   depth: number;
@@ -81,7 +82,7 @@ export default function TableOfContents({ headings, withTabs }: TableOfContentsP
         sx={{ paddingLeft: `calc(${heading.depth - 1} * ${theme.spacing.lg})` }}
         onClick={(event) => {
           event.preventDefault();
-          navigate(`${pathname}#${slug}`, { replace: true });
+          navigate(`${removePathNamePrefix(pathname)}#${slug}`, { replace: true });
         }}
       >
         {heading.value}
