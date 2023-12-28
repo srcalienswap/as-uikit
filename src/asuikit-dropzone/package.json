@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/dropzone",
   "description": "Dropzone component built with AS.UIKit theme and components",
-  "version": "6.0.27",
+  "version": "6.0.28",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -28,14 +28,14 @@
     "upload"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.27",
-    "@asuikit/hooks": "6.0.27",
+    "@asuikit/core": "6.0.28",
+    "@asuikit/hooks": "6.0.28",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
     "react-dropzone": "14.2.3",
-    "@asuikit/utils": "6.0.27"
+    "@asuikit/utils": "6.0.28"
   },
   "devDependencies": {}
 }
