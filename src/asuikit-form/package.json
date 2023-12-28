@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/form",
   "description": "AS.UIKit form management library",
-  "version": "6.0.27",
+  "version": "6.0.28",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",

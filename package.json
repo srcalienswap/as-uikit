@@ -4,7 +4,7 @@
   "workspaces": [
     "src/*"
   ],
-  "version": "6.0.27",
+  "version": "6.0.28",
   "description": "AS.UIKit Components Monorepo",
   "main": "index.js",
   "repository": "https://github.com/srcalienswap/as-uikit.git",
