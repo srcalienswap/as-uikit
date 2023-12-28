@@ -54,16 +54,16 @@ const hexToRgb = (color: string): number[] => {
     if (rgbaMatch && rgbaMatch.length >= 3) {
       return [parseFloat(rgbaMatch[0]), parseFloat(rgbaMatch[1]), parseFloat(rgbaMatch[2])];
     }
-    throw new Error('Invalid RGBA format');
+    throw new Error(`Invalid RGBA format  ${color}`);
   } else if (color.toLowerCase().startsWith('rgb')) {
     // 处理 rgb 格式
     const rgbMatch = color.match(/(\d+(\.\d+)?)/g);
     if (rgbMatch && rgbMatch.length >= 3) {
       return [parseFloat(rgbMatch[0]), parseFloat(rgbMatch[1]), parseFloat(rgbMatch[2])];
     }
-    throw new Error('Invalid RGB format');
+    throw new Error(`Invalid RGB format ${color}`);
   } else {
-    throw new Error('Invalid color format');
+    throw new Error(`Invalid color format ${color}`);
   }
 };
 
@@ -185,9 +185,16 @@ export function variant(theme: MantineThemeBase) {
         const _color = colorInfo.isSplittedColor ? colorInfo.key : color;
 
         const bgColor = getThemeColor(_color, _shade, primaryFallback);
-        const textColor = isHightLuma(bgColor)
-          ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
-          : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
+
+        let textColor = theme.colors.text[0];
+        try {
+          textColor = isHightLuma(bgColor)
+            ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
+            : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.warn(error);
+        }
 
         return {
           border: 'transparent',
