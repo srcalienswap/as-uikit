@@ -43,6 +43,14 @@ export const sizes = {
   'compact-xl': { height: rem(40), paddingLeft: rem(14), paddingRight: rem(14) },
 };
 
+const FontSizes = {
+  xs: '12px',
+  sm: '14px',
+  md: '16px',
+  lg: '16px',
+  xl: '18px',
+};
+
 interface GetSizeStyles {
   compact: boolean;
   size: string | number;
@@ -201,7 +209,7 @@ export default createStyles(
       lineHeight: 1,
       fontSize: getSize({
         size: size === 'xs' ? 'sm' : size,
-        sizes: theme.fontSizes,
+        sizes: FontSizes,
       }),
       userSelect: 'none',
       cursor: 'pointer',
@@ -250,7 +258,7 @@ export default createStyles(
 
     rightIcon: {
       marginLeft: theme.spacing.xs,
-      fontSize: getSize({ size, sizes: theme.fontSizes }),
+      fontSize: getSize({ size, sizes: FontSizes }),
       // height: getSize({ size, sizes: theme.fontSizes }),
       // marginLeft: 4,
     },
