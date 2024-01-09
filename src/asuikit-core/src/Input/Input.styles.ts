@@ -135,7 +135,7 @@ export default createStyles(
         appearance: 'none',
         resize: 'none',
         boxSizing: 'border-box',
-        fontSize: getSize({ size, sizes: theme.fontSizes }),
+        fontSize: getSize({ size: size === 'lg' ? 'md' : size, sizes: theme.fontSizes }),
         width: '100%',
         color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
         display: 'block',
