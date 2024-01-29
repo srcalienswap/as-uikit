@@ -31,11 +31,11 @@ export interface ButtonStylesParams {
 }
 
 export const sizes = {
-  xs: { height: INPUT_SIZES.xs, paddingLeft: rem(14), paddingRight: rem(14) },
-  sm: { height: INPUT_SIZES.sm, paddingLeft: rem(18), paddingRight: rem(18) },
-  md: { height: INPUT_SIZES.md, paddingLeft: rem(22), paddingRight: rem(22) },
-  lg: { height: INPUT_SIZES.lg, paddingLeft: rem(26), paddingRight: rem(26) },
-  xl: { height: INPUT_SIZES.xl, paddingLeft: rem(32), paddingRight: rem(32) },
+  xs: { height: rem(28), paddingLeft: rem(14), paddingRight: rem(14) },
+  sm: { height: rem(36), paddingLeft: rem(18), paddingRight: rem(18) },
+  md: { height: rem(40), paddingLeft: rem(22), paddingRight: rem(22) },
+  lg: { height: rem(48), paddingLeft: rem(26), paddingRight: rem(26) },
+  xl: { height: rem(56), paddingLeft: rem(32), paddingRight: rem(32) },
   'compact-xs': { height: rem(22), paddingLeft: rem(7), paddingRight: rem(7) },
   'compact-sm': { height: rem(26), paddingLeft: rem(8), paddingRight: rem(8) },
   'compact-md': { height: rem(30), paddingLeft: rem(10), paddingRight: rem(10) },
@@ -43,12 +43,12 @@ export const sizes = {
   'compact-xl': { height: rem(40), paddingLeft: rem(14), paddingRight: rem(14) },
 };
 
-const FontSizes = {
-  xs: '12px',
-  sm: '14px',
-  md: '16px',
-  lg: '16px',
-  xl: '18px',
+export const button_radius = {
+  xs: rem(4),
+  sm: rem(4),
+  md: rem(8),
+  lg: rem(8),
+  xl: rem(12),
 };
 
 interface GetSizeStyles {
@@ -104,67 +104,6 @@ function getVariantStyles({ variant, theme, color, gradient }: GetVariantStyles)
     };
   }
 
-  if (variant === 'light') {
-    return {
-      border: 0,
-      backgroundColor: theme.fn.themeColor(color, 0),
-      color: theme.fn.themeColor(color, 9),
-      ...theme.fn.hover({ backgroundColor: theme.fn.themeColor(color, 1) }),
-    };
-  }
-
-  if (variant === 'outline') {
-    return {
-      border: `1px solid ${theme.fn.themeColor(color, 9)}`,
-      backgroundColor: 'transparent',
-      color: theme.fn.themeColor(color, 9),
-      ...theme.fn.hover({
-        backgroundColor: color?.startsWith('grey')
-          ? theme.fn.themeColor('grey', 9)
-          : theme.fn.themeColor(color, 9),
-        color: color?.startsWith('grey') ? theme.colors.grey[0] : theme.white,
-      }),
-
-      '&:disabled, &[data-disabled]': {
-        backgroundColor: 'transparent',
-        color: theme.colors.grey[3],
-        border: `1px solid ${theme.colors.grey[3]}`,
-      },
-    };
-  }
-
-  if (variant === 'subtle') {
-    return {
-      border: 0,
-      backgroundColor: 'transparent',
-      color: theme.fn.themeColor(color, 9),
-      ...theme.fn.hover({ backgroundColor: theme.fn.themeColor(color, 0) }),
-
-      '&:disabled, &[data-disabled]': {
-        backgroundColor: 'transparent',
-        color: theme.colors.text[4],
-      },
-
-      '&[data-loading]': {
-        pointerEvents: 'none',
-        opacity: 0.6,
-
-        '&::before': {
-          content: '""',
-          ...theme.fn.cover(rem(-1)),
-          backgroundColor: 'transparent',
-          cursor: 'not-allowed',
-        },
-      },
-    };
-  }
-
-  // const special =
-  //   (theme.colorScheme === 'dark' && color === 'white') ||
-  //   (theme.colorScheme === 'light' && color === 'black');
-  // const specialColor =
-  //   theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.grey[0];
-
   return {
     border: `${rem(1)} solid ${colors.border}`,
     backgroundColor: colors.background,
@@ -192,34 +131,21 @@ export default createStyles(
       ...theme.fn.fontStyles(),
       ...theme.fn.focusStyles(),
       ...getWidthStyles(fullWidth),
-      borderRadius: radius
-        ? theme.fn.radius(radius)
-        : getSize({
-            size,
-            sizes: {
-              xs: rem(4),
-              sm: rem(8),
-              md: rem(8),
-              lg: rem(12),
-              xl: rem(12),
-            },
-          }),
-      fontWeight: size === 'xs' ? 500 : 600,
+      borderRadius: radius ? theme.fn.radius(radius) : button_radius[size],
+      fontWeight: 600,
       position: 'relative',
       lineHeight: 1,
-      fontSize: getSize({
-        size: size === 'xs' ? 'sm' : size,
-        sizes: FontSizes,
-      }),
+      fontSize: getSize({ size, sizes: theme.fontSizes }),
       userSelect: 'none',
       cursor: 'pointer',
+      ...getVariantStyles({ variant, theme, color, gradient }),
 
       '&:active': theme.activeStyles,
 
       '&:disabled, &[data-disabled]': {
         borderColor: 'transparent',
-        backgroundColor: theme.colors.grey[1],
-        color: theme.colors.grey[4],
+        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
+        color: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[5],
         cursor: 'not-allowed',
         backgroundImage: 'none',
         pointerEvents: 'none',
@@ -239,12 +165,10 @@ export default createStyles(
             theme.colorScheme === 'dark'
               ? theme.fn.rgba(theme.colors.dark[7], 0.5)
               : 'rgba(255, 255, 255, .5)',
-          borderRadius: theme.fn.radius(radius),
+          borderRadius: radius ? theme.fn.radius(radius) : button_radius[size],
           cursor: 'not-allowed',
         },
       },
-
-      ...getVariantStyles({ variant, theme, color, gradient }),
     },
 
     icon: {
@@ -253,14 +177,11 @@ export default createStyles(
     },
 
     leftIcon: {
-      marginRight: theme.spacing.sm,
+      marginRight: theme.spacing.xs,
     },
 
     rightIcon: {
       marginLeft: theme.spacing.xs,
-      fontSize: getSize({ size, sizes: FontSizes }),
-      // height: getSize({ size, sizes: theme.fontSizes }),
-      // marginLeft: 4,
     },
 
     centerLoader: {

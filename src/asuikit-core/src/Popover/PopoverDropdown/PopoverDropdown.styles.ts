@@ -9,7 +9,7 @@ export default createStyles((theme, { radius, shadow }: PopoverStylesParams) => 
   dropdown: {
     position: 'absolute',
     backgroundColor: theme.white,
-    background: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
+    background: theme.colors.bg[2],
     border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,

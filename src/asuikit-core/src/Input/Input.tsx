@@ -53,6 +53,8 @@ export interface InputSharedProps {
 
   /** Input size */
   size?: MantineSize;
+
+  placeholder?: string;
 }
 
 export interface InputProps extends InputSharedProps, DefaultProps<InputStylesNames> {

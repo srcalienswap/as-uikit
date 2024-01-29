@@ -60,7 +60,7 @@ export default createStyles((theme, params: TabsListStylesParams, { variant }) =
       flexWrap: 'wrap',
       flexDirection: vertical ? 'column' : 'row',
       justifyContent: GROUP_POSITIONS[params.position],
-
+      gap: '16px',
       '& [role="tab"]': {
         flex: params.grow ? 1 : undefined,
       },

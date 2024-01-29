@@ -111,9 +111,9 @@ export default createStyles((theme, params: TabStylesParams, { variant }) => ({
     fontWeight: 600,
 
     position: 'relative',
-    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
-    paddingLeft: params.withIcon ? theme.spacing.xs : undefined,
-    paddingRight: params.withRightSection ? theme.spacing.xs : undefined,
+    padding: `${theme.spacing.md} 0`,
+    paddingLeft: params.withIcon ? theme.spacing.md : undefined,
+    paddingRight: params.withRightSection ? theme.spacing.sm : undefined,
     fontSize: theme.fontSizes.sm,
     whiteSpace: 'nowrap',
     zIndex: 0,

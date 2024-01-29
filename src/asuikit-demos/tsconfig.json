@@ -22,11 +22,13 @@
       "@asuikit/form": ["../asuikit-form/src"],
       "@asuikit/spotlight": ["../asuikit-spotlight/src"],
       "@asuikit/carousel": ["../asuikit-carousel/src"],
-      "@asuikit/tiptap": ["../asuikit-tiptap/src"]
+      "@asuikit/tiptap": ["../asuikit-tiptap/src"],
+      "@asuikit/ds": ["../asuikit-ds/src"]
     }
   },
   "references": [
     { "path": "../asuikit-core" },
+    { "path": "../asuikit-ds" },
     { "path": "../asuikit-dates" },
     { "path": "../asuikit-hooks" },
     { "path": "../asuikit-prism" },
