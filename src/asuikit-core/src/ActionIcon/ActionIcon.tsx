@@ -50,7 +50,7 @@ export interface ActionIconProps
 }
 
 const defaultProps: Partial<ActionIconProps> = {
-  color: 'gray',
+  color: 'grey',
   size: 'md',
   variant: 'subtle',
 };

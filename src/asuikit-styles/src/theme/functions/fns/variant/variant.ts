@@ -118,7 +118,7 @@ export function variant(theme: MantineThemeBase) {
               ? theme.colorScheme === 'dark'
                 ? theme.colors.dark[0]
                 : theme.colors.dark[9]
-              : getThemeColor(color, theme.colorScheme === 'dark' ? 2 : getPrimaryShade('light')),
+              : getThemeColor(color, 9),
           hover: rgba(
             getThemeColor(color, theme.colorScheme === 'dark' ? 8 : 0, primaryFallback, false),
             theme.colorScheme === 'dark' ? 0.2 : 1
@@ -128,9 +128,9 @@ export function variant(theme: MantineThemeBase) {
 
       case 'outline': {
         return {
-          border: getThemeColor(color, theme.colorScheme === 'dark' ? 5 : getPrimaryShade('light')),
+          border: getThemeColor(color, 9),
           background: 'transparent',
-          color: getThemeColor(color, theme.colorScheme === 'dark' ? 5 : getPrimaryShade('light')),
+          color: getThemeColor(color, 9),
           hover:
             theme.colorScheme === 'dark'
               ? rgba(getThemeColor(color, 5, primaryFallback, false), 0.05)
@@ -164,7 +164,7 @@ export function variant(theme: MantineThemeBase) {
               ? theme.colorScheme === 'dark'
                 ? theme.colors.dark[0]
                 : theme.colors.dark[9]
-              : getThemeColor(color, theme.colorScheme === 'dark' ? 2 : getPrimaryShade('light')),
+              : getThemeColor(color, theme.colorScheme === 'dark' ? 9 : getPrimaryShade('light')),
           background: 'transparent',
           hover: null,
         };

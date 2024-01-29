@@ -73,6 +73,7 @@ const defaultProps: Partial<ButtonProps> = {
   type: 'button',
   variant: 'filled',
   loaderPosition: 'left',
+  // radius: 12,
 };
 
 export const _Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
