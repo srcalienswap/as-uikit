@@ -103,6 +103,6 @@ describe('@asuikit/styles/merge-theme', () => {
     expect(
       darkTheme.fn.variant({ variant: 'filled', color: 'currentColor', primaryFallback: false })
         .color
-    ).toEqual('#F0F0F0');
+    ).toEqual('#F5F5F5');
   });
 });
