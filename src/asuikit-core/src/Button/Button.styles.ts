@@ -8,7 +8,6 @@ import {
   getSize,
   rem,
 } from '@asuikit/styles';
-import { INPUT_SIZES } from '../Input';
 
 export const BUTTON_VARIANTS = [
   'filled',
@@ -112,6 +111,25 @@ function getVariantStyles({ variant, theme, color, gradient }: GetVariantStyles)
   };
 }
 
+// eslint-disable-next-line consistent-return
+function getVariantDisabledStyles({ variant, theme }: GetVariantStyles) {
+  if (variant === 'outline') {
+    return {
+      backgroundColor: 'transparent',
+      color: theme.colors.text[4],
+      border: `1px solid ${theme.colors.line[3]}`,
+    };
+  }
+  if (variant === 'subtle') {
+    return {
+      backgroundColor: 'transparent',
+      color: theme.colors.text[4],
+      border: 'none',
+    };
+  }
+  return {};
+}
+
 export default createStyles(
   (
     theme,
@@ -145,11 +163,12 @@ export default createStyles(
       '&:disabled, &[data-disabled]': {
         borderColor: 'transparent',
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[5],
+        // color: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[5],
+        color: theme.colors.text[1],
         cursor: 'not-allowed',
         backgroundImage: 'none',
         pointerEvents: 'none',
-
+        ...getVariantDisabledStyles({ variant, theme, color, gradient }),
         '&:active': {
           transform: 'none',
         },
