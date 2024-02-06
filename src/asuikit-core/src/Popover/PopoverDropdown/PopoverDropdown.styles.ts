@@ -8,12 +8,10 @@ export interface PopoverStylesParams {
 export default createStyles((theme, { radius, shadow }: PopoverStylesParams) => ({
   dropdown: {
     position: 'absolute',
-    backgroundColor: theme.white,
-    background: theme.colors.bg[2],
-    border: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-    }`,
-    padding: `${theme.spacing.sm} ${theme.spacing.md}`,
+    // backgroundColor: theme.white,
+    backgroundColor: theme.colors.bg[2],
+    border: `${rem(1)} solid ${theme.colors.line[1]}`,
+    padding: theme.spacing.md,
     boxShadow: theme.shadows[shadow] || shadow || 'none',
     borderRadius: theme.fn.radius(radius),
 
@@ -24,9 +22,7 @@ export default createStyles((theme, { radius, shadow }: PopoverStylesParams) => 
 
   arrow: {
     backgroundColor: 'inherit',
-    border: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-    }`,
+    border: `${rem(1)} solid ${theme.colors.line[1]}`,
     zIndex: 1,
   },
 }));

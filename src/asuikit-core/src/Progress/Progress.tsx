@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 import {
   DefaultProps,
   MantineNumberSize,
@@ -25,8 +25,11 @@ export interface ProgressProps
     React.ComponentPropsWithoutRef<'div'> {
   variant?: string;
 
-  /** Percent of filled bar (0-100) */
+  /** Percent of filled bar (0-max) */
   value?: number;
+
+  /** default: 100 */
+  max?: number;
 
   /** Progress color from theme */
   color?: MantineColor;
@@ -69,6 +72,7 @@ const defaultProps: Partial<ProgressProps> = {
   striped: false,
   animate: false,
   label: '',
+  max: 100,
 };
 
 export const Progress = forwardRef<HTMLDivElement, ProgressProps>((props, ref) => {
@@ -87,6 +91,7 @@ export const Progress = forwardRef<HTMLDivElement, ProgressProps>((props, ref) =
     sections,
     unstyled,
     variant,
+    max,
     ...others
   } = useComponentDefaultProps('Progress', defaultProps, props);
 
@@ -131,6 +136,8 @@ export const Progress = forwardRef<HTMLDivElement, ProgressProps>((props, ref) =
       )
     : null;
 
+  const width = useMemo(() => Math.ceil((value / max) * 100), []);
+
   return (
     <Box className={cx(classes.root, className)} ref={ref} {...others}>
       {segments || (
@@ -141,7 +148,7 @@ export const Progress = forwardRef<HTMLDivElement, ProgressProps>((props, ref) =
           aria-valuenow={value}
           aria-label={ariaLabel}
           className={classes.bar}
-          style={{ width: `${value}%` }}
+          style={{ width: `${width}%` }}
           data-striped={striped || animate || undefined}
           data-animate={animate || undefined}
         >
