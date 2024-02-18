@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/modals",
   "description": "Modals manager based on AS.UIKit components",
-  "version": "6.0.29",
+  "version": "6.0.30",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -27,13 +27,13 @@
     "confirm"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.29",
-    "@asuikit/hooks": "6.0.29",
+    "@asuikit/core": "6.0.30",
+    "@asuikit/hooks": "6.0.30",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@asuikit/utils": "6.0.29"
+    "@asuikit/utils": "6.0.30"
   },
   "devDependencies": {}
 }
