@@ -16,7 +16,8 @@ export interface TooltipStylesParams {
 function getColors(theme: MantineTheme, color?: MantineColor): CSSObject {
   if (!color) {
     return {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.gray[2] : theme.colors.gray[9],
+      // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.gray[2] : theme.colors.gray[9],
+      backgroundColor: theme.colors.grey[9],
       color: theme.colorScheme === 'dark' ? theme.black : theme.white,
     };
   }
@@ -29,23 +30,25 @@ function getColors(theme: MantineTheme, color?: MantineColor): CSSObject {
   };
 }
 
-export default createStyles((theme, { color, radius, width, multiline }: TooltipStylesParams) => ({
-  tooltip: {
-    ...theme.fn.fontStyles(),
-    ...getColors(theme, color),
-    lineHeight: theme.lineHeight,
-    fontSize: theme.fontSizes.sm,
-    borderRadius: theme.fn.radius(radius),
-    padding: `calc(${theme.spacing.xs} / 2) ${theme.spacing.xs}`,
-    position: 'absolute',
-    whiteSpace: multiline ? 'unset' : 'nowrap',
-    pointerEvents: 'none',
-    width,
-  },
+export default createStyles(
+  (theme, { color, radius = 'md', width, multiline }: TooltipStylesParams) => ({
+    tooltip: {
+      ...theme.fn.fontStyles(),
+      ...getColors(theme, color),
+      lineHeight: theme.lineHeight,
+      fontSize: theme.fontSizes.sm,
+      borderRadius: theme.fn.radius(radius),
+      padding: `${theme.spacing.xs}`,
+      position: 'absolute',
+      whiteSpace: multiline ? 'unset' : 'nowrap',
+      pointerEvents: 'none',
+      width,
+    },
 
-  arrow: {
-    backgroundColor: 'inherit',
-    border: 0,
-    zIndex: 1,
-  },
-}));
+    arrow: {
+      backgroundColor: 'inherit',
+      border: 0,
+      zIndex: 1,
+    },
+  })
+);

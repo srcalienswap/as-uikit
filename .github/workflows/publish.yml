@@ -75,3 +75,32 @@ jobs:
           yarn run docs:deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Get Previous tag'
+        id: currenttag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        with:
+          fallback: "unknown"
+          
+      - name: post message
+        uses: foxundermoon/feishu-action@v2
+        with:
+          url: ${{ secrets.FEISHU_BOT_WEBHOOK_URL }}
+          msg_type: post
+          content: |
+            post:
+              zh_cn:
+                title: ASUIKit 更新通知
+                content:
+                - - tag: text
+                    un_escape: true
+                    text: '更新版本：'
+                  - tag: text
+                    un_escape: true
+                    text: ${{ steps.previoustag.outputs.tag }}
+                - - tag: text
+                    un_escape: true
+                    text: 'NPM 地址:'
+                  - tag: a
+                    text: @asuikit/core
+                    href: https://www.npmjs.com/package/@asuikit/core
