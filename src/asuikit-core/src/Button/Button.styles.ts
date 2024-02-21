@@ -165,7 +165,7 @@ export default createStyles(
         backgroundColor: theme.colors.grey[1],
         // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
         // color: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[5],
-        color: theme.colors.grey[4],
+        color: theme.colors.text[3],
         cursor: 'not-allowed',
         backgroundImage: 'none',
         pointerEvents: 'none',

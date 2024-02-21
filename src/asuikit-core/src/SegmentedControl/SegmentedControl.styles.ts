@@ -192,7 +192,7 @@ export default createStyles(
           ? colors.background
           : theme.colorScheme === 'dark'
             ? theme.colors.bg[3]
-            : theme.colors.white[9],
+            : theme.colors.white,
       },
     };
   }

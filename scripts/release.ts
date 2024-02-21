@@ -95,13 +95,15 @@ const { argv }: { argv: any } = yargs(hideBin(process.argv))
   await git.add([path.join(__dirname, '../src'), path.join(__dirname, '../package.json')]);
   await git.commit(`[release] Version: ${incrementedVersion}`);
   await git.push();
+  await git.addTag(incrementedVersion);
+  await git.pushTags();
 
-  open(
-    githubRelease({
-      user: 'srcalienswap',
-      repo: 'as-uikit',
-      tag: incrementedVersion,
-      title: incrementedVersion,
-    })
-  );
+  // open(
+  //   githubRelease({
+  //     user: 'srcalienswap',
+  //     repo: 'as-uikit',
+  //     tag: incrementedVersion,
+  //     title: incrementedVersion,
+  //   })
+  // );
 })();
