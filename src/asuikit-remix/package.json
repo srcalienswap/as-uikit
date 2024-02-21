@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/remix",
   "description": "AS.UIKit integration for Remix",
-  "version": "6.0.30",
+  "version": "6.0.31",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -20,14 +20,14 @@
     "remix"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.30",
-    "@asuikit/hooks": "6.0.30",
+    "@asuikit/core": "6.0.31",
+    "@asuikit/hooks": "6.0.31",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@asuikit/ssr": "6.0.30",
-    "@asuikit/styles": "6.0.30"
+    "@asuikit/ssr": "6.0.31",
+    "@asuikit/styles": "6.0.31"
   },
   "devDependencies": {}
 }
