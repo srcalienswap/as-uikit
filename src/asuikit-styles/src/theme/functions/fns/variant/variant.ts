@@ -38,6 +38,14 @@ function getColorIndexInfo(color: string, theme: MantineThemeBase): ColorInfo {
   return { isSplittedColor: false };
 }
 
+const isHexOrRgba = (color: string) => {
+  const hexRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+  const rgbRegex = /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/;
+  const rgbaRegex = /^rgba\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*(0(\.\d+)?|1(\.0)?)\)$/;
+
+  return hexRegex.test(color) || rgbRegex.test(color) || rgbaRegex.test(color);
+};
+
 const hexToRgb = (color: string): number[] => {
   if (color.toLowerCase().startsWith('#')) {
     // 处理 hex 格式
@@ -189,13 +197,19 @@ export function variant(theme: MantineThemeBase) {
         const bgColor = getThemeColor(_color, _shade, primaryFallback);
 
         let textColor = theme.colors.text[0];
-        try {
-          textColor = isHightLuma(bgColor)
-            ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
-            : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
-        } catch (error) {
-          // eslint-disable-next-line no-console
-          console.warn(error);
+
+        if (isHexOrRgba(bgColor)) {
+          try {
+            textColor = isHightLuma(bgColor)
+              ? theme.colors.grey[theme.colorScheme === 'dark' ? 0 : 9]
+              : theme.colors.grey[theme.colorScheme === 'dark' ? 9 : 0];
+          } catch (error) {
+            // console.warn(error);
+            if (typeof window !== 'undefined') {
+              // eslint-disable-next-line no-console
+              console.warn(error);
+            }
+          }
         }
 
         return {
