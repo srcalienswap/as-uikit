@@ -102,5 +102,5 @@ jobs:
                     un_escape: true
                     text: 'NPM 地址:'
                   - tag: a
-                    text: @asuikit/core
-                    href: https://www.npmjs.com/package/@asuikit/core
+                    text: "@asuikit/core"
+                    href: "https://www.npmjs.com/package/@asuikit/core"
