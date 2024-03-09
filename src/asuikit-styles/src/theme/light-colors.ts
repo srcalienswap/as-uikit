@@ -256,4 +256,5 @@ export const LIGHT_COLORS = {
     '#FC5555',
   ],
   text: [grey[9], grey[9], grey[7], grey[5], grey[2], grey[9], grey[9], grey[9], grey[9], grey[9]],
+  white: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
 } as Record<string, Tuple<string, 10>>;
