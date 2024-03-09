@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/tiptap",
   "description": "Rich text editor based on tiptap",
-  "version": "6.0.32",
+  "version": "6.0.33",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -28,15 +28,15 @@
     "rich-text-editor"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.32",
-    "@asuikit/hooks": "6.0.32",
+    "@asuikit/core": "6.0.33",
+    "@asuikit/hooks": "6.0.33",
     "@tabler/icons-react": ">=2.1.0",
     "@tiptap/extension-link": "^2.0.0-beta.202",
     "@tiptap/react": "^2.0.0-beta.202",
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@asuikit/utils": "6.0.32"
+    "@asuikit/utils": "6.0.33"
   },
   "devDependencies": {}
 }
