@@ -1,0 +1,50 @@
+
+name: Publish to NPM
+permissions: write-all
+on:
+  workflow_dispatch:
+    inputs:
+        version:
+          description: Environment for Deploy
+          required: true
+          type: choice
+          options: 
+            - patch
+            - minor
+            - major
+jobs:
+  publish:
+    name: "Publish to NPM"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: fregante/setup-git-user@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+          always-auth: true
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install --frozen-lockfile
+      
+      - name: Docs Clean 
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: docs:clean
+      
+      - name: Build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build:all
+
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn run docs:deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
