@@ -1,17 +1,9 @@
 
-name: Publish to NPM
+name: Publish to pages
 permissions: write-all
 on:
   workflow_dispatch:
-    inputs:
-        version:
-          description: Environment for Deploy
-          required: true
-          type: choice
-          options: 
-            - patch
-            - minor
-            - major
+
 jobs:
   publish:
     name: "Publish to NPM"
