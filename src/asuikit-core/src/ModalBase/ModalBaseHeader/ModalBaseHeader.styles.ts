@@ -15,7 +15,7 @@ export default createStyles((theme, { padding }: ModalBaseHeaderStylesParams) =>
       paddingRight: `calc(${paddingValue} - ${rem(5)})`,
       position: 'sticky',
       top: 0,
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+      backgroundColor: theme.colors.bg[3],
       zIndex: 1000,
     },
   };

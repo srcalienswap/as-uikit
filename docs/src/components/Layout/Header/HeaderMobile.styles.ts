@@ -11,9 +11,7 @@ export default createStyles((theme) => ({
     zIndex: 6,
     position: 'fixed',
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-    borderBottom: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[2]
-    }`,
+    borderBottom: `${rem(1)} solid ${theme.colors.line[1]}`,
 
     [theme.fn.largerThan(NAVBAR_BREAKPOINT)]: {
       display: 'none',

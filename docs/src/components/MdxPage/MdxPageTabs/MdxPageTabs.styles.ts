@@ -9,10 +9,8 @@ import {
 
 export default createStyles((theme) => ({
   tabsWrapper: {
-    background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
-    borderBottom: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
-    }`,
+    background: theme.colors.bg[2],
+    borderBottom: `${rem(1)} solid ${theme.colors.line[2]}`,
     paddingLeft: `calc(${theme.spacing.xl} * 2)`,
 
     [`@media (max-width: ${em(BREAKPOINT)})`]: {
@@ -43,7 +41,7 @@ export default createStyles((theme) => ({
     paddingLeft: theme.spacing.lg,
     paddingRight: theme.spacing.lg,
     marginBottom: rem(-1),
-    borderColor: theme.colorScheme === 'dark' ? `${theme.colors.dark[8]} !important` : undefined,
+    borderColor: theme.colors.line[1],
     backgroundColor: 'transparent',
 
     [`@media (max-width: ${em(BREAKPOINT)})`]: {
@@ -56,6 +54,7 @@ export default createStyles((theme) => ({
     '&[data-active]': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
       color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+      borderColor: theme.colors.line[2],
     },
   },
 

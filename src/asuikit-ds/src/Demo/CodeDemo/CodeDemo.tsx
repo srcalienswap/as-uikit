@@ -46,7 +46,7 @@ export default function CodeDemo({
         style={{
           backgroundColor:
             demoBackground || (theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white),
-          borderColor: demoBorder ? undefined : 'transparent',
+          borderColor: demoBorder ? 'undefined' : 'transparent',
           zIndex,
         }}
       >

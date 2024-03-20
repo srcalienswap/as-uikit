@@ -5,7 +5,7 @@ export default createStyles((theme) => ({
   wrapper: {
     position: 'relative',
     zIndex: 4,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+    backgroundColor: theme.colors.bg[2],
     paddingLeft: `calc(${theme.spacing.xl} * 2)`,
     paddingRight: `calc(${theme.spacing.xl} * 2)`,
 

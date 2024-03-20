@@ -9,9 +9,7 @@ export default createStyles((theme: MantineTheme) => ({
   navbar: {
     boxSizing: 'border-box',
     height: '100vh',
-    borderRight: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[2]
-    }`,
+    borderRight: `${rem(1)} solid ${theme.colors.line[1]}`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
     position: 'fixed',
     zIndex: 5,

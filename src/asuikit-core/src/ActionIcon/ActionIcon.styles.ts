@@ -92,16 +92,19 @@ export default createStyles(
       },
 
       '&:disabled, &[data-disabled]': {
-        color: theme.colors.gray[theme.colorScheme === 'dark' ? 6 : 4],
+        // color: theme.colors.gray[theme.colorScheme === 'dark' ? 6 : 4],
+        color: theme.colors.text[3],
         cursor: 'not-allowed',
-        backgroundColor:
-          variant === 'transparent'
-            ? undefined
-            : theme.fn.themeColor('gray', theme.colorScheme === 'dark' ? 8 : 1),
-        borderColor:
-          variant === 'transparent'
-            ? undefined
-            : theme.fn.themeColor('gray', theme.colorScheme === 'dark' ? 8 : 1),
+        // backgroundColor:
+        //   variant === 'transparent'
+        //     ? undefined
+        //     : theme.fn.themeColor('gray', theme.colorScheme === 'dark' ? 8 : 1),
+        // borderColor:
+        //   variant === 'transparent'
+        //     ? undefined
+        //     : theme.fn.themeColor('gray', theme.colorScheme === 'dark' ? 8 : 1),
+        backgroundColor: theme.colors.grey[1],
+        borderColor: theme.colors.grey[1],
         backgroundImage: 'none',
         pointerEvents: 'none',
 

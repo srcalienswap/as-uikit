@@ -4,7 +4,7 @@ interface ModalBaseContentStylesParams {
   zIndex: number;
 }
 
-export default createStyles((_theme, { zIndex }: ModalBaseContentStylesParams) => ({
+export default createStyles((theme, { zIndex }: ModalBaseContentStylesParams) => ({
   inner: {
     position: 'fixed',
     width: '100%',
@@ -17,5 +17,6 @@ export default createStyles((_theme, { zIndex }: ModalBaseContentStylesParams) =
 
   content: {
     pointerEvents: 'all',
+    backgroundColor: theme.colors.bg[3],
   },
 }));

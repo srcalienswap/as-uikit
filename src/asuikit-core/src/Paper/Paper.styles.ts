@@ -18,9 +18,7 @@ export default createStyles((theme, { radius, shadow }: PaperStylesParams) => ({
     boxShadow: theme.shadows[shadow] || shadow || 'none',
 
     '&[data-with-border]': {
-      border: `${rem(1)} solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
-      }`,
+      border: `${rem(1)} solid ${theme.colors.line[1]}`,
     },
   },
 }));

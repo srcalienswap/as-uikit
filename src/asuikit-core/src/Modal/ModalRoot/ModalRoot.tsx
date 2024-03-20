@@ -28,6 +28,7 @@ const defaultProps: Partial<ModalRootProps> = {
   ...ModalBaseDefaultProps,
   yOffset: '5dvh',
   xOffset: '5vw',
+  radius: '16px',
 };
 
 export function ModalRoot(props: ModalRootProps) {

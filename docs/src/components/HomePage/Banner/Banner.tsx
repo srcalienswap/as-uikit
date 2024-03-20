@@ -11,9 +11,7 @@ export function Banner() {
       <Container size={1100} px="md">
         <div className={classes.image} />
         <Overlay
-          gradient={`linear-gradient(45deg, ${
-            theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[2]
-          } 25%, rgba(0, 0, 0, 0) 95%)`}
+          gradient={`linear-gradient(45deg, ${theme.colors.line[1]} 25%, rgba(0, 0, 0, 0) 95%)`}
           opacity={0.5}
           zIndex={1}
         />

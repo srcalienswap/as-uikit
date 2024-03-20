@@ -11,9 +11,7 @@ export default createStyles((theme: MantineTheme, { radius }: CodeDemoStylesPara
 
   demo: {
     maxWidth: '100%',
-    border: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1]
-    }`,
+    border: `${rem(1)} solid ${theme.colors.line[1]}`,
     position: 'relative',
 
     '&:not(:only-child)': {
@@ -27,9 +25,7 @@ export default createStyles((theme: MantineTheme, { radius }: CodeDemoStylesPara
     borderBottomRightRadius: theme.fn.radius(radius),
     borderBottomLeftRadius: theme.fn.radius(radius),
     marginTop: 0,
-    border: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1]
-    }`,
+    border: `${rem(1)} solid ${theme.colors.line[1]}`,
   },
 
   code: {
