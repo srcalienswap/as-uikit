@@ -1,7 +1,7 @@
 {
   "name": "@asuikit/prism",
   "description": "Code highlight with AS.UIKit theme",
-  "version": "6.0.33",
+  "version": "6.0.34",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -29,14 +29,14 @@
     "syntax-highlight"
   ],
   "peerDependencies": {
-    "@asuikit/core": "6.0.33",
-    "@asuikit/hooks": "6.0.33",
+    "@asuikit/core": "6.0.34",
+    "@asuikit/hooks": "6.0.34",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
     "prism-react-renderer": "^1.2.1",
-    "@asuikit/utils": "6.0.33"
+    "@asuikit/utils": "6.0.34"
   },
   "devDependencies": {}
 }
