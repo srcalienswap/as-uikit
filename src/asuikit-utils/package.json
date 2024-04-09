@@ -1,6 +1,6 @@
 {
   "name": "@asuikit/utils",
-  "version": "6.0.34",
+  "version": "6.0.35",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
