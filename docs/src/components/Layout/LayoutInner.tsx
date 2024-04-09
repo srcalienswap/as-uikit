@@ -149,6 +149,7 @@ export function LayoutInner({ children, location }: LayoutProps) {
       }}
     >
       <Notifications />
+      <Notifications position="bottom-left" eventKey="other-notifications" />
       <AutoOpenSpotlight />
       <div
         className={cx({

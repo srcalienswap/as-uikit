@@ -6,7 +6,7 @@ import { NotificationsPositioning } from '../types';
 import {
   notifications as GlobalNotifications,
   NotificationsEvents,
-  useNotificationsEvents,
+  useNotificationsCustomEvents,
 } from '../events';
 import getPositionStyles from './get-position-styles/get-position-styles';
 import getNotificationStateStyles from './get-notification-state-styles/get-notification-state-styles';
@@ -57,6 +57,9 @@ export interface NotificationsProps
 
   /** Target element of Portal component */
   target?: PortalProps['target'];
+
+  /** multi notifications event key */
+  eventKey?: string;
 }
 
 export const Notifications: React.FC<NotificationsProps> & NotificationsStaticMethods = ({
@@ -71,6 +74,7 @@ export const Notifications: React.FC<NotificationsProps> & NotificationsStaticMe
   style,
   children,
   target,
+  eventKey = 'asuikit-notifications',
   ...others
 }) => {
   const forceUpdate = useForceUpdate();
@@ -100,7 +104,7 @@ export const Notifications: React.FC<NotificationsProps> & NotificationsStaticMe
     previousLength.current = notifications.length;
   }, [notifications]);
 
-  useNotificationsEvents({
+  useNotificationsCustomEvents(eventKey, {
     show: showNotification,
     hide: hideNotification,
     update: updateNotification,
