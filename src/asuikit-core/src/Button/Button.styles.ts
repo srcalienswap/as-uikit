@@ -116,14 +116,14 @@ function getVariantDisabledStyles({ variant, theme }: GetVariantStyles) {
   if (variant === 'outline') {
     return {
       backgroundColor: 'transparent',
-      color: theme.colors.text[4],
+      color: theme.colors.text[3],
       border: `1px solid ${theme.colors.line[3]}`,
     };
   }
   if (variant === 'subtle') {
     return {
       backgroundColor: 'transparent',
-      color: theme.colors.text[4],
+      color: theme.colors.text[3],
       border: 'none',
     };
   }
